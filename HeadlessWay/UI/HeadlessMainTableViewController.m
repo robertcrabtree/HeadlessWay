@@ -202,7 +202,7 @@
 {
     if (indexPath.section == 0) {
         HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
-        if (node.type == kDataNodeTypeMenu) {
+        if (node.type == kDataNodeTypeSubMenu) {
             [self performSegueWithIdentifier:@"segueIdMainMenuToSubmenuLinks" sender:self];
         } else {
             [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
@@ -258,7 +258,7 @@
     
     if (indexPath.section == 0) {
         HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
-        if (node.type == kDataNodeTypeMenu) {
+        if (node.type == kDataNodeTypeSubMenu) {
             HeadlessSubMenuTableViewController *controller = [segue destinationViewController];
             controller.node = node;
         } else {

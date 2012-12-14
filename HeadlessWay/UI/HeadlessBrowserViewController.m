@@ -62,7 +62,7 @@
     [super viewDidLoad];
     [self.webView setDelegate:self];
     
-    if (self.node.urlNavigation) {
+    if (self.node.type == kDataNodeTypeWebPageFull) {
         UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(actionBack:)];
         UIBarButtonItem *forward = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(actionForward:)];
         UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
@@ -83,10 +83,10 @@
         self.buttonForward.enabled = NO;
     }
 
-    if (self.node.type == kDataNodeTypeLink) {
+    if (self.node.type == kDataNodeTypeWebData || self.node.type == kDataNodeTypeWebPageFull) {
         NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.node.url]];
         [self.webView loadRequest:requestURL];
-    } else if (self.node.type == kDataNodeTypeVideo) {
+    } else if (self.node.type == kDataNodeTypeYoutube) {
         
         /*
         NSString *htmlBase = @"<html><head>\

@@ -10,9 +10,10 @@
 #import "TBXML.h"
 
 typedef enum {
-    kDataNodeTypeMenu = 0,
-    kDataNodeTypeLink,
-    kDataNodeTypeVideo,
+    kDataNodeTypeSubMenu = 0,
+    kDataNodeTypeWebData,       // will not show navigation buttons in UIWebView
+    kDataNodeTypeWebPageFull,   // will show navigation buttons in UIWebView
+    kDataNodeTypeYoutube,
 } HeadlessDataNodeType;
 
 @interface HeadlessDataNode : NSObject
@@ -20,7 +21,6 @@ typedef enum {
 - (id) initWithElement:(TBXMLElement *)elmt;
 
 @property (nonatomic, assign) HeadlessDataNodeType type;
-@property (nonatomic, assign) BOOL urlNavigation;
 @property (nonatomic, assign) BOOL isExperimentMenu;
 @property (nonatomic, assign) BOOL isExperimentLink;
 @property (nonatomic, assign) BOOL isVideo;

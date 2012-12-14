@@ -36,7 +36,7 @@
                 NSString *attrValue = [TBXML attributeValue:attribute];
                 
                 if ([attrName isEqualToString:@"type"]) {
-                    if ([attrValue isEqualToString:@"menu"]) {
+                    if ([attrValue isEqualToString:@"submenu"]) {
                         NSString *specialValue = [TBXML valueOfAttributeNamed:@"special" forElement:element];
                         HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (specialValue) {
@@ -53,7 +53,7 @@
                             }
                             [node release];
                         }
-                    } else if ([attrValue isEqualToString:@"link"]) {
+                    } else if ([attrValue isEqualToString:@"webdata"]) {
                         HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (node) {
                             TBXMLElement *parent = element->parentElement;
@@ -66,7 +66,15 @@
                                 [self traverseElement:element->firstChild array:nodes];
                             [node release];
                         }
-                    } else if ([attrValue isEqualToString:@"video"]) {
+                    } else if ([attrValue isEqualToString:@"webpage"]) {
+                        HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
+                        if (node) {
+                            [nodes addObject:node];
+                            if (element->firstChild)
+                                [self traverseElement:element->firstChild array:nodes];
+                            [node release];
+                        }
+                    } else if ([attrValue isEqualToString:@"youtube"]) {
                         HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (node) {
                             [nodes addObject:node];

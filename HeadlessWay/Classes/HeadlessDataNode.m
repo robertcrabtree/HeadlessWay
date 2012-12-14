@@ -10,7 +10,7 @@
 
 @implementation HeadlessDataNode
 
-@synthesize type, urlNavigation, isExperimentMenu, isExperimentLink, isVideo, name, url, children, randomExperiment;
+@synthesize type, isExperimentMenu, isExperimentLink, isVideo, name, url, children, randomExperiment;
 
 - (id) init
 {
@@ -18,8 +18,7 @@
     if (self) {
         name = nil;
         url = nil;
-        type = kDataNodeTypeMenu;
-        urlNavigation = NO;
+        type = kDataNodeTypeSubMenu;
         isExperimentMenu = NO;
         isExperimentLink = NO;
         children = [[NSMutableArray alloc] init];
@@ -35,12 +34,16 @@
         TBXMLElement *child = elmt->firstChild;
         TBXMLAttribute *attribute = elmt->firstAttribute;
         NSString *attrValue = [TBXML attributeValue:attribute];
-        if ([attrValue isEqualToString:@"menu"]) {
-            type = kDataNodeTypeMenu;
-        } else if ([attrValue isEqualToString:@"link"]) {
-            type = kDataNodeTypeLink;
+        if ([attrValue isEqualToString:@"submenu"]) {
+            type = kDataNodeTypeSubMenu;
+        } else if ([attrValue isEqualToString:@"webdata"]) {
+            type = kDataNodeTypeWebData;
+        } else if ([attrValue isEqualToString:@"webpage"]) {
+            type = kDataNodeTypeWebPageFull;
+        } else if ([attrValue isEqualToString:@"youtube"]) {
+            type = kDataNodeTypeYoutube;
         } else {
-            type = kDataNodeTypeVideo;
+            NSLog(@"Error: invalid node type");
         }
 
         do {
@@ -51,13 +54,6 @@
             
             if ([elmtName isEqualToString:@"url"]) {
                 url = [[TBXML textForElement:child] retain];
-
-                NSString *attrValue = [TBXML valueOfAttributeNamed:@"navigation" forElement:child];
-                if (attrValue) {
-                    if ([attrValue isEqualToString:@"yes"]) {
-                        urlNavigation = true;
-                    }
-                }
             }
         } while ((child = child->nextSibling));
     }
@@ -90,10 +86,9 @@
 
 - (void) printUrl:(NSInteger)indentLevel
 {
-    NSLog(@"%@- HeadlessDataNode type=%@, name=%@, navigate=%@, url=%@",
+    NSLog(@"%@- HeadlessDataNode type=%@, name=%@, url=%@",
           [self spaces:indentLevel], @"link",
           self.name,
-          self.urlNavigation == true ? @"yes" : @"no",
           self.url);
 }
 
@@ -112,7 +107,7 @@
 
 - (void) print:(NSInteger)indentLevel
 {
-    if (self.type == kDataNodeTypeMenu) {
+    if (self.type == kDataNodeTypeSubMenu) {
         [self printMenu:indentLevel];
     } else {
         [self printUrl:indentLevel];

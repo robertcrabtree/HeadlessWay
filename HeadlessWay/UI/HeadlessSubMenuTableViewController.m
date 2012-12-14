@@ -121,7 +121,7 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     HeadlessDataNode *n = [node.children objectAtIndex:indexPath.row];
-    if (n.type == kDataNodeTypeMenu) {
+    if (n.type == kDataNodeTypeSubMenu) {
         HeadlessSubMenuTableViewController *subMenu = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"StoryboardIdSubMenu"];
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
@@ -135,7 +135,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     HeadlessDataNode *n = [self.node.children objectAtIndex:indexPath.row];
     
-    if (n.type == kDataNodeTypeMenu) {
+    if (n.type == kDataNodeTypeSubMenu) {
         NSLog(@"Error: we don't support recursive segue yet");
     } else {
         HeadlessBrowserViewController *controller = [segue destinationViewController];
