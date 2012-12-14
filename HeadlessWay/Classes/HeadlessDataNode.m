@@ -10,7 +10,7 @@
 
 @implementation HeadlessDataNode
 
-@synthesize type, isExperimentMenu, isVideo, name, url, children, randomExperiment;
+@synthesize type, isExperimentMenu, name, url, children, randomExperiment;
 
 - (id) init
 {
