@@ -1,18 +1,18 @@
 //
-//  XMLMenuParser.m
+//  HeadlessDataNodeParser.m
 //  MasterDetail
 //
 //  Created by Bobby Crabtree on 11/7/12.
 //  Copyright (c) 2012 Me. All rights reserved.
 //
 
-#import "XMLMenuParser.h"
+#import "HeadlessDataNodeParser.h"
 #import "HeadlessDataNode.h"
 
-@interface XMLMenuParser ()
+@interface HeadlessDataNodeParser ()
 @end
 
-@implementation XMLMenuParser
+@implementation HeadlessDataNodeParser
 
 @synthesize experiments;
 

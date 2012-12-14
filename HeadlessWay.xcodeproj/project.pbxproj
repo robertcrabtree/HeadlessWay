@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* HeadlessDataNode.m */; };
 		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
-		E014FD851673E7E500621B86 /* XMLMenuParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* XMLMenuParser.m */; };
+		E014FD851673E7E500621B86 /* HeadlessDataNodeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* HeadlessDataNodeParser.m */; };
 		E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */; };
 		E014FD991673E7F500621B86 /* HeadlessMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8C1673E7F500621B86 /* HeadlessMainTableViewController.m */; };
 		E014FD9E1673E7F500621B86 /* HeadlessSubMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */; };
@@ -43,8 +43,8 @@
 		E014FD771673E7E500621B86 /* HeadlessDataNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessDataNode.m; sourceTree = "<group>"; };
 		E014FD7B1673E7E500621B86 /* Pointers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointers.h; sourceTree = "<group>"; };
 		E014FD7C1673E7E500621B86 /* Pointers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pointers.m; sourceTree = "<group>"; };
-		E014FD7E1673E7E500621B86 /* XMLMenuParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLMenuParser.h; sourceTree = "<group>"; };
-		E014FD7F1673E7E500621B86 /* XMLMenuParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLMenuParser.m; sourceTree = "<group>"; };
+		E014FD7E1673E7E500621B86 /* HeadlessDataNodeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessDataNodeParser.h; sourceTree = "<group>"; };
+		E014FD7F1673E7E500621B86 /* HeadlessDataNodeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessDataNodeParser.m; sourceTree = "<group>"; };
 		E014FD891673E7F500621B86 /* HeadlessBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessBrowserViewController.h; sourceTree = "<group>"; };
 		E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessBrowserViewController.m; sourceTree = "<group>"; };
 		E014FD8B1673E7F500621B86 /* HeadlessMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessMainTableViewController.h; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 				E014FD771673E7E500621B86 /* HeadlessDataNode.m */,
 				E014FD7B1673E7E500621B86 /* Pointers.h */,
 				E014FD7C1673E7E500621B86 /* Pointers.m */,
-				E014FD7E1673E7E500621B86 /* XMLMenuParser.h */,
-				E014FD7F1673E7E500621B86 /* XMLMenuParser.m */,
+				E014FD7E1673E7E500621B86 /* HeadlessDataNodeParser.h */,
+				E014FD7F1673E7E500621B86 /* HeadlessDataNodeParser.m */,
 				E0343A1916742B3B0090FCAA /* HeadlessAlarmRouter.h */,
 				E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */,
 			);
@@ -300,7 +300,7 @@
 				E031BB481663283E006C6902 /* TBXML+HTTP.m in Sources */,
 				E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */,
 				E014FD831673E7E500621B86 /* Pointers.m in Sources */,
-				E014FD851673E7E500621B86 /* XMLMenuParser.m in Sources */,
+				E014FD851673E7E500621B86 /* HeadlessDataNodeParser.m in Sources */,
 				E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */,
 				E014FD991673E7F500621B86 /* HeadlessMainTableViewController.m in Sources */,
 				E014FD9E1673E7F500621B86 /* HeadlessSubMenuTableViewController.m in Sources */,

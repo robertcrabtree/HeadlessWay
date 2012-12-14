@@ -10,7 +10,7 @@
 #import "HeadlessSubMenuTableViewController.h"
 #import "HeadlessBrowserViewController.h"
 #import "HeadlessPointerViewController.h"
-#import "XMLMenuParser.h"
+#import "HeadlessDataNodeParser.h"
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
 #import "HeadlessAlarmRouter.h"
@@ -38,7 +38,7 @@
         _primaryNode = [[HeadlessDataNode alloc] init];
         _secondaryNode = [[HeadlessDataNode alloc] init];
         
-        XMLMenuParser *parse = [[XMLMenuParser alloc] init];
+        HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
         [parse parseFile:@"Headless.xml" primary:_primaryNode secondary:_secondaryNode];
         experimentsNode = [parse.experiments retain];
         [parse release];

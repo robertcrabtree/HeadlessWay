@@ -1,5 +1,5 @@
 //
-//  XMLMenuParser.h
+//  HeadlessDataNodeParser.h
 //  MasterDetail
 //
 //  Created by Bobby Crabtree on 11/7/12.
@@ -11,7 +11,7 @@
 
 @class HeadlessDataNode;
 
-@interface XMLMenuParser : NSObject
+@interface HeadlessDataNodeParser : NSObject
 - (void) parseFile:(NSString *)fileName primary:(HeadlessDataNode*)primary secondary:(HeadlessDataNode*)secondary;
 @property (nonatomic, readonly) HeadlessDataNode *experiments;
 @end
