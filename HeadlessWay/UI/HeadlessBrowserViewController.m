@@ -1,0 +1,159 @@
+//
+//  HeadlessBrowserViewController.m
+//  HeadlessWay
+//
+//  Created by Bobby Crabtree on 11/25/12.
+//  Copyright (c) 2012 HeadlessWay. All rights reserved.
+//
+
+#import "HeadlessBrowserViewController.h"
+#import "MenuNode.h"
+
+@interface HeadlessBrowserViewController ()
+
+@end
+
+@implementation HeadlessBrowserViewController
+
+@synthesize webView, buttonBack, buttonForward, node, experimentMenuNode;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [webView release];
+    [buttonBack release];
+    [buttonForward release];
+    [node release];
+    [experimentMenuNode release];
+    [super dealloc];
+}
+
+- (void)actionNext:(id)sender
+{
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.experimentMenuNode.randomExperiment.url]];
+    [self.webView loadRequest:requestURL];
+}
+
+- (void)actionBack:(id)sender
+{
+    [self.webView goBack];
+}
+
+- (void)actionForward:(id)sender
+{
+    [self.webView goForward];
+}
+
+- (void)actionRefresh:(id)sender
+{
+    [self.webView reload];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.webView setDelegate:self];
+    
+    if (self.node.urlNavigation) {
+        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(actionBack:)];
+        UIBarButtonItem *forward = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(actionForward:)];
+        UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
+        UIBarButtonItem *refresh = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(actionRefresh:)];
+        
+        self.toolbarItems = [NSArray arrayWithObjects:back, forward, flex, refresh, nil];
+//        self.navigationController.toolbar.hidden = NO;
+        [self.navigationController setToolbarHidden:NO animated:YES];
+        
+        [back release];
+        [forward release];
+        [flex release];
+        [refresh release];
+        
+        self.buttonBack = back;
+        self.buttonForward = forward;
+        self.buttonBack.enabled = NO;
+        self.buttonForward.enabled = NO;
+    }
+
+    if (self.node.type == kMenuNodeTypeLink) {
+        NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.node.url]];
+        [self.webView loadRequest:requestURL];
+    } else if (self.node.type == kMenuNodeTypeVideo) {
+        
+        /*
+        NSString *htmlBase = @"<html><head>\
+        <body style=\"margin:0\">\
+        <embed id=\"yt\" src=\"%@\" type=\"application/x-shockwave-flash\" \
+        width=\"%0.0f\" height=\"%0.0f\"></embed>\
+        </body></html>";
+        NSString *htmlString = [NSString stringWithFormat:htmlBase, node.url, 320.0f, 480.0f];
+        [self.webView loadHTMLString:htmlString baseURL:nil];
+         */
+
+        NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head>\
+                                <body style=\"background:#33ff66;margin-top:0px;margin-left:0px\"><div>\
+                                <object width=\"320\" height=\"480\">\
+                                <param name=\"movie\" value=\"%@\"></param>\
+                                <param name=\"wmode\" value=\"transparent\"></param>\
+                                <embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"320\" height=\"480\"></embed>\
+                                </object></div></body></html>",node.url,node.url];
+        
+        [self.webView loadHTMLString:htmlString baseURL:nil];
+
+#warning test this on a device supposedly not working on simulator
+        /*
+        NSURL *url = [NSURL URLWithString:node.url];
+        [[UIApplication sharedApplication] openURL:url];
+         */
+
+       // self.webView.scrollView.scrollEnabled = NO;
+    } else {
+        NSLog(@"Error: invalid node type in browser");
+    }
+
+    if (self.experimentMenuNode != nil) {
+        UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next Experiment" style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
+        self.navigationItem.rightBarButtonItem = nextButton;
+        [nextButton release];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    // this prevents a crash if view controller is popped off the stack before page loads
+    if (self.webView.loading)
+        [self.webView stopLoading];
+    [self.webView setDelegate:nil];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [super viewWillDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    self.buttonBack.enabled = (self.webView.canGoBack);
+    self.buttonForward.enabled = (self.webView.canGoForward);
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    self.buttonBack.enabled = (self.webView.canGoBack);
+    self.buttonForward.enabled = (self.webView.canGoForward);
+}
+
+@end

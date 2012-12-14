@@ -1,0 +1,135 @@
+//
+//  HeadlessPointerViewController.m
+//  HeadlessWay
+//
+//  Created by Bobby Crabtree on 12/8/12.
+//  Copyright (c) 2012 HeadlessWay. All rights reserved.
+//
+
+#import "HeadlessPointerViewController.h"
+#import "HeadlessBrowserViewController.h"
+#import "Pointers.h"
+#import "MenuNode.h"
+
+@interface HeadlessPointerViewController ()
+
+@end
+
+@implementation HeadlessPointerViewController
+
+@synthesize experimentsNode, pointers, buttonRefresh, buttonExperiment, textView, alarmFired;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    [experimentsNode release];
+    [pointers release];
+    [buttonRefresh release];
+    [buttonExperiment release];
+    [textView release];
+    [super dealloc];
+}
+
+- (void)nextPointer
+{
+    if (self.pointers) {
+        NSString *pointer = [self.pointers nextPointer];
+        self.textView.text = pointer;
+    }
+}
+
+- (void) actionDone:(id)sender
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void) actionExperiment:(id)sender
+{
+    [self performSegueWithIdentifier:@"segueIdPointerToExperiment" sender:self];
+}
+
+- (void) actionRefresh:(id)sender
+{
+    
+    [self nextPointer];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self nextPointer];
+
+    if (self.alarmFired) {
+        // @TODO: maybe we will do something with this someday
+        // for now nothing, but we do have the option of
+        // distinguishing if this is viewing because of
+        // an alarm
+    }
+
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(actionDone:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+    [doneButton release];
+    
+    self.buttonRefresh.action = @selector(actionRefresh:);
+    self.buttonRefresh.target = self;
+    self.buttonExperiment.action = @selector(actionExperiment:);
+    self.buttonExperiment.target = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // add observer to format the text vertically centered
+    // we must do this before we set the text...
+    [self.textView addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
+    
+    // we are resettting the text so the observer will reformat the text
+    // vertically. this is necessary in case we do an experiment then come back
+    // text needs to be reformatted (center verticaly)
+    NSString *text = self.textView.text;
+    self.textView.text = text;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.textView removeObserver:self forKeyPath:@"contentSize"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    UITextView *tv = object;
+    if (tv) {
+        // center the text vertically...
+        CGFloat topCorrect = ([tv bounds].size.height - [tv contentSize].height * [tv zoomScale])/2.0;
+        topCorrect = ( topCorrect < 0.0 ? 0.0 : topCorrect );
+        tv.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
+    } else {
+        NSLog(@"Error: UITextView is null (o_O)");
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MenuNode *randomExperiment = experimentsNode.randomExperiment;
+    HeadlessBrowserViewController *controller = [segue destinationViewController];
+    controller.node = randomExperiment;
+    controller.experimentMenuNode = experimentsNode;
+}
+
+@end

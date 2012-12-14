@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E014FD801673E7E500621B86 /* MenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* MenuNode.m */; };
+		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
+		E014FD851673E7E500621B86 /* XMLMenuParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* XMLMenuParser.m */; };
+		E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */; };
+		E014FD991673E7F500621B86 /* HeadlessMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8C1673E7F500621B86 /* HeadlessMainTableViewController.m */; };
+		E014FD9E1673E7F500621B86 /* HeadlessSubMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */; };
+		E014FDA31673E87700621B86 /* Headless.xml in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA01673E87700621B86 /* Headless.xml */; };
+		E014FDA51673E87700621B86 /* Pointers.txt in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA21673E87700621B86 /* Pointers.txt */; };
+		E014FDA81673F82F00621B86 /* HeadlessPointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */; };
+		E031BB1116632399006C6902 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1016632399006C6902 /* UIKit.framework */; };
+		E031BB1316632399006C6902 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1216632399006C6902 /* Foundation.framework */; };
+		E031BB1516632399006C6902 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1416632399006C6902 /* CoreGraphics.framework */; };
+		E031BB1B16632399006C6902 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E031BB1916632399006C6902 /* InfoPlist.strings */; };
+		E031BB1D16632399006C6902 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E031BB1C16632399006C6902 /* main.m */; };
+		E031BB2116632399006C6902 /* HeadlessAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E031BB2016632399006C6902 /* HeadlessAppDelegate.m */; };
+		E031BB2316632399006C6902 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E031BB2216632399006C6902 /* Default.png */; };
+		E031BB2516632399006C6902 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E031BB2416632399006C6902 /* Default@2x.png */; };
+		E031BB2716632399006C6902 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E031BB2616632399006C6902 /* Default-568h@2x.png */; };
+		E031BB2A16632399006C6902 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E031BB2816632399006C6902 /* MainStoryboard.storyboard */; };
+		E031BB461663283E006C6902 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = E031BB411663283E006C6902 /* TBXML.m */; };
+		E031BB471663283E006C6902 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = E031BB431663283E006C6902 /* TBXML+Compression.m */; };
+		E031BB481663283E006C6902 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = E031BB451663283E006C6902 /* TBXML+HTTP.m */; };
+		E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB491663287C006C6902 /* libz.dylib */; };
+		E0343A1B16742B3B0090FCAA /* HeadlessAlarmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */; };
+		E0C852A31677EA070044C6BC /* HeadlessAlarmItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C8529E1677EA070044C6BC /* HeadlessAlarmItemViewController.m */; };
+		E0C852A41677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A01677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m */; };
+		E0C852A51677EA070044C6BC /* HeadlessAlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A21677EA070044C6BC /* HeadlessAlarmTableViewController.m */; };
+		E0C852A81677EA100044C6BC /* AlarmNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A71677EA100044C6BC /* AlarmNode.m */; };
+		E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E014FD761673E7E500621B86 /* MenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNode.h; sourceTree = "<group>"; };
+		E014FD771673E7E500621B86 /* MenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuNode.m; sourceTree = "<group>"; };
+		E014FD7B1673E7E500621B86 /* Pointers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointers.h; sourceTree = "<group>"; };
+		E014FD7C1673E7E500621B86 /* Pointers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pointers.m; sourceTree = "<group>"; };
+		E014FD7E1673E7E500621B86 /* XMLMenuParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLMenuParser.h; sourceTree = "<group>"; };
+		E014FD7F1673E7E500621B86 /* XMLMenuParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLMenuParser.m; sourceTree = "<group>"; };
+		E014FD891673E7F500621B86 /* HeadlessBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessBrowserViewController.h; sourceTree = "<group>"; };
+		E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessBrowserViewController.m; sourceTree = "<group>"; };
+		E014FD8B1673E7F500621B86 /* HeadlessMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessMainTableViewController.h; sourceTree = "<group>"; };
+		E014FD8C1673E7F500621B86 /* HeadlessMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessMainTableViewController.m; sourceTree = "<group>"; };
+		E014FD951673E7F500621B86 /* HeadlessSubMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessSubMenuTableViewController.h; sourceTree = "<group>"; };
+		E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessSubMenuTableViewController.m; sourceTree = "<group>"; };
+		E014FDA01673E87700621B86 /* Headless.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Headless.xml; sourceTree = "<group>"; };
+		E014FDA21673E87700621B86 /* Pointers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pointers.txt; sourceTree = "<group>"; };
+		E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessPointerViewController.h; sourceTree = "<group>"; };
+		E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessPointerViewController.m; sourceTree = "<group>"; };
+		E031BB0C16632399006C6902 /* HeadlessWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadlessWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E031BB1016632399006C6902 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E031BB1216632399006C6902 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E031BB1416632399006C6902 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E031BB1816632399006C6902 /* HeadlessWay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeadlessWay-Info.plist"; sourceTree = "<group>"; };
+		E031BB1A16632399006C6902 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E031BB1C16632399006C6902 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E031BB1E16632399006C6902 /* HeadlessWay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeadlessWay-Prefix.pch"; sourceTree = "<group>"; };
+		E031BB1F16632399006C6902 /* HeadlessAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadlessAppDelegate.h; sourceTree = "<group>"; };
+		E031BB2016632399006C6902 /* HeadlessAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadlessAppDelegate.m; sourceTree = "<group>"; };
+		E031BB2216632399006C6902 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E031BB2416632399006C6902 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E031BB2616632399006C6902 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E031BB2916632399006C6902 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E031BB401663283E006C6902 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBXML.h; path = TBXML/TBXML.h; sourceTree = "<group>"; };
+		E031BB411663283E006C6902 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBXML.m; path = TBXML/TBXML.m; sourceTree = "<group>"; };
+		E031BB421663283E006C6902 /* TBXML+Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TBXML+Compression.h"; path = "TBXML/TBXML+Compression.h"; sourceTree = "<group>"; };
+		E031BB431663283E006C6902 /* TBXML+Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TBXML+Compression.m"; path = "TBXML/TBXML+Compression.m"; sourceTree = "<group>"; };
+		E031BB441663283E006C6902 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TBXML+HTTP.h"; path = "TBXML/TBXML+HTTP.h"; sourceTree = "<group>"; };
+		E031BB451663283E006C6902 /* TBXML+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TBXML+HTTP.m"; path = "TBXML/TBXML+HTTP.m"; sourceTree = "<group>"; };
+		E031BB491663287C006C6902 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E0343A1916742B3B0090FCAA /* HeadlessAlarmRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmRouter.h; sourceTree = "<group>"; };
+		E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmRouter.m; sourceTree = "<group>"; };
+		E0C8529D1677EA070044C6BC /* HeadlessAlarmItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmItemViewController.h; sourceTree = "<group>"; };
+		E0C8529E1677EA070044C6BC /* HeadlessAlarmItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmItemViewController.m; sourceTree = "<group>"; };
+		E0C8529F1677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmRepeatTableViewController.h; sourceTree = "<group>"; };
+		E0C852A01677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmRepeatTableViewController.m; sourceTree = "<group>"; };
+		E0C852A11677EA070044C6BC /* HeadlessAlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmTableViewController.h; sourceTree = "<group>"; };
+		E0C852A21677EA070044C6BC /* HeadlessAlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmTableViewController.m; sourceTree = "<group>"; };
+		E0C852A61677EA100044C6BC /* AlarmNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmNode.h; sourceTree = "<group>"; };
+		E0C852A71677EA100044C6BC /* AlarmNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmNode.m; sourceTree = "<group>"; };
+		E0C852A91677EBA90044C6BC /* HeadlessAlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmManager.h; sourceTree = "<group>"; };
+		E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E031BB0916632399006C6902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */,
+				E031BB1116632399006C6902 /* UIKit.framework in Frameworks */,
+				E031BB1316632399006C6902 /* Foundation.framework in Frameworks */,
+				E031BB1516632399006C6902 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E014FD751673E7E500621B86 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E0C852A91677EBA90044C6BC /* HeadlessAlarmManager.h */,
+				E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */,
+				E0C852A61677EA100044C6BC /* AlarmNode.h */,
+				E0C852A71677EA100044C6BC /* AlarmNode.m */,
+				E014FD761673E7E500621B86 /* MenuNode.h */,
+				E014FD771673E7E500621B86 /* MenuNode.m */,
+				E014FD7B1673E7E500621B86 /* Pointers.h */,
+				E014FD7C1673E7E500621B86 /* Pointers.m */,
+				E014FD7E1673E7E500621B86 /* XMLMenuParser.h */,
+				E014FD7F1673E7E500621B86 /* XMLMenuParser.m */,
+				E0343A1916742B3B0090FCAA /* HeadlessAlarmRouter.h */,
+				E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E014FD861673E7F500621B86 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E0C8529D1677EA070044C6BC /* HeadlessAlarmItemViewController.h */,
+				E0C8529E1677EA070044C6BC /* HeadlessAlarmItemViewController.m */,
+				E0C8529F1677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.h */,
+				E0C852A01677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m */,
+				E0C852A11677EA070044C6BC /* HeadlessAlarmTableViewController.h */,
+				E0C852A21677EA070044C6BC /* HeadlessAlarmTableViewController.m */,
+				E014FD891673E7F500621B86 /* HeadlessBrowserViewController.h */,
+				E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */,
+				E014FD8B1673E7F500621B86 /* HeadlessMainTableViewController.h */,
+				E014FD8C1673E7F500621B86 /* HeadlessMainTableViewController.m */,
+				E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */,
+				E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */,
+				E014FD951673E7F500621B86 /* HeadlessSubMenuTableViewController.h */,
+				E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E014FD9F1673E87700621B86 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E014FDA01673E87700621B86 /* Headless.xml */,
+				E014FDA21673E87700621B86 /* Pointers.txt */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E031BB0116632399006C6902 = {
+			isa = PBXGroup;
+			children = (
+				E031BB1616632399006C6902 /* HeadlessWay */,
+				E031BB0F16632399006C6902 /* Frameworks */,
+				E031BB0D16632399006C6902 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E031BB0D16632399006C6902 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E031BB0C16632399006C6902 /* HeadlessWay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E031BB0F16632399006C6902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E031BB491663287C006C6902 /* libz.dylib */,
+				E031BB1016632399006C6902 /* UIKit.framework */,
+				E031BB1216632399006C6902 /* Foundation.framework */,
+				E031BB1416632399006C6902 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E031BB1616632399006C6902 /* HeadlessWay */ = {
+			isa = PBXGroup;
+			children = (
+				E031BB1F16632399006C6902 /* HeadlessAppDelegate.h */,
+				E031BB2016632399006C6902 /* HeadlessAppDelegate.m */,
+				E031BB2816632399006C6902 /* MainStoryboard.storyboard */,
+				E014FD861673E7F500621B86 /* UI */,
+				E014FD751673E7E500621B86 /* Classes */,
+				E031BB3F166327D1006C6902 /* TBXML */,
+				E014FD9F1673E87700621B86 /* Data */,
+				E031BB1716632399006C6902 /* Supporting Files */,
+			);
+			path = HeadlessWay;
+			sourceTree = "<group>";
+		};
+		E031BB1716632399006C6902 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E031BB1816632399006C6902 /* HeadlessWay-Info.plist */,
+				E031BB1916632399006C6902 /* InfoPlist.strings */,
+				E031BB1C16632399006C6902 /* main.m */,
+				E031BB1E16632399006C6902 /* HeadlessWay-Prefix.pch */,
+				E031BB2216632399006C6902 /* Default.png */,
+				E031BB2416632399006C6902 /* Default@2x.png */,
+				E031BB2616632399006C6902 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E031BB3F166327D1006C6902 /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				E031BB401663283E006C6902 /* TBXML.h */,
+				E031BB411663283E006C6902 /* TBXML.m */,
+				E031BB421663283E006C6902 /* TBXML+Compression.h */,
+				E031BB431663283E006C6902 /* TBXML+Compression.m */,
+				E031BB441663283E006C6902 /* TBXML+HTTP.h */,
+				E031BB451663283E006C6902 /* TBXML+HTTP.m */,
+			);
+			name = TBXML;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E031BB0B16632399006C6902 /* HeadlessWay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E031BB3016632399006C6902 /* Build configuration list for PBXNativeTarget "HeadlessWay" */;
+			buildPhases = (
+				E031BB0816632399006C6902 /* Sources */,
+				E031BB0916632399006C6902 /* Frameworks */,
+				E031BB0A16632399006C6902 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadlessWay;
+			productName = HeadlessWay;
+			productReference = E031BB0C16632399006C6902 /* HeadlessWay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E031BB0316632399006C6902 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Headless;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = HeadlessWay;
+			};
+			buildConfigurationList = E031BB0616632399006C6902 /* Build configuration list for PBXProject "HeadlessWay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E031BB0116632399006C6902;
+			productRefGroup = E031BB0D16632399006C6902 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E031BB0B16632399006C6902 /* HeadlessWay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E031BB0A16632399006C6902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E031BB1B16632399006C6902 /* InfoPlist.strings in Resources */,
+				E031BB2316632399006C6902 /* Default.png in Resources */,
+				E031BB2516632399006C6902 /* Default@2x.png in Resources */,
+				E031BB2716632399006C6902 /* Default-568h@2x.png in Resources */,
+				E031BB2A16632399006C6902 /* MainStoryboard.storyboard in Resources */,
+				E014FDA31673E87700621B86 /* Headless.xml in Resources */,
+				E014FDA51673E87700621B86 /* Pointers.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E031BB0816632399006C6902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E031BB1D16632399006C6902 /* main.m in Sources */,
+				E031BB2116632399006C6902 /* HeadlessAppDelegate.m in Sources */,
+				E031BB461663283E006C6902 /* TBXML.m in Sources */,
+				E031BB471663283E006C6902 /* TBXML+Compression.m in Sources */,
+				E031BB481663283E006C6902 /* TBXML+HTTP.m in Sources */,
+				E014FD801673E7E500621B86 /* MenuNode.m in Sources */,
+				E014FD831673E7E500621B86 /* Pointers.m in Sources */,
+				E014FD851673E7E500621B86 /* XMLMenuParser.m in Sources */,
+				E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */,
+				E014FD991673E7F500621B86 /* HeadlessMainTableViewController.m in Sources */,
+				E014FD9E1673E7F500621B86 /* HeadlessSubMenuTableViewController.m in Sources */,
+				E014FDA81673F82F00621B86 /* HeadlessPointerViewController.m in Sources */,
+				E0343A1B16742B3B0090FCAA /* HeadlessAlarmRouter.m in Sources */,
+				E0C852A31677EA070044C6BC /* HeadlessAlarmItemViewController.m in Sources */,
+				E0C852A41677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m in Sources */,
+				E0C852A51677EA070044C6BC /* HeadlessAlarmTableViewController.m in Sources */,
+				E0C852A81677EA100044C6BC /* AlarmNode.m in Sources */,
+				E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E031BB1916632399006C6902 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E031BB1A16632399006C6902 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E031BB2816632399006C6902 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E031BB2916632399006C6902 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E031BB2E16632399006C6902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E031BB2F16632399006C6902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E031BB3116632399006C6902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeadlessWay/HeadlessWay-Prefix.pch";
+				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E031BB3216632399006C6902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeadlessWay/HeadlessWay-Prefix.pch";
+				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E031BB0616632399006C6902 /* Build configuration list for PBXProject "HeadlessWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E031BB2E16632399006C6902 /* Debug */,
+				E031BB2F16632399006C6902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E031BB3016632399006C6902 /* Build configuration list for PBXNativeTarget "HeadlessWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E031BB3116632399006C6902 /* Debug */,
+				E031BB3216632399006C6902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E031BB0316632399006C6902 /* Project object */;
+}
