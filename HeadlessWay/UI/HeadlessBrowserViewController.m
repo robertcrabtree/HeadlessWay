@@ -7,7 +7,7 @@
 //
 
 #import "HeadlessBrowserViewController.h"
-#import "MenuNode.h"
+#import "HeadlessDataNode.h"
 
 @interface HeadlessBrowserViewController ()
 
@@ -83,10 +83,10 @@
         self.buttonForward.enabled = NO;
     }
 
-    if (self.node.type == kMenuNodeTypeLink) {
+    if (self.node.type == kDataNodeTypeLink) {
         NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.node.url]];
         [self.webView loadRequest:requestURL];
-    } else if (self.node.type == kMenuNodeTypeVideo) {
+    } else if (self.node.type == kDataNodeTypeVideo) {
         
         /*
         NSString *htmlBase = @"<html><head>\

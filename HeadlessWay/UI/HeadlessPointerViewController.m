@@ -9,7 +9,7 @@
 #import "HeadlessPointerViewController.h"
 #import "HeadlessBrowserViewController.h"
 #import "Pointers.h"
-#import "MenuNode.h"
+#import "HeadlessDataNode.h"
 
 @interface HeadlessPointerViewController ()
 
@@ -126,7 +126,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    MenuNode *randomExperiment = experimentsNode.randomExperiment;
+    HeadlessDataNode *randomExperiment = experimentsNode.randomExperiment;
     HeadlessBrowserViewController *controller = [segue destinationViewController];
     controller.node = randomExperiment;
     controller.experimentMenuNode = experimentsNode;

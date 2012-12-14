@@ -7,7 +7,7 @@
 //
 
 #import "XMLMenuParser.h"
-#import "MenuNode.h"
+#import "HeadlessDataNode.h"
 
 @interface XMLMenuParser ()
 @end
@@ -38,7 +38,7 @@
                 if ([attrName isEqualToString:@"type"]) {
                     if ([attrValue isEqualToString:@"menu"]) {
                         NSString *specialValue = [TBXML valueOfAttributeNamed:@"special" forElement:element];
-                        MenuNode *node = [[MenuNode alloc] initWithElement:element];
+                        HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (specialValue) {
                             node.isExperimentMenu = YES;
                             experiments = [node retain];
@@ -54,7 +54,7 @@
                             [node release];
                         }
                     } else if ([attrValue isEqualToString:@"link"]) {
-                        MenuNode *node = [[MenuNode alloc] initWithElement:element];
+                        HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (node) {
                             TBXMLElement *parent = element->parentElement;
                             NSString *specialValue = [TBXML valueOfAttributeNamed:@"special" forElement:parent];
@@ -67,7 +67,7 @@
                             [node release];
                         }
                     } else if ([attrValue isEqualToString:@"video"]) {
-                        MenuNode *node = [[MenuNode alloc] initWithElement:element];
+                        HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (node) {
                             [nodes addObject:node];
                             if (element->firstChild)
@@ -87,7 +87,7 @@
     } while ((element = element->nextSibling));
 }
 
-- (void) parse:(TBXML*)tbxml primary:(MenuNode*)primary secondary:(MenuNode*)secondary
+- (void) parse:(TBXML*)tbxml primary:(HeadlessDataNode*)primary secondary:(HeadlessDataNode*)secondary
 {
     if (tbxml.rootXMLElement) {
         
@@ -114,7 +114,7 @@
     }
 }
 
-- (void) parseFile:(NSString *)fileName primary:(MenuNode*)primary secondary:(MenuNode*)secondary
+- (void) parseFile:(NSString *)fileName primary:(HeadlessDataNode*)primary secondary:(HeadlessDataNode*)secondary
 {
     NSError *error;
     TBXML *xml = [[TBXML alloc] initWithXMLFile:fileName error:&error];

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "TBXML.h"
 
-@class MenuNode;
+@class HeadlessDataNode;
 
 @interface XMLMenuParser : NSObject
-- (void) parseFile:(NSString *)fileName primary:(MenuNode*)primary secondary:(MenuNode*)secondary;
-@property (nonatomic, readonly) MenuNode *experiments;
+- (void) parseFile:(NSString *)fileName primary:(HeadlessDataNode*)primary secondary:(HeadlessDataNode*)secondary;
+@property (nonatomic, readonly) HeadlessDataNode *experiments;
 @end

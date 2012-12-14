@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E014FD801673E7E500621B86 /* MenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* MenuNode.m */; };
+		E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* HeadlessDataNode.m */; };
 		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
 		E014FD851673E7E500621B86 /* XMLMenuParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* XMLMenuParser.m */; };
 		E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */; };
@@ -39,8 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E014FD761673E7E500621B86 /* MenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNode.h; sourceTree = "<group>"; };
-		E014FD771673E7E500621B86 /* MenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuNode.m; sourceTree = "<group>"; };
+		E014FD761673E7E500621B86 /* HeadlessDataNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessDataNode.h; sourceTree = "<group>"; };
+		E014FD771673E7E500621B86 /* HeadlessDataNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessDataNode.m; sourceTree = "<group>"; };
 		E014FD7B1673E7E500621B86 /* Pointers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointers.h; sourceTree = "<group>"; };
 		E014FD7C1673E7E500621B86 /* Pointers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pointers.m; sourceTree = "<group>"; };
 		E014FD7E1673E7E500621B86 /* XMLMenuParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLMenuParser.h; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 				E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */,
 				E0C852A61677EA100044C6BC /* AlarmNode.h */,
 				E0C852A71677EA100044C6BC /* AlarmNode.m */,
-				E014FD761673E7E500621B86 /* MenuNode.h */,
-				E014FD771673E7E500621B86 /* MenuNode.m */,
+				E014FD761673E7E500621B86 /* HeadlessDataNode.h */,
+				E014FD771673E7E500621B86 /* HeadlessDataNode.m */,
 				E014FD7B1673E7E500621B86 /* Pointers.h */,
 				E014FD7C1673E7E500621B86 /* Pointers.m */,
 				E014FD7E1673E7E500621B86 /* XMLMenuParser.h */,
@@ -298,7 +298,7 @@
 				E031BB461663283E006C6902 /* TBXML.m in Sources */,
 				E031BB471663283E006C6902 /* TBXML+Compression.m in Sources */,
 				E031BB481663283E006C6902 /* TBXML+HTTP.m in Sources */,
-				E014FD801673E7E500621B86 /* MenuNode.m in Sources */,
+				E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */,
 				E014FD831673E7E500621B86 /* Pointers.m in Sources */,
 				E014FD851673E7E500621B86 /* XMLMenuParser.m in Sources */,
 				E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */,

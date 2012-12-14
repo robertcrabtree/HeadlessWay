@@ -8,7 +8,7 @@
 
 #import "HeadlessSubMenuTableViewController.h"
 #import "HeadlessBrowserViewController.h"
-#import "MenuNode.h"
+#import "HeadlessDataNode.h"
 
 @interface HeadlessSubMenuTableViewController ()
 
@@ -71,7 +71,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    MenuNode *n = [node.children objectAtIndex:indexPath.row];
+    HeadlessDataNode *n = [node.children objectAtIndex:indexPath.row];
     cell.textLabel.text = n.name;
     return cell;
 }
@@ -120,8 +120,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    MenuNode *n = [node.children objectAtIndex:indexPath.row];
-    if (n.type == kMenuNodeTypeMenu) {
+    HeadlessDataNode *n = [node.children objectAtIndex:indexPath.row];
+    if (n.type == kDataNodeTypeMenu) {
         HeadlessSubMenuTableViewController *subMenu = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"StoryboardIdSubMenu"];
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
@@ -133,9 +133,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    MenuNode *n = [self.node.children objectAtIndex:indexPath.row];
+    HeadlessDataNode *n = [self.node.children objectAtIndex:indexPath.row];
     
-    if (n.type == kMenuNodeTypeMenu) {
+    if (n.type == kDataNodeTypeMenu) {
         NSLog(@"Error: we don't support recursive segue yet");
     } else {
         HeadlessBrowserViewController *controller = [segue destinationViewController];

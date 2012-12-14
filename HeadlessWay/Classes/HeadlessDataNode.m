@@ -1,14 +1,14 @@
 //
-//  MenuNode.m
+//  HeadlessDataNode.m
 //  MasterDetail
 //
 //  Created by Bobby Crabtree on 11/7/12.
 //  Copyright (c) 2012 Me. All rights reserved.
 //
 
-#import "MenuNode.h"
+#import "HeadlessDataNode.h"
 
-@implementation MenuNode
+@implementation HeadlessDataNode
 
 @synthesize type, urlNavigation, isExperimentMenu, isExperimentLink, isVideo, name, url, children, randomExperiment;
 
@@ -18,7 +18,7 @@
     if (self) {
         name = nil;
         url = nil;
-        type = kMenuNodeTypeMenu;
+        type = kDataNodeTypeMenu;
         urlNavigation = NO;
         isExperimentMenu = NO;
         isExperimentLink = NO;
@@ -36,11 +36,11 @@
         TBXMLAttribute *attribute = elmt->firstAttribute;
         NSString *attrValue = [TBXML attributeValue:attribute];
         if ([attrValue isEqualToString:@"menu"]) {
-            type = kMenuNodeTypeMenu;
+            type = kDataNodeTypeMenu;
         } else if ([attrValue isEqualToString:@"link"]) {
-            type = kMenuNodeTypeLink;
+            type = kDataNodeTypeLink;
         } else {
-            type = kMenuNodeTypeVideo;
+            type = kDataNodeTypeVideo;
         }
 
         do {
@@ -64,10 +64,10 @@
     return self;
 }
 
-- (MenuNode*)randomExperiment
+- (HeadlessDataNode*)randomExperiment
 {
     int random = arc4random() % children.count;
-    MenuNode *node = [children objectAtIndex:random];
+    HeadlessDataNode *node = [children objectAtIndex:random];
     return node;
 }
 
@@ -90,7 +90,7 @@
 
 - (void) printUrl:(NSInteger)indentLevel
 {
-    NSLog(@"%@- MenuNode type=%@, name=%@, navigate=%@, url=%@",
+    NSLog(@"%@- HeadlessDataNode type=%@, name=%@, navigate=%@, url=%@",
           [self spaces:indentLevel], @"link",
           self.name,
           self.urlNavigation == true ? @"yes" : @"no",
@@ -99,20 +99,20 @@
 
 - (void) printMenu:(NSInteger)indentLevel
 {
-    NSLog(@"%@+ MenuNode type=%@, name=%@, children=%i",
+    NSLog(@"%@+ HeadlessDataNode type=%@, name=%@, children=%i",
           [self spaces:indentLevel], @"menu",
           self.name,
           self.children.count);
 
     for (int i = 0; i < self.children.count; i++) {
-        MenuNode *child = [self.children objectAtIndex:i];
+        HeadlessDataNode *child = [self.children objectAtIndex:i];
         [child print:indentLevel+1];
     }
 }
 
 - (void) print:(NSInteger)indentLevel
 {
-    if (self.type == kMenuNodeTypeMenu) {
+    if (self.type == kDataNodeTypeMenu) {
         [self printMenu:indentLevel];
     } else {
         [self printUrl:indentLevel];

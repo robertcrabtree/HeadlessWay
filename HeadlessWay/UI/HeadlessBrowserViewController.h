@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class MenuNode;
+@class HeadlessDataNode;
 
 @interface HeadlessBrowserViewController : UIViewController<UIWebViewDelegate>
 
@@ -16,6 +16,6 @@
 @property (nonatomic, retain) UIBarButtonItem *buttonBack;
 @property (nonatomic, retain) UIBarButtonItem *buttonForward;
 
-@property (nonatomic, retain) MenuNode *node;
-@property (nonatomic, retain) MenuNode *experimentMenuNode;
+@property (nonatomic, retain) HeadlessDataNode *node;
+@property (nonatomic, retain) HeadlessDataNode *experimentMenuNode;
 @end

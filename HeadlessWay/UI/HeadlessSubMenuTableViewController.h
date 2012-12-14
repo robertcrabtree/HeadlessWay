@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class MenuNode;
+@class HeadlessDataNode;
 
 @interface HeadlessSubMenuTableViewController : UITableViewController
-@property (nonatomic, retain) MenuNode *node;
+@property (nonatomic, retain) HeadlessDataNode *node;
 @end

@@ -1,5 +1,5 @@
 //
-//  MenuNode.h
+//  HeadlessDataNode.h
 //  MasterDetail
 //
 //  Created by Bobby Crabtree on 11/7/12.
@@ -10,16 +10,16 @@
 #import "TBXML.h"
 
 typedef enum {
-    kMenuNodeTypeMenu = 0,
-    kMenuNodeTypeLink,
-    kMenuNodeTypeVideo,
-} MenuNodeType;
+    kDataNodeTypeMenu = 0,
+    kDataNodeTypeLink,
+    kDataNodeTypeVideo,
+} HeadlessDataNodeType;
 
-@interface MenuNode : NSObject
+@interface HeadlessDataNode : NSObject
 
 - (id) initWithElement:(TBXMLElement *)elmt;
 
-@property (nonatomic, assign) MenuNodeType type;
+@property (nonatomic, assign) HeadlessDataNodeType type;
 @property (nonatomic, assign) BOOL urlNavigation;
 @property (nonatomic, assign) BOOL isExperimentMenu;
 @property (nonatomic, assign) BOOL isExperimentLink;
@@ -28,5 +28,5 @@ typedef enum {
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSMutableArray *children;
 
-@property (nonatomic, readonly) MenuNode *randomExperiment;
+@property (nonatomic, readonly) HeadlessDataNode *randomExperiment;
 @end

@@ -12,16 +12,16 @@
 #import "HeadlessPointerViewController.h"
 #import "XMLMenuParser.h"
 #import "Pointers.h"
-#import "MenuNode.h"
+#import "HeadlessDataNode.h"
 #import "HeadlessAlarmRouter.h"
 
 @interface HeadlessMainTableViewController () {
-    MenuNode *_primaryNode;
-    MenuNode *_secondaryNode;
+    HeadlessDataNode *_primaryNode;
+    HeadlessDataNode *_secondaryNode;
     BOOL _isPointerViewActive;
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
-@property (nonatomic, retain) MenuNode *experimentsNode;
+@property (nonatomic, retain) HeadlessDataNode *experimentsNode;
 @property (nonatomic, retain) Pointers *pointers;
 @end
 
@@ -35,8 +35,8 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _primaryNode = [[MenuNode alloc] init];
-        _secondaryNode = [[MenuNode alloc] init];
+        _primaryNode = [[HeadlessDataNode alloc] init];
+        _secondaryNode = [[HeadlessDataNode alloc] init];
         
         XMLMenuParser *parse = [[XMLMenuParser alloc] init];
         [parse parseFile:@"Headless.xml" primary:_primaryNode secondary:_secondaryNode];
@@ -147,7 +147,7 @@
     }
 
     if (indexPath.section == 0) {
-        MenuNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
+        HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
         cell.textLabel.text = node.name;
     } else if (indexPath.section == 1) {
         cell.textLabel.text = @"Alarm Settings";
@@ -201,8 +201,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        MenuNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
-        if (node.type == kMenuNodeTypeMenu) {
+        HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
+        if (node.type == kDataNodeTypeMenu) {
             [self performSegueWithIdentifier:@"segueIdMainMenuToSubmenuLinks" sender:self];
         } else {
             [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
@@ -257,8 +257,8 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
     if (indexPath.section == 0) {
-        MenuNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
-        if (node.type == kMenuNodeTypeMenu) {
+        HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
+        if (node.type == kDataNodeTypeMenu) {
             HeadlessSubMenuTableViewController *controller = [segue destinationViewController];
             controller.node = node;
         } else {
