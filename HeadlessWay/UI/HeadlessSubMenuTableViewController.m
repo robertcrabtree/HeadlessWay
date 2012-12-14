@@ -141,7 +141,7 @@
         HeadlessBrowserViewController *controller = [segue destinationViewController];
         controller.node = n;
         if (self.node.isExperimentMenu) {
-            controller.experimentMenuNode = node;
+            controller.experimentSubmenu = node;
         }
     }
 }

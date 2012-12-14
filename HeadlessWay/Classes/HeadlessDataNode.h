@@ -22,7 +22,6 @@ typedef enum {
 
 @property (nonatomic, assign) HeadlessDataNodeType type;
 @property (nonatomic, assign) BOOL isExperimentMenu;
-@property (nonatomic, assign) BOOL isExperimentLink;
 @property (nonatomic, assign) BOOL isVideo;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;

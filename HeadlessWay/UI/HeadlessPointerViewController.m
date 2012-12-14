@@ -17,7 +17,7 @@
 
 @implementation HeadlessPointerViewController
 
-@synthesize experimentsNode, pointers, buttonRefresh, buttonExperiment, textView, alarmFired;
+@synthesize experimentSubmenu, pointers, buttonRefresh, buttonExperiment, textView, alarmFired;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +30,7 @@
 
 - (void)dealloc
 {
-    [experimentsNode release];
+    [experimentSubmenu release];
     [pointers release];
     [buttonRefresh release];
     [buttonExperiment release];
@@ -126,10 +126,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    HeadlessDataNode *randomExperiment = experimentsNode.randomExperiment;
+    HeadlessDataNode *randomExperiment = experimentSubmenu.randomExperiment;
     HeadlessBrowserViewController *controller = [segue destinationViewController];
     controller.node = randomExperiment;
-    controller.experimentMenuNode = experimentsNode;
+    controller.experimentSubmenu = experimentSubmenu;
 }
 
 @end

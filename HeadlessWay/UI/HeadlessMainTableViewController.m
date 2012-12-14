@@ -21,13 +21,13 @@
     BOOL _isPointerViewActive;
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
-@property (nonatomic, retain) HeadlessDataNode *experimentsNode;
+@property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
 @property (nonatomic, retain) Pointers *pointers;
 @end
 
 @implementation HeadlessMainTableViewController
 
-@synthesize buttonPointer, experimentsNode, pointers;
+@synthesize buttonPointer, experimentSubmenu, pointers;
 
 //#define _TEST_NOTIFICATION 1
 
@@ -40,7 +40,7 @@
         
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
         [parse parseFile:@"Headless.xml" primary:_primaryNode secondary:_secondaryNode];
-        experimentsNode = [parse.experiments retain];
+        experimentSubmenu = [parse.experiments retain];
         [parse release];
         _isPointerViewActive = NO;
     }
@@ -55,7 +55,7 @@
         _isPointerViewActive = YES;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
-        pointerView.experimentsNode = experimentsNode;
+        pointerView.experimentSubmenu = experimentSubmenu;
         pointerView.pointers = self.pointers;
         pointerView.alarmFired = alarmFired;
         
@@ -107,7 +107,7 @@
     [_primaryNode release];
     [_secondaryNode release];
     [buttonPointer release];
-    [experimentsNode release];
+    [experimentSubmenu release];
     [super dealloc];
 }
 

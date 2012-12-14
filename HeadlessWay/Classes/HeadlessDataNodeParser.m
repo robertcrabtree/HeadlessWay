@@ -56,11 +56,6 @@
                     } else if ([attrValue isEqualToString:@"webdata"]) {
                         HeadlessDataNode *node = [[HeadlessDataNode alloc] initWithElement:element];
                         if (node) {
-                            TBXMLElement *parent = element->parentElement;
-                            NSString *specialValue = [TBXML valueOfAttributeNamed:@"special" forElement:parent];
-                            if (specialValue) {
-                                node.isExperimentLink = YES;
-                            }
                             [nodes addObject:node];
                             if (element->firstChild)
                                 [self traverseElement:element->firstChild array:nodes];

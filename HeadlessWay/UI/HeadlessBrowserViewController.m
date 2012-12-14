@@ -15,7 +15,7 @@
 
 @implementation HeadlessBrowserViewController
 
-@synthesize webView, buttonBack, buttonForward, node, experimentMenuNode;
+@synthesize webView, buttonBack, buttonForward, node, experimentSubmenu;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,13 +32,13 @@
     [buttonBack release];
     [buttonForward release];
     [node release];
-    [experimentMenuNode release];
+    [experimentSubmenu release];
     [super dealloc];
 }
 
 - (void)actionNext:(id)sender
 {
-    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.experimentMenuNode.randomExperiment.url]];
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.experimentSubmenu.randomExperiment.url]];
     [self.webView loadRequest:requestURL];
 }
 
@@ -119,7 +119,7 @@
         NSLog(@"Error: invalid node type in browser");
     }
 
-    if (self.experimentMenuNode != nil) {
+    if (self.experimentSubmenu != nil) {
         UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next Experiment" style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
         self.navigationItem.rightBarButtonItem = nextButton;
         [nextButton release];

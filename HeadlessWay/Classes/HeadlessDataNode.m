@@ -10,7 +10,7 @@
 
 @implementation HeadlessDataNode
 
-@synthesize type, isExperimentMenu, isExperimentLink, isVideo, name, url, children, randomExperiment;
+@synthesize type, isExperimentMenu, isVideo, name, url, children, randomExperiment;
 
 - (id) init
 {
@@ -20,7 +20,6 @@
         url = nil;
         type = kDataNodeTypeSubMenu;
         isExperimentMenu = NO;
-        isExperimentLink = NO;
         children = [[NSMutableArray alloc] init];
     }
     return self;
