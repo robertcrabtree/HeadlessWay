@@ -40,7 +40,8 @@
     for (int i = 0; i < alarms.count; i++) {
         AlarmNode *node = [alarms objectAtIndex:i];
         [fileData addObject:[node saveString]];
-        [node getAllTimes:times];
+        if (node.enabled)
+            [node getAllTimes:times];
     }
     
     // save our text file with notification information (times and repeat info)
