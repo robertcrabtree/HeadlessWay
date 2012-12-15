@@ -23,17 +23,16 @@
 
 #warning need to test alarm saving again since modifications to AlarmNode were made
 
-#warning select and deselect row when editing/adding done
-
 @property (nonatomic, retain) AlarmNode *addingNode;
 @property (nonatomic, retain) AlarmNode *editingNode;
+@property (nonatomic, retain) AlarmNode *highlightNode;
 @property (nonatomic, assign) NSInteger editingIndex;
 
 @end
 
 @implementation HeadlessAlarmTableViewController
 
-@synthesize addingNode, editingNode, editingIndex;
+@synthesize addingNode, editingNode, highlightNode, editingIndex;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -68,6 +67,7 @@
     [_labelNoAlarms release];
     [addingNode release];
     [editingNode release];
+    [highlightNode release];
     [super dealloc];
 }
 
@@ -247,6 +247,7 @@
             if (![self checkDuplicates:self.addingNode skipIndex:-1]) {
                 [_alarms addObject:self.addingNode];
                 [self saveData];
+                self.highlightNode = self.addingNode;
             }
         }
         self.addingNode = nil;
@@ -258,6 +259,7 @@
                 editMe.time = self.editingNode.time;
                 editMe.repeat = self.editingNode.repeat;
                 [self saveData];
+                self.highlightNode = editMe;
             }
         }
         self.editingNode = nil;
@@ -284,6 +286,23 @@
         }];
     }
     [self.tableView reloadData];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.highlightNode) {
+        for (int i = 0; i < _alarms.count; i++) {
+            AlarmNode *n = [_alarms objectAtIndex:i];
+            if (n == self.highlightNode) {
+                NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];
+                [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+                [self.tableView selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+                [self.tableView deselectRowAtIndexPath:path animated:YES];
+            }
+        }
+        self.highlightNode = nil;
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated
