@@ -12,6 +12,5 @@
 @class HeadlessDataNode;
 
 @interface HeadlessDataNodeParser : NSObject
-- (void) parseFile:(NSString *)fileName primary:(HeadlessDataNode*)primary secondary:(HeadlessDataNode*)secondary;
-@property (nonatomic, readonly) HeadlessDataNode *experiments;
+- (HeadlessDataNode*) parseFile:(NSString *)fileName;
 @end

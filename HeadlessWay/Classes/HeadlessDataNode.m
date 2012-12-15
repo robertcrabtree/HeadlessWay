@@ -10,7 +10,14 @@
 
 @implementation HeadlessDataNode
 
+static HeadlessDataNode* _gExperimentMenu = nil;
+
 @synthesize type, isExperimentMenu, name, url, children, randomExperiment;
+
++ (HeadlessDataNode*) experimentMenu
+{
+    return _gExperimentMenu;
+}
 
 - (id) init
 {
@@ -25,39 +32,78 @@
     return self;
 }
 
+
+////////////////////////////////////////////////////////////////////////
+
+- (void)initAttributes:(TBXMLElement *)elmt
+{
+    NSString *typeStr = [TBXML valueOfAttributeNamed:@"type" forElement:elmt];
+    NSString *specialStr = [TBXML valueOfAttributeNamed:@"special" forElement:elmt];
+
+    if ([typeStr isEqualToString:@"root"]) {
+        type = kDataNodeTypeRoot;
+    } else if ([typeStr isEqualToString:@"group"]) {
+        type = kDataNodeTypeGroup;
+    } else if ([typeStr isEqualToString:@"submenu"]) {
+        type = kDataNodeTypeSubMenu;
+    } else if ([typeStr isEqualToString:@"webdata"]) {
+        type = kDataNodeTypeWebData;
+    } else if ([typeStr isEqualToString:@"webpage"]) {
+        type = kDataNodeTypeWebPageFull;
+    } else if ([typeStr isEqualToString:@"youtube"]) {
+        type = kDataNodeTypeYoutube;
+    }
+
+    if ([specialStr isEqualToString:@"experiment"]) {
+        isExperimentMenu = YES;
+        if (_gExperimentMenu && self != _gExperimentMenu) {
+            [_gExperimentMenu release];
+        }
+        _gExperimentMenu = [self retain];
+    }
+}
+
+- (void)initData:(TBXMLElement *)elmt
+{
+    TBXMLElement *elmtName = [TBXML childElementNamed:@"name" parentElement:elmt];
+    TBXMLElement *elmtUrl = [TBXML childElementNamed:@"url" parentElement:elmt];
+    
+    if (elmtName)
+        name = [[TBXML textForElement:elmtName] retain];
+    
+    if (elmtUrl)
+        url = [[TBXML textForElement:elmtUrl] retain];
+}
+
+- (void)initChildren:(TBXMLElement *)elmt
+{
+    TBXMLElement *child = [TBXML childElementNamed:@"node" parentElement:elmt];
+    if (child) {
+        do {
+            HeadlessDataNode *childNode = [[HeadlessDataNode alloc] initWithElement:child];
+            [children addObject:childNode];
+            [childNode release];
+        } while ((child = child->nextSibling));
+    }
+}
+
 - (id) initWithElement:(TBXMLElement *)elmt
 {
     self = [self init];
     if (self) {
-        
-        TBXMLElement *child = elmt->firstChild;
-        TBXMLAttribute *attribute = elmt->firstAttribute;
-        NSString *attrValue = [TBXML attributeValue:attribute];
-        if ([attrValue isEqualToString:@"submenu"]) {
-            type = kDataNodeTypeSubMenu;
-        } else if ([attrValue isEqualToString:@"webdata"]) {
-            type = kDataNodeTypeWebData;
-        } else if ([attrValue isEqualToString:@"webpage"]) {
-            type = kDataNodeTypeWebPageFull;
-        } else if ([attrValue isEqualToString:@"youtube"]) {
-            type = kDataNodeTypeYoutube;
-        } else {
-            NSLog(@"Error: invalid node type");
-        }
-
-        do {
-            NSString *elmtName = [TBXML elementName:child];
-            
-            if ([elmtName isEqualToString:@"name"])
-                name = [[TBXML textForElement:child] retain];
-            
-            if ([elmtName isEqualToString:@"url"]) {
-                url = [[TBXML textForElement:child] retain];
-            }
-        } while ((child = child->nextSibling));
+        [self setElement:elmt];
     }
     return self;
 }
+
+- (void) setElement:(TBXMLElement *)elmt
+{
+    [self initAttributes:elmt];
+    [self initData:elmt];
+    [self initChildren:elmt];
+}
+
+////////////////////////////////////////////////////////////////////////
 
 - (HeadlessDataNode*)randomExperiment
 {
@@ -68,6 +114,7 @@
 
 - (void)dealloc
 {
+    [_gExperimentMenu release];
     [name release];
     [url release];
     [children release];

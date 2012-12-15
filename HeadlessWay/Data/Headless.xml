@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
-    <primary>
+    <node type="group">
         <node type="webdata">
             <name>Home</name>
             <url>http://www.headless.org/headless-app/english-welcome.htm</url>
@@ -218,23 +218,26 @@
                 <url>http://www.youtube.com/v/zBHpGKmIjFE</url>
             </node>
         </node>
-    </primary>
-    <secondary>
-        <node type="webpage">
-            <name>Full Website</name>
-            <url navigation="yes">http://headless.org</url>
+    </node>
+    <node type="group">
+        <node type="submenu">
+            <name>Resources</name>
+            <node type="webpage">
+                <name>Full Website</name>
+                <url navigation="yes">http://headless.org</url>
+            </node>
+            <node type="webpage">
+                <name>Reflections e-course Signup</name>
+                <url navigation="yes">http://headless.org/reflections-subscribe.htm</url>
+            </node>
+            <node type="webpage">
+                <name>No-Facebook</name>
+                <url navigation="yes">https://www.facebook.com/groups/richardlang/</url>
+            </node>
+            <node type="webpage">
+                <name>Twitter</name>
+                <url navigation="yes">https://twitter.com/headexchange</url>
+            </node>
         </node>
-        <node type="webpage">
-            <name>Reflections e-course Signup</name>
-            <url navigation="yes">http://headless.org/reflections-subscribe.htm</url>
-        </node>
-        <node type="webpage">
-            <name>No-Facebook</name>
-            <url navigation="yes">https://www.facebook.com/groups/richardlang/</url>
-        </node>
-        <node type="webpage">
-            <name>Twitter</name>
-            <url navigation="yes">https://twitter.com/headexchange</url>
-        </node>
-    </secondary>
+    </node>
 </root>

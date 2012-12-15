@@ -16,8 +16,7 @@
 #import "HeadlessAlarmRouter.h"
 
 @interface HeadlessMainTableViewController () {
-    HeadlessDataNode *_primaryNode;
-    HeadlessDataNode *_secondaryNode;
+    HeadlessDataNode *_rootNode;
     BOOL _isPointerViewActive;
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
@@ -35,12 +34,8 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _primaryNode = [[HeadlessDataNode alloc] init];
-        _secondaryNode = [[HeadlessDataNode alloc] init];
-        
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
-        [parse parseFile:@"Headless.xml" primary:_primaryNode secondary:_secondaryNode];
-        experimentSubmenu = [parse.experiments retain];
+        _rootNode = [[parse parseFile:@"Headless.xml"] retain];
         [parse release];
         _isPointerViewActive = NO;
     }
@@ -55,7 +50,7 @@
         _isPointerViewActive = YES;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
-        pointerView.experimentSubmenu = experimentSubmenu;
+        pointerView.experimentSubmenu = [HeadlessDataNode experimentMenu];
         pointerView.pointers = self.pointers;
         pointerView.alarmFired = alarmFired;
         
@@ -104,8 +99,7 @@
 
 - (void)dealloc
 {
-    [_primaryNode release];
-    [_secondaryNode release];
+    [_rootNode release];
     [buttonPointer release];
     [experimentSubmenu release];
     [super dealloc];
@@ -131,9 +125,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    if (section == 0)
-        return _primaryNode.children.count;
+    if (section < _rootNode.children.count) {
+        return ((HeadlessDataNode*) [_rootNode.children objectAtIndex:section]).children.count;
+    }
     return 1;
 }
 
@@ -145,19 +139,20 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-
-    if (indexPath.section == 0) {
-        HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
+    
+    if (indexPath.section < _rootNode.children.count) {
+        HeadlessDataNode *groupNode = [_rootNode.children objectAtIndex:indexPath.section];
+        
+        HeadlessDataNode *node = [groupNode.children objectAtIndex:indexPath.row];
         cell.textLabel.text = node.name;
-    } else if (indexPath.section == 1) {
-        cell.textLabel.text = @"Alarm Settings";
-    } else if (indexPath.section == 2) {
-        cell.textLabel.text = @"Resources";
+    } else if (indexPath.section == _rootNode.children.count) {
+        cell.textLabel.text = @"Alarm settings";
     } else {
 #ifdef _TEST_NOTIFICATION
         cell.textLabel.text = @"(( xxx TEST xxx ))";
 #endif
     }
+    
     return cell;
 }
 
@@ -200,17 +195,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
+    if (indexPath.section < _rootNode.children.count) {
+        HeadlessDataNode *groupNode = [_rootNode.children objectAtIndex:indexPath.section];
+        
+        HeadlessDataNode *node = [groupNode.children objectAtIndex:indexPath.row];
         if (node.type == kDataNodeTypeSubMenu) {
-            [self performSegueWithIdentifier:@"segueIdMainMenuToSubmenuLinks" sender:self];
-        } else {
+            [self performSegueWithIdentifier:@"segueIdMainMenuToSubmenu" sender:self];
+        } else if (node.type == kDataNodeTypeWebData || node.type == kDataNodeTypeWebPageFull) {
+            [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
+        } else if (node.type == kDataNodeTypeYoutube) {
             [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
         }
-    } else if (indexPath.section == 1) {
+    } else if (indexPath.section == _rootNode.children.count) {
         [self performSegueWithIdentifier:@"segueIdMainMenuToNotification" sender:self];
-    } else if (indexPath.section == 2) {
-        [self performSegueWithIdentifier:@"segueIdMainMenuToSubmenuMore" sender:self];
     } else {
 #ifdef _TEST_NOTIFICATION
         [self testNotification];
@@ -256,8 +253,10 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
-    if (indexPath.section == 0) {
-        HeadlessDataNode *node = [_primaryNode.children objectAtIndex:indexPath.row];
+    if (indexPath.section < _rootNode.children.count) {
+        HeadlessDataNode *groupNode = [_rootNode.children objectAtIndex:indexPath.section];
+
+        HeadlessDataNode *node = [groupNode.children objectAtIndex:indexPath.row];
         if (node.type == kDataNodeTypeSubMenu) {
             HeadlessSubMenuTableViewController *controller = [segue destinationViewController];
             controller.node = node;
@@ -265,11 +264,6 @@
             HeadlessBrowserViewController *controller = [segue destinationViewController];
             controller.node = node;
         }
-    } else if (indexPath.section == 1) {
-        // no-op
-    } else if (indexPath.section == 2) {
-        HeadlessSubMenuTableViewController *controller = [segue destinationViewController];
-        controller.node = _secondaryNode;
     }
 }
 
