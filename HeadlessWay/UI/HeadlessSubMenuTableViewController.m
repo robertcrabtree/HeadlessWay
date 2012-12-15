@@ -30,7 +30,7 @@
 - (void)dealloc
 {
     [node release];
-[super dealloc];
+    [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -54,12 +54,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return node.children.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return node.children.count;
+    HeadlessDataNode *group = [node.children objectAtIndex:section];
+    return group.children.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,10 +71,18 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-
-    HeadlessDataNode *n = [node.children objectAtIndex:indexPath.row];
+    
+    HeadlessDataNode *groupNode = [node.children objectAtIndex:indexPath.section];
+    HeadlessDataNode *n = [groupNode.children objectAtIndex:indexPath.row];
     cell.textLabel.text = n.name;
+
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    HeadlessDataNode *group = [node.children objectAtIndex:section];
+    return group.name;
 }
 
 /*
@@ -120,11 +129,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    HeadlessDataNode *n = [node.children objectAtIndex:indexPath.row];
+    HeadlessDataNode *group = [self.node.children objectAtIndex:indexPath.section];
+    HeadlessDataNode *n = [group.children objectAtIndex:indexPath.row];
+    
     if (n.type == kDataNodeTypeSubMenu) {
         HeadlessSubMenuTableViewController *subMenu = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"StoryboardIdSubMenu"];
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
+    } else if (n.type == kDataNodeTypeYoutube) {
+        NSURL *url = [NSURL URLWithString:n.url];
+        [[UIApplication sharedApplication] openURL:url];
     } else {
         [self performSegueWithIdentifier:@"segueIdSubMenuToBrowser" sender:self];
     }
@@ -133,15 +147,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    HeadlessDataNode *n = [self.node.children objectAtIndex:indexPath.row];
+    HeadlessDataNode *group = [self.node.children objectAtIndex:indexPath.section];
+    HeadlessDataNode *n = [group.children objectAtIndex:indexPath.row];
     
     if (n.type == kDataNodeTypeSubMenu) {
         NSLog(@"Error: we don't support recursive segue yet");
     } else {
         HeadlessBrowserViewController *controller = [segue destinationViewController];
         controller.node = n;
-        if (self.node.isExperimentMenu) {
-            controller.experimentSubmenu = node;
+        if (group.isExperimentMenu) {
+            controller.experimentSubmenu = group;
         }
     }
 }

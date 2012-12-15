@@ -5,176 +5,184 @@
             <name>Home</name>
             <url>http://www.headless.org/headless-app/english-welcome.htm</url>
         </node>
-        <node type="submenu" special="experiment">
+        <node type="submenu">
             <name>Experiments</name>
-            <node type="webdata">
-                <name>Touch</name>
-                <url>http://www.headless.org/headless-app/experiments/touch.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Two-Way Pointing</name>
-                <url>http://www.headless.org/headless-app/experiments/2-way-pointing.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Being All Things</name>
-                <url>http://www.headless.org/headless-app/experiments/being-all-things.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Closed Eyes</name>
-                <url>http://www.headless.org/headless-app/experiments/closed-eyes.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Handling Problems</name>
-                <url>http://www.headless.org/headless-app/experiments/handling-problem.htms</url>
-            </node>
-            <node type="webdata">
-                <name>In-seeing Experiements For the Blind</name>
-                <url>http://www.headless.org/headless-app/experiments/inseeing-experiments-for-the-blind.htm</url>
-            </node>
-            <node type="webdata">
-                <name>No Head Circle</name>
-                <url>http://www.headless.org/headless-app/experiments/no-head-circle.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Pointing</name>
-                <url>http://www.headless.org/headless-app/experiments/pointing.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Seeing Who You Are</name>
-                <url>http://www.headless.org/headless-app/experiments/seeing-who-you-are.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Seeing Your Nose</name>
-                <url>http://www.headless.org/headless-app/experiments/seeing-your-nose.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Spinning The World</name>
-                <url>http://www.headless.org/headless-app/experiments/spinning-the-world.htm</url>
-            </node>
-            <node type="webdata">
-                <name>The Bottom Line</name>
-                <url>http://www.headless.org/headless-app/experiments/the-bottom-line.htm</url>
-            </node>
-            <node type="webdata">
-                <name>The Mirror</name>
-                <url>http://www.headless.org/headless-app/experiments/the-mirror.htm</url>
-            </node>
-            <node type="webdata">
-                <name>The Single Eye</name>
-                <url>http://www.headless.org/headless-app/experiments/the-single-eye.htm</url>
-            </node>
-            <node type="webdata">
-                <name>The Tube</name>
-                <url>http://www.headless.org/headless-app/experiments/the-tube.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Time</name>
-                <url>http://www.headless.org/headless-app/experiments/time.htm</url>
+            <node type="group" special="experiment">
+                <node type="webdata">
+                    <name>Touch</name>
+                    <url>http://www.headless.org/headless-app/experiments/touch.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Two-Way Pointing</name>
+                    <url>http://www.headless.org/headless-app/experiments/2-way-pointing.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Being All Things</name>
+                    <url>http://www.headless.org/headless-app/experiments/being-all-things.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Closed Eyes</name>
+                    <url>http://www.headless.org/headless-app/experiments/closed-eyes.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Handling Problems</name>
+                    <url>http://www.headless.org/headless-app/experiments/handling-problem.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>In-seeing Experiements For the Blind</name>
+                    <url>http://www.headless.org/headless-app/experiments/inseeing-experiments-for-the-blind.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>No Head Circle</name>
+                    <url>http://www.headless.org/headless-app/experiments/no-head-circle.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Pointing</name>
+                    <url>http://www.headless.org/headless-app/experiments/pointing.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Seeing Who You Are</name>
+                    <url>http://www.headless.org/headless-app/experiments/seeing-who-you-are.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Seeing Your Nose</name>
+                    <url>http://www.headless.org/headless-app/experiments/seeing-your-nose.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Spinning The World</name>
+                    <url>http://www.headless.org/headless-app/experiments/spinning-the-world.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>The Bottom Line</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-bottom-line.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>The Mirror</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-mirror.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>The Single Eye</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-single-eye.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>The Tube</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-tube.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Time</name>
+                    <url>http://www.headless.org/headless-app/experiments/time.htm</url>
+                </node>
             </node>
         </node>
         <node type="submenu">
             <name>Articles</name>
-            <node type="webdata">
-                <name>Useful Tool</name>
-                <url>http://www.headless.org/headless-app/articles/useful-tool.htm</url>
-            </node>
-            <node type="webdata">
-                <name>A True Beginning</name>
-                <url>http://www.headless.org/headless-app/articles/a-true-beginning.htm</url>
-            </node>
-            <node type="webdata">
-                <name>A View of Bankei</name>
-                <url>http://www.headless.org/headless-app/articles/a-view-of-bankei.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Confrontation</name>
-                <url>http://www.headless.org/headless-app/articles/confrontation.htm</url>
-            </node>
-            <node type="webdata">
-                <name>De Adhaerendo Deo</name>
-                <url>http://www.headless.org/headless-app/articles/de-adhaerendo-deo.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Descartes</name>
-                <url>http://www.headless.org/headless-app/articles/descartes.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Discovering Who You Are</name>
-                <url>http://www.headless.org/headless-app/articles/discovering-who-you-are.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Douglas Dying</name>
-                <url>http://www.headless.org/headless-app/articles/douglas-dying.htm</url>
+            <node type="group">
+                <node type="webdata">
+                    <name>Useful Tool</name>
+                    <url>http://www.headless.org/headless-app/articles/useful-tool.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>A True Beginning</name>
+                    <url>http://www.headless.org/headless-app/articles/a-true-beginning.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>A View of Bankei</name>
+                    <url>http://www.headless.org/headless-app/articles/a-view-of-bankei.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Confrontation</name>
+                    <url>http://www.headless.org/headless-app/articles/confrontation.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>De Adhaerendo Deo</name>
+                    <url>http://www.headless.org/headless-app/articles/de-adhaerendo-deo.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Descartes</name>
+                    <url>http://www.headless.org/headless-app/articles/descartes.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Discovering Who You Are</name>
+                    <url>http://www.headless.org/headless-app/articles/discovering-who-you-are.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Douglas Dying</name>
+                    <url>http://www.headless.org/headless-app/articles/douglas-dying.htm</url>
+                </node>
             </node>
         </node>
         <node type="submenu">
             <name>Douglas Harding</name>
-            <node type="webdata">
-                <name>Experience and Meaning</name>
-                <url>http://www.headless.org/headless-app/articles/experience-and-meaning.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Face To No Face</name>
-                <url>http://www.headless.org/headless-app/articles/face-to-no-face.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Gordian Knot</name>
-                <url>http://www.headless.org/headless-app/articles/gordian-knot.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Handling Problems</name>
-                <url>http://www.headless.org/headless-app/articles/handling-problems.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Hardings Tip</name>
-                <url>http://www.headless.org/headless-app/articles/hardings-tip.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Headless Performance</name>
-                <url>http://www.headless.org/headless-app/articles/headless-performance.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Impression</name>
-                <url>http://www.headless.org/headless-app/articles/impression.htm</url>
-            </node>
-            <node type="webdata">
-                <name>In Memoriam</name>
-                <url>http://www.headless.org/headless-app/articles/in-memoriam.htm</url>
+            <node type="group">
+                <node type="webdata">
+                    <name>Experience and Meaning</name>
+                    <url>http://www.headless.org/headless-app/articles/experience-and-meaning.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Face To No Face</name>
+                    <url>http://www.headless.org/headless-app/articles/face-to-no-face.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Gordian Knot</name>
+                    <url>http://www.headless.org/headless-app/articles/gordian-knot.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Handling Problems</name>
+                    <url>http://www.headless.org/headless-app/articles/handling-problems.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Hardings Tip</name>
+                    <url>http://www.headless.org/headless-app/articles/hardings-tip.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Headless Performance</name>
+                    <url>http://www.headless.org/headless-app/articles/headless-performance.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Impression</name>
+                    <url>http://www.headless.org/headless-app/articles/impression.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>In Memoriam</name>
+                    <url>http://www.headless.org/headless-app/articles/in-memoriam.htm</url>
+                </node>
             </node>
         </node>
         <node type="submenu">
             <name>Mind Blowing Stuff</name>
-            <node type="webdata">
-                <name>Letters From Home</name>
-                <url>http://www.headless.org/headless-app/articles/letters-from-home.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Letter To Martin</name>
-                <url>http://www.headless.org/headless-app/articles/letter-to-martin.htm</url>
-            </node>
-            <node type="webdata">
-                <name>My Special Friend</name>
-                <url>http://www.headless.org/headless-app/articles/my-special-friend.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Not In Prison</name>
-                <url>http://www.headless.org/headless-app/articles/not-in-prison.htm</url>
-            </node>
-            <node type="webdata">
-                <name>On Being Aware</name>
-                <url>http://www.headless.org/headless-app/articles/on-being-aware.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Remarks On Enlightenment</name>
-                <url>http://www.headless.org/headless-app/articles/remarks-on-enlightenment.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Results</name>
-                <url>http://www.headless.org/headless-app/articles/results.htm</url>
-            </node>
-            <node type="webdata">
-                <name>Sharing With Children</name>
-                <url>http://www.headless.org/headless-app/articles/sharing-with-children.htm</url>
+            <node type="group">
+                <node type="webdata">
+                    <name>Letters From Home</name>
+                    <url>http://www.headless.org/headless-app/articles/letters-from-home.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Letter To Martin</name>
+                    <url>http://www.headless.org/headless-app/articles/letter-to-martin.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>My Special Friend</name>
+                    <url>http://www.headless.org/headless-app/articles/my-special-friend.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Not In Prison</name>
+                    <url>http://www.headless.org/headless-app/articles/not-in-prison.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>On Being Aware</name>
+                    <url>http://www.headless.org/headless-app/articles/on-being-aware.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Remarks On Enlightenment</name>
+                    <url>http://www.headless.org/headless-app/articles/remarks-on-enlightenment.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Results</name>
+                    <url>http://www.headless.org/headless-app/articles/results.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Sharing With Children</name>
+                    <url>http://www.headless.org/headless-app/articles/sharing-with-children.htm</url>
+                </node>
             </node>
         </node>
         <!--
@@ -185,58 +193,70 @@
          -->
         <node type="submenu">
             <name>Video</name>
-            <node type="youtube">
-                <name>Who Are We Really (part 1A)</name>
-                <url>http://www.youtube.com/v/oHcjkdo3cO8</url>
+            <node type="group">
+                <name>Who Are We Really</name>
+                <node type="youtube">
+                    <name>part 1A</name>
+                    <url>http://www.youtube.com/v/oHcjkdo3cO8</url>
+                </node>
+                <node type="youtube">
+                    <name>part 1B</name>
+                    <url>http://www.youtube.com/v/gHfD8ozxXhA</url>
+                </node>
+                <node type="youtube">
+                    <name>part 2A</name>
+                    <url>http://www.youtube.com/v/zQLuV7YQBsE</url>
+                </node>
+                <node type="youtube">
+                    <name>part 2B</name>
+                    <url>http://www.youtube.com/v/9G4Rk-S6188</url>
+                </node>
+                <node type="youtube">
+                    <name>part 3A</name>
+                    <url>http://www.youtube.com/v/fp8CXjShggk</url>
+                </node>
+                <node type="youtube">
+                    <name>part 3B</name>
+                    <url>http://www.youtube.com/v/llWCHO2ivUg</url>
+                </node>
+                <node type="youtube">
+                    <name>part 4A</name>
+                    <url>http://www.youtube.com/v/hU3pSxOSsBk</url>
+                </node>
+                <node type="youtube">
+                    <name>part 4B</name>
+                    <url>http://www.youtube.com/watch?v=zBHpGKmIjFE</url>
+                </node>
             </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 1B)</name>
-                <url>http://www.youtube.com/v/gHfD8ozxXhA</url>
-            </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 2A)</name>
-                <url>http://www.youtube.com/v/zQLuV7YQBsE</url>
-            </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 2B)</name>
-                <url>http://www.youtube.com/v/9G4Rk-S6188</url>
-            </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 3A)</name>
-                <url>http://www.youtube.com/v/fp8CXjShggk</url>
-            </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 3B)</name>
-                <url>http://www.youtube.com/v/llWCHO2ivUg</url>
-            </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 4A)</name>
-                <url>http://www.youtube.com/v/hU3pSxOSsBk</url>
-            </node>
-            <node type="youtube">
-                <name>Who Are We Really (part 4B)</name>
-                <url>http://www.youtube.com/v/zBHpGKmIjFE</url>
+            <node type="group">
+                <name>Other</name>
+                <node type="youtube">
+                    <name>Touching Eternity</name>
+                    <url>http://www.youtube.com/watch?v=x2rLq1KuGCk</url>
+                </node>
             </node>
         </node>
     </node>
     <node type="group">
         <node type="submenu">
             <name>Resources</name>
-            <node type="webpage">
-                <name>Full Website</name>
-                <url navigation="yes">http://headless.org</url>
-            </node>
-            <node type="webpage">
-                <name>Reflections e-course Signup</name>
-                <url navigation="yes">http://headless.org/reflections-subscribe.htm</url>
-            </node>
-            <node type="webpage">
-                <name>No-Facebook</name>
-                <url navigation="yes">https://www.facebook.com/groups/richardlang/</url>
-            </node>
-            <node type="webpage">
-                <name>Twitter</name>
-                <url navigation="yes">https://twitter.com/headexchange</url>
+            <node type="group">
+                <node type="webpage">
+                    <name>Full Website</name>
+                    <url navigation="yes">http://headless.org</url>
+                </node>
+                <node type="webpage">
+                    <name>Reflections e-course Signup</name>
+                    <url navigation="yes">http://headless.org/reflections-subscribe.htm</url>
+                </node>
+                <node type="webpage">
+                    <name>No-Facebook</name>
+                    <url navigation="yes">https://www.facebook.com/groups/richardlang/</url>
+                </node>
+                <node type="webpage">
+                    <name>Twitter</name>
+                    <url navigation="yes">https://twitter.com/headexchange</url>
+                </node>
             </node>
         </node>
     </node>

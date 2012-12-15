@@ -156,6 +156,17 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *title = @"";
+    if (section < _rootNode.children.count) {
+        HeadlessDataNode *groupNode = [_rootNode.children objectAtIndex:section];
+        title = groupNode.name;
+    }
+    
+    return title;
+}
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return NO;
@@ -204,7 +215,8 @@
         } else if (node.type == kDataNodeTypeWebData || node.type == kDataNodeTypeWebPageFull) {
             [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
         } else if (node.type == kDataNodeTypeYoutube) {
-            [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
+            NSURL *url = [NSURL URLWithString:node.url];
+            [[UIApplication sharedApplication] openURL:url];
         }
     } else if (indexPath.section == _rootNode.children.count) {
         [self performSegueWithIdentifier:@"segueIdMainMenuToNotification" sender:self];
