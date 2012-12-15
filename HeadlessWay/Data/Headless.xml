@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<root>
+<node type="root">
     <node type="group">
         <node type="webdata">
             <name>Home</name>
@@ -240,4 +240,4 @@
             </node>
         </node>
     </node>
-</root>
+</node>
