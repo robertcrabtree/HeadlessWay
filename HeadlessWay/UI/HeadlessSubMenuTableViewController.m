@@ -137,6 +137,7 @@
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
     } else if (n.type == kDataNodeTypeYoutube) {
+#warning deselect row when coming back from video player
         NSURL *url = [NSURL URLWithString:n.url];
         [[UIApplication sharedApplication] openURL:url];
     } else {

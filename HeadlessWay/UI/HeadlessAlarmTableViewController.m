@@ -21,9 +21,9 @@
     UILabel *_labelNoAlarms;
 }
 
-#warning seem to be having issues when lots of alarms are created
-
 #warning need to test alarm saving again since modifications to AlarmNode were made
+
+#warning select and deselect row when editing/adding done
 
 @property (nonatomic, retain) AlarmNode *addingNode;
 @property (nonatomic, retain) AlarmNode *editingNode;
@@ -132,6 +132,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     AlarmNode *node = [_alarms objectAtIndex:indexPath.row];
     node.enabled = switchView.on;
+    [self saveData];
 }
 
 -(void)toggleButtonEdit:(BOOL)edit
