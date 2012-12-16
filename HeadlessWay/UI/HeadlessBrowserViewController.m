@@ -114,6 +114,11 @@
         [self.webView stopLoading];
     [self.webView setDelegate:nil];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
+    if (self.node.type == kDataNodeTypeWebPageFull) {
+        [self.navigationController setToolbarHidden:YES animated:YES];
+    }
+    
     [super viewWillDisappear:animated];
 }
 
