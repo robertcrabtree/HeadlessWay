@@ -11,7 +11,6 @@
 #import "HeadlessDataNode.h"
 
 @interface HeadlessSubMenuTableViewController ()
-
 @end
 
 @implementation HeadlessSubMenuTableViewController
@@ -137,7 +136,7 @@
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
     } else if (n.type == kDataNodeTypeYoutube) {
-#warning deselect row when coming back from video player
+        [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
         NSURL *url = [NSURL URLWithString:n.url];
         [[UIApplication sharedApplication] openURL:url];
     } else {
