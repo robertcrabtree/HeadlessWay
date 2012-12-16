@@ -286,23 +286,43 @@
         }];
     }
     [self.tableView reloadData];
+    
+    // first let's scroll to the newly added or modified cell
+    // in viewDidAppear we will select and deselect the cell
+    // so the user knows what changes they made
+    if (self.highlightNode) {
+        NSIndexPath *path = [self findIndexPath:self.highlightNode];
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
+        
+        // only scroll if not already visible
+        if (![[self.tableView visibleCells] containsObject:cell]) {
+            [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+    }
+}
+
+-(NSIndexPath*)findIndexPath:(AlarmNode*)node
+{
+    for (int i = 0; i < _alarms.count; i++) {
+        AlarmNode *n = [_alarms objectAtIndex:i];
+        if (n == node) {
+            return [NSIndexPath indexPathForRow:i inSection:0];
+        }
+    }
+    return nil;
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    // highlight the last edited or added cell
     if (self.highlightNode) {
-        for (int i = 0; i < _alarms.count; i++) {
-            AlarmNode *n = [_alarms objectAtIndex:i];
-            if (n == self.highlightNode) {
-                NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];
-                [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-                [self.tableView selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-                [self.tableView deselectRowAtIndexPath:path animated:YES];
-            }
-        }
-        self.highlightNode = nil;
+        NSIndexPath *path = [self findIndexPath:self.highlightNode];
+        [self.tableView selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionNone];
+        [self.tableView deselectRowAtIndexPath:path animated:YES];
     }
+    self.highlightNode = nil;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
