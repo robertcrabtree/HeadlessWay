@@ -87,17 +87,6 @@
         NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.node.url]];
         [self.webView loadRequest:requestURL];
     } else if (self.node.type == kDataNodeTypeYoutube) {
-        
-        /*
-        NSString *htmlBase = @"<html><head>\
-        <body style=\"margin:0\">\
-        <embed id=\"yt\" src=\"%@\" type=\"application/x-shockwave-flash\" \
-        width=\"%0.0f\" height=\"%0.0f\"></embed>\
-        </body></html>";
-        NSString *htmlString = [NSString stringWithFormat:htmlBase, node.url, 320.0f, 480.0f];
-        [self.webView loadHTMLString:htmlString baseURL:nil];
-         */
-
         NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head>\
                                 <body style=\"background:#33ff66;margin-top:0px;margin-left:0px\"><div>\
                                 <object width=\"320\" height=\"480\">\
@@ -107,14 +96,6 @@
                                 </object></div></body></html>",node.url,node.url];
         
         [self.webView loadHTMLString:htmlString baseURL:nil];
-
-#warning test this on a device supposedly not working on simulator
-        /*
-        NSURL *url = [NSURL URLWithString:node.url];
-        [[UIApplication sharedApplication] openURL:url];
-         */
-
-       // self.webView.scrollView.scrollEnabled = NO;
     } else {
         NSLog(@"Error: invalid node type in browser");
     }

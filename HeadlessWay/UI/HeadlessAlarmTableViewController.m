@@ -21,8 +21,6 @@
     UILabel *_labelNoAlarms;
 }
 
-#warning need to test alarm saving again since modifications to AlarmNode were made
-
 @property (nonatomic, retain) AlarmNode *addingNode;
 @property (nonatomic, retain) AlarmNode *editingNode;
 @property (nonatomic, retain) AlarmNode *highlightNode;
