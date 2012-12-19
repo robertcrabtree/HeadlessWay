@@ -387,11 +387,15 @@
 		E031BB3116632399006C6902 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Richard Lang (UNG7XFNWU2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Richard Lang (UNG7XFNWU2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeadlessWay/HeadlessWay-Prefix.pch";
 				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ED50730A-50B9-42ED-919C-4CF0C662E9E1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ED50730A-50B9-42ED-919C-4CF0C662E9E1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,11 +403,15 @@
 		E031BB3216632399006C6902 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Richard Lang";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Richard Lang";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeadlessWay/HeadlessWay-Prefix.pch";
 				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5B95C566-487E-475B-9412-364AC54E189F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B95C566-487E-475B-9412-364AC54E189F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
