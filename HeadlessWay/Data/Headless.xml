@@ -213,43 +213,9 @@
         <!----------------------->
         <!--    VIDEO          -->
         <!----------------------->
-        <node type="submenu">
+        <node type="webdata">
             <name>Video</name>
-            <node type="group">
-                <name>Who Are We Really?</name>
-                <node type="youtube">
-                    <name>Part 1A</name>
-                    <url>http://www.youtube.com/watch?v=oHcjkdo3cO8</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 1B</name>
-                    <url>http://www.youtube.com/watch?v=gHfD8ozxXhA</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 2A</name>
-                    <url>http://www.youtube.com/watch?v=zQLuV7YQBsE</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 2B</name>
-                    <url>http://www.youtube.com/watch?v=9G4Rk-S6188</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 3A</name>
-                    <url>http://www.youtube.com/watch?v=fp8CXjShggk</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 3B</name>
-                    <url>http://www.youtube.com/watch?v=llWCHO2ivUg</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 4A</name>
-                    <url>http://www.youtube.com/watch?v=hU3pSxOSsBk</url>
-                </node>
-                <node type="youtube">
-                    <name>Part 4B</name>
-                    <url>http://www.youtube.com/watch?v=zBHpGKmIjFE</url>
-                </node>
-            </node>
+            <url>http://www.headless.org/headless-app/experiments-video.htm</url>
         </node>
     </node>
     <!----------------------->
