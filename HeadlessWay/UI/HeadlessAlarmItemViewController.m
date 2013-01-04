@@ -40,13 +40,19 @@
 
 - (void)addDatePicker
 {
-    static const int magic = 200; // not sure why 200 is the magic number
     UIDatePicker *pick = [[UIDatePicker alloc] initWithFrame:CGRectZero];
     self.picker = pick;
     [pick release];
     
 	CGSize pickerSize = [pick sizeThatFits:CGSizeZero];
-    CGRect pickerFrame = CGRectMake(0, magic, pickerSize.width, pickerSize.height);
+    CGFloat windowHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    CGFloat navigationHeight = [[self.navigationController navigationBar] frame].size.height;
+    CGFloat pickerHeight = pickerSize.height;
+    
+    CGFloat pickerX = windowHeight - statusBarHeight - navigationHeight - pickerHeight;
+    
+    CGRect pickerFrame = CGRectMake(0, pickerX, pickerSize.width, pickerSize.height);
     self.picker.frame = pickerFrame;
     
     self.picker.hidden = NO;
