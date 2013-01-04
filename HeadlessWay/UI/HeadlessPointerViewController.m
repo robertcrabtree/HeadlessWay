@@ -8,6 +8,7 @@
 
 #import "HeadlessPointerViewController.h"
 #import "HeadlessBrowserViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
 
@@ -82,6 +83,8 @@
     self.buttonRefresh.target = self;
     self.buttonExperiment.action = @selector(actionExperiment:);
     self.buttonExperiment.target = self;
+    
+    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@"Pointers"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

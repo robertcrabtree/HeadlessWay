@@ -10,6 +10,7 @@
 #import "HeadlessSubMenuTableViewController.h"
 #import "HeadlessBrowserViewController.h"
 #import "HeadlessPointerViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNodeParser.h"
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
@@ -89,6 +90,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
 - (void)viewWillAppear:(BOOL)animated

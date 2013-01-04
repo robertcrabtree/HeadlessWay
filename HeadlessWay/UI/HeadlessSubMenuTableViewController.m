@@ -8,6 +8,7 @@
 
 #import "HeadlessSubMenuTableViewController.h"
 #import "HeadlessBrowserViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNode.h"
 
 @interface HeadlessSubMenuTableViewController ()
@@ -41,6 +42,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:self.node.name];
 }
 
 - (void)didReceiveMemoryWarning
