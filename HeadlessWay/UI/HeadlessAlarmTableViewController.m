@@ -175,7 +175,7 @@
             self.tableView.frame.origin.y -
             self.tableView.sectionHeaderHeight;
         
-        NSString *text = @"Alarms remind you to see who you really are. Add alarms to get notifications throughout the day.";
+        NSString *text = @"Add alarms to remind you to see who you really are.";
         _labelNoAlarms.font = [UIFont boldSystemFontOfSize:_labelNoAlarms.font.pointSize];
         CGRect frame = _labelNoAlarms.frame;
         frame.size.width = [text sizeWithFont:_labelNoAlarms.font].width;
