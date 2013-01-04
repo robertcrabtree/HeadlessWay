@@ -83,6 +83,14 @@
 
 - (void)toggleEditingMode:(BOOL)editing
 {
+    // if a cell is being edited for delete because user swiped the cell
+    // then we need to disable editing mode so we can put all cells into
+    // editing mode and properly display the 'minus' as expected
+    if (self.tableView.editing && editing) {
+        [self setEditing:NO animated:YES];
+        [self.tableView setEditing:NO animated:YES];
+    }
+    
     [self setEditing:editing animated:YES];
     [self.tableView setEditing:editing animated:YES];
 }
