@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */; };
 		E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* HeadlessDataNode.m */; };
 		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
 		E014FD851673E7E500621B86 /* HeadlessDataNodeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* HeadlessDataNodeParser.m */; };
@@ -36,9 +37,13 @@
 		E0C852A51677EA070044C6BC /* HeadlessAlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A21677EA070044C6BC /* HeadlessAlarmTableViewController.m */; };
 		E0C852A81677EA100044C6BC /* AlarmNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A71677EA100044C6BC /* AlarmNode.m */; };
 		E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */; };
+		E0D9E318169A3A4A0003F857 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D9E317169A3A4A0003F857 /* icon.png */; };
+		E0D9E31A169A3A5E0003F857 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D9E319169A3A5E0003F857 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E006F5D71697578D0065FE9D /* HeadlessNavigationBarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessNavigationBarHelper.h; sourceTree = "<group>"; };
+		E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessNavigationBarHelper.m; sourceTree = "<group>"; };
 		E014FD761673E7E500621B86 /* HeadlessDataNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessDataNode.h; sourceTree = "<group>"; };
 		E014FD771673E7E500621B86 /* HeadlessDataNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessDataNode.m; sourceTree = "<group>"; };
 		E014FD7B1673E7E500621B86 /* Pointers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointers.h; sourceTree = "<group>"; };
@@ -88,6 +93,8 @@
 		E0C852A71677EA100044C6BC /* AlarmNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmNode.m; sourceTree = "<group>"; };
 		E0C852A91677EBA90044C6BC /* HeadlessAlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmManager.h; sourceTree = "<group>"; };
 		E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmManager.m; sourceTree = "<group>"; };
+		E0D9E317169A3A4A0003F857 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E0D9E319169A3A5E0003F857 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +148,8 @@
 				E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */,
 				E014FD951673E7F500621B86 /* HeadlessSubMenuTableViewController.h */,
 				E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */,
+				E006F5D71697578D0065FE9D /* HeadlessNavigationBarHelper.h */,
+				E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -157,6 +166,8 @@
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
+				E0D9E319169A3A5E0003F857 /* icon@2x.png */,
+				E0D9E317169A3A4A0003F857 /* icon.png */,
 				E031BB1616632399006C6902 /* HeadlessWay */,
 				E031BB0F16632399006C6902 /* Frameworks */,
 				E031BB0D16632399006C6902 /* Products */,
@@ -283,6 +294,8 @@
 				E031BB2A16632399006C6902 /* MainStoryboard.storyboard in Resources */,
 				E014FDA31673E87700621B86 /* Headless.xml in Resources */,
 				E014FDA51673E87700621B86 /* Pointers.txt in Resources */,
+				E0D9E318169A3A4A0003F857 /* icon.png in Resources */,
+				E0D9E31A169A3A5E0003F857 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +324,7 @@
 				E0C852A51677EA070044C6BC /* HeadlessAlarmTableViewController.m in Sources */,
 				E0C852A81677EA100044C6BC /* AlarmNode.m in Sources */,
 				E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */,
+				E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,8 +408,8 @@
 				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ED50730A-50B9-42ED-919C-4CF0C662E9E1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ED50730A-50B9-42ED-919C-4CF0C662E9E1";
+				PROVISIONING_PROFILE = "CCABAEE9-C1BA-4ABD-8EF1-EEFDBE521227";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CCABAEE9-C1BA-4ABD-8EF1-EEFDBE521227";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,8 +424,8 @@
 				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5B95C566-487E-475B-9412-364AC54E189F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B95C566-487E-475B-9412-364AC54E189F";
+				PROVISIONING_PROFILE = "AC620076-A49B-4039-AA87-B462EB7F7BDA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC620076-A49B-4039-AA87-B462EB7F7BDA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
