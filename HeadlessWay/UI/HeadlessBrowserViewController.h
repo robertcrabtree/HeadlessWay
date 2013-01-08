@@ -10,6 +10,10 @@
 
 @class HeadlessDataNode;
 
+#warning full website does not show up well "Scale to fit" disabled
+
+#warning need to resize youtube and images in mobile versioned webpages
+
 @interface HeadlessBrowserViewController : UIViewController<UIWebViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
