@@ -9,8 +9,6 @@
 #import "HeadlessNavigationController.h"
 #import "HeadlessBrowserViewController.h"
 
-#warning need rotation constraints for iOS 5
-
 @implementation HeadlessNavigationController
 
 - (NSUInteger)supportedInterfaceOrientations
