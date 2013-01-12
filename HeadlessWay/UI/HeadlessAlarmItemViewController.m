@@ -7,6 +7,7 @@
 //
 
 #import "HeadlessAlarmItemViewController.h"
+#import "HeadlessCommon.h"
 #import "HeadlessAlarmRepeatTableViewController.h"
 
 @interface HeadlessAlarmItemViewController ()
@@ -18,6 +19,7 @@
 
 @synthesize node, buttonCancel, buttonSave, picker, tmpNode;
 
+HEADLESS_ROTATION_SUPPORT_NONE
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

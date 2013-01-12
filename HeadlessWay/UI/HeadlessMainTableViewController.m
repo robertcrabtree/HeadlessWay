@@ -9,9 +9,11 @@
 #import "HeadlessMainTableViewController.h"
 #import "HeadlessSubMenuTableViewController.h"
 #import "HeadlessBrowserViewController.h"
+#import "HeadlessNavigationController.h"
 #import "HeadlessPointerViewController.h"
 #import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNodeParser.h"
+#import "HeadlessCommon.h"
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
 #import "HeadlessAlarmRouter.h"
@@ -28,6 +30,8 @@
 @implementation HeadlessMainTableViewController
 
 @synthesize buttonPointer, experimentSubmenu, pointers;
+
+HEADLESS_ROTATION_SUPPORT_NONE
 
 //#define _TEST_NOTIFICATION 1
 
@@ -55,7 +59,7 @@
         pointerView.pointers = self.pointers;
         pointerView.alarmFired = alarmFired;
         
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:pointerView];
+        HeadlessNavigationController *navController = [[HeadlessNavigationController alloc] initWithRootViewController:pointerView];
         [self presentViewController:navController animated:YES completion:nil];
         [navController release];
     }

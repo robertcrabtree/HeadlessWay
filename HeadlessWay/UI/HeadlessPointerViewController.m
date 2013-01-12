@@ -11,6 +11,7 @@
 #import "HeadlessNavigationBarHelper.h"
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
+#import "HeadlessCommon.h"
 
 @interface HeadlessPointerViewController ()
 
@@ -19,6 +20,8 @@
 @implementation HeadlessPointerViewController
 
 @synthesize experimentSubmenu, pointers, buttonRefresh, buttonExperiment, textView, alarmFired;
+
+HEADLESS_ROTATION_SUPPORT_NONE
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

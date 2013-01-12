@@ -8,8 +8,10 @@
 
 #import "HeadlessAlarmTableViewController.h"
 #import "HeadlessAlarmItemViewController.h"
+#import "HeadlessNavigationController.h"
 #import "HeadlessAlarmRepeatTableViewController.h"
 #import "HeadlessAlarmManager.h"
+#import "HeadlessCommon.h"
 #import "AlarmNode.h"
 
 @interface HeadlessAlarmTableViewController () {
@@ -31,6 +33,8 @@
 @implementation HeadlessAlarmTableViewController
 
 @synthesize addingNode, editingNode, highlightNode, editingIndex;
+
+HEADLESS_ROTATION_SUPPORT_NONE
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -118,7 +122,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
     HeadlessAlarmItemViewController *itemView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessAlarmItemViewController"];
     itemView.node = node;
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemView];
+    HeadlessNavigationController *navController = [[HeadlessNavigationController alloc] initWithRootViewController:itemView];
     [self presentViewController:navController animated:YES completion:NULL];
     [navController release];
 }

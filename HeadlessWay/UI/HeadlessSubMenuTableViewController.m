@@ -10,6 +10,7 @@
 #import "HeadlessBrowserViewController.h"
 #import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNode.h"
+#import "HeadlessCommon.h"
 
 @interface HeadlessSubMenuTableViewController ()
 @end
@@ -17,6 +18,8 @@
 @implementation HeadlessSubMenuTableViewController
 
 @synthesize node;
+
+HEADLESS_ROTATION_SUPPORT_NONE
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

@@ -7,6 +7,7 @@
 //
 
 #import "HeadlessAlarmRepeatTableViewController.h"
+#import "HeadlessCommon.h"
 
 @interface HeadlessAlarmRepeatTableViewController ()
 
@@ -15,6 +16,8 @@
 @implementation HeadlessAlarmRepeatTableViewController
 
 @synthesize node;
+
+HEADLESS_ROTATION_SUPPORT_NONE
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

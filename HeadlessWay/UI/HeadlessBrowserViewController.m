@@ -8,6 +8,7 @@
 
 #import "HeadlessBrowserViewController.h"
 #import "HeadlessDataNode.h"
+#import "HeadlessCommon.h"
 
 @interface HeadlessBrowserViewController ()
 
@@ -16,6 +17,8 @@
 @implementation HeadlessBrowserViewController
 
 @synthesize webView, buttonBack, buttonForward, node, experimentSubmenu;
+
+HEADLESS_ROTATION_SUPPORT
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
