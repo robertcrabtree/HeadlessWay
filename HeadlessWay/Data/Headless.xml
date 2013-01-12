@@ -226,14 +226,6 @@
             <name>Resources</name>
             <node type="group">
                 <node type="webpage">
-                    <name>Full Website</name>
-                    <url navigation="yes">http://headless.org</url>
-                </node>
-                <node type="webpage">
-                    <name>Reflections e-course Signup</name>
-                    <url navigation="yes">http://headless.org/reflections-subscribe.htm</url>
-                </node>
-                <node type="webpage">
                     <name>No-Facebook</name>
                     <url navigation="yes">https://www.facebook.com/groups/richardlang/</url>
                 </node>
