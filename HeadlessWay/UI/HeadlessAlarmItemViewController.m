@@ -8,6 +8,7 @@
 
 #import "HeadlessAlarmItemViewController.h"
 #import "HeadlessCommon.h"
+#import "HeadlessGraphics.h"
 #import "HeadlessAlarmRepeatTableViewController.h"
 
 @interface HeadlessAlarmItemViewController ()
@@ -104,6 +105,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.tmpNode = nil;
 
     [self addDatePicker];
+    
+    SET_LOOKS_TABLE();
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -153,6 +156,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     cell.detailTextLabel.text = text;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    SET_LOOKS_TABLE_CELL();
+
     return cell;
 }
 

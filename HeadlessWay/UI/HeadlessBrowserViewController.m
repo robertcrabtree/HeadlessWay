@@ -8,6 +8,7 @@
 
 #import "HeadlessBrowserViewController.h"
 #import "HeadlessDataNode.h"
+#import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
 
 @interface HeadlessBrowserViewController ()
@@ -66,13 +67,15 @@ HEADLESS_ROTATION_SUPPORT
     [self.webView setDelegate:self];
     
     if (self.node.type == kDataNodeTypeWebPageFull) {
-        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(actionBack:)];
-        UIBarButtonItem *forward = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(actionForward:)];
+        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(actionBack:)];
+        UIBarButtonItem *fixed = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
+        fixed.width = 30;
+        UIBarButtonItem *forward = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"forward.png"] style:UIBarButtonItemStylePlain target:self action:@selector(actionForward:)];
         UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
         UIBarButtonItem *refresh = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(actionRefresh:)];
         
-        self.toolbarItems = [NSArray arrayWithObjects:back, forward, flex, refresh, nil];
-//        self.navigationController.toolbar.hidden = NO;
+        self.toolbarItems = [NSArray arrayWithObjects:back, fixed, forward, flex, refresh, nil];
+
         [self.navigationController setToolbarHidden:NO animated:YES];
         
         [back release];

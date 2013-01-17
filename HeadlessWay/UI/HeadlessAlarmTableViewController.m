@@ -11,6 +11,7 @@
 #import "HeadlessNavigationController.h"
 #import "HeadlessAlarmRepeatTableViewController.h"
 #import "HeadlessAlarmManager.h"
+#import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
 #import "AlarmNode.h"
 
@@ -165,6 +166,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.tableView.allowsSelectionDuringEditing = YES;
     
     [[HeadlessAlarmManager sharedInstance] allAlarms:_alarms];
+    
+    SET_LOOKS_TABLE();
 }
 
 -(void)showAlarmText
@@ -382,6 +385,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     cell.editingAccessoryView = nil;
     
     cell.detailTextLabel.text = [node repeatString];
+    
+    SET_LOOKS_TABLE_CELL();
 
     return cell;
 }

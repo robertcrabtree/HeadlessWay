@@ -32,6 +32,13 @@
 		E031BB481663283E006C6902 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = E031BB451663283E006C6902 /* TBXML+HTTP.m */; };
 		E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB491663287C006C6902 /* libz.dylib */; };
 		E0343A1B16742B3B0090FCAA /* HeadlessAlarmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */; };
+		E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */; };
+		E0A53CD816A886A5004646D7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CD616A886A5004646D7 /* background.png */; };
+		E0A53CD916A886A5004646D7 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CD716A886A5004646D7 /* background@2x.png */; };
+		E0A53CDE16A88A17004646D7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CDA16A88A17004646D7 /* back.png */; };
+		E0A53CDF16A88A17004646D7 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CDB16A88A17004646D7 /* back@2x.png */; };
+		E0A53CE016A88A17004646D7 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CDC16A88A17004646D7 /* forward.png */; };
+		E0A53CE116A88A17004646D7 /* forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CDD16A88A17004646D7 /* forward@2x.png */; };
 		E0C852A31677EA070044C6BC /* HeadlessAlarmItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C8529E1677EA070044C6BC /* HeadlessAlarmItemViewController.m */; };
 		E0C852A41677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A01677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.m */; };
 		E0C852A51677EA070044C6BC /* HeadlessAlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A21677EA070044C6BC /* HeadlessAlarmTableViewController.m */; };
@@ -83,6 +90,16 @@
 		E031BB491663287C006C6902 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E0343A1916742B3B0090FCAA /* HeadlessAlarmRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmRouter.h; sourceTree = "<group>"; };
 		E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmRouter.m; sourceTree = "<group>"; };
+		E043809616A0D21000E3AD41 /* HeadlessNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessNavigationController.h; sourceTree = "<group>"; };
+		E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessNavigationController.m; sourceTree = "<group>"; };
+		E043809C16A0E1AD00E3AD41 /* HeadlessCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessCommon.h; sourceTree = "<group>"; };
+		E0A53CD616A886A5004646D7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Images/background.png; sourceTree = "<group>"; };
+		E0A53CD716A886A5004646D7 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Images/background@2x.png"; sourceTree = "<group>"; };
+		E0A53CDA16A88A17004646D7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Images/back.png; sourceTree = "<group>"; };
+		E0A53CDB16A88A17004646D7 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "Images/back@2x.png"; sourceTree = "<group>"; };
+		E0A53CDC16A88A17004646D7 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forward.png; path = Images/forward.png; sourceTree = "<group>"; };
+		E0A53CDD16A88A17004646D7 /* forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forward@2x.png"; path = "Images/forward@2x.png"; sourceTree = "<group>"; };
+		E0A53CE216A89722004646D7 /* HeadlessGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessGraphics.h; sourceTree = "<group>"; };
 		E0C8529D1677EA070044C6BC /* HeadlessAlarmItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmItemViewController.h; sourceTree = "<group>"; };
 		E0C8529E1677EA070044C6BC /* HeadlessAlarmItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmItemViewController.m; sourceTree = "<group>"; };
 		E0C8529F1677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmRepeatTableViewController.h; sourceTree = "<group>"; };
@@ -115,6 +132,7 @@
 		E014FD751673E7E500621B86 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E043809C16A0E1AD00E3AD41 /* HeadlessCommon.h */,
 				E0343A1916742B3B0090FCAA /* HeadlessAlarmRouter.h */,
 				E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */,
 				E0C852A91677EBA90044C6BC /* HeadlessAlarmManager.h */,
@@ -134,6 +152,7 @@
 		E014FD861673E7F500621B86 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E0A53CE216A89722004646D7 /* HeadlessGraphics.h */,
 				E0C8529D1677EA070044C6BC /* HeadlessAlarmItemViewController.h */,
 				E0C8529E1677EA070044C6BC /* HeadlessAlarmItemViewController.m */,
 				E0C8529F1677EA070044C6BC /* HeadlessAlarmRepeatTableViewController.h */,
@@ -150,6 +169,8 @@
 				E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */,
 				E006F5D71697578D0065FE9D /* HeadlessNavigationBarHelper.h */,
 				E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */,
+				E043809616A0D21000E3AD41 /* HeadlessNavigationController.h */,
+				E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -204,6 +225,7 @@
 				E031BB3F166327D1006C6902 /* TBXML */,
 				E014FD9F1673E87700621B86 /* Data */,
 				E031BB1716632399006C6902 /* Supporting Files */,
+				E0A53CD416A88697004646D7 /* Images */,
 			);
 			path = HeadlessWay;
 			sourceTree = "<group>";
@@ -233,6 +255,19 @@
 				E031BB451663283E006C6902 /* TBXML+HTTP.m */,
 			);
 			name = TBXML;
+			sourceTree = "<group>";
+		};
+		E0A53CD416A88697004646D7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E0A53CDA16A88A17004646D7 /* back.png */,
+				E0A53CDB16A88A17004646D7 /* back@2x.png */,
+				E0A53CDC16A88A17004646D7 /* forward.png */,
+				E0A53CDD16A88A17004646D7 /* forward@2x.png */,
+				E0A53CD616A886A5004646D7 /* background.png */,
+				E0A53CD716A886A5004646D7 /* background@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +331,12 @@
 				E014FDA51673E87700621B86 /* Pointers.txt in Resources */,
 				E0D9E318169A3A4A0003F857 /* icon.png in Resources */,
 				E0D9E31A169A3A5E0003F857 /* icon@2x.png in Resources */,
+				E0A53CD816A886A5004646D7 /* background.png in Resources */,
+				E0A53CD916A886A5004646D7 /* background@2x.png in Resources */,
+				E0A53CDE16A88A17004646D7 /* back.png in Resources */,
+				E0A53CDF16A88A17004646D7 /* back@2x.png in Resources */,
+				E0A53CE016A88A17004646D7 /* forward.png in Resources */,
+				E0A53CE116A88A17004646D7 /* forward@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +366,7 @@
 				E0C852A81677EA100044C6BC /* AlarmNode.m in Sources */,
 				E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */,
 				E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */,
+				E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

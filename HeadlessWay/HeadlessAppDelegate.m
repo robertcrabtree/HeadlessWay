@@ -10,8 +10,11 @@
 #import "HeadlessPointerViewController.h"
 #import "HeadlessAlarmRouter.h"
 #import "HeadlessAlarmManager.h"
+#import "HeadlessGraphics.h"
 
 @implementation HeadlessAppDelegate
+
+#warning test alarms thouroughly when device is turned off especially
 
 - (void)dealloc
 {
@@ -30,6 +33,12 @@
     [alert release];
 }
 
+- (void)customizeLook
+{
+    SET_LOOKS_NAVIGATION_BAR();
+    SET_LOOKS_TOOLBAR();
+}
+
 - (BOOL)application:(UIApplication *)app didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -37,6 +46,8 @@
     UILocalNotification *notif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     
 //    [self showDebug:notif != nil ? @"got notif" : @"no notif"];
+    
+    [self customizeLook];
         
     [self updateAlarmManager];
     if (notif) {

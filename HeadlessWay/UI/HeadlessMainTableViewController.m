@@ -13,6 +13,7 @@
 #import "HeadlessPointerViewController.h"
 #import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNodeParser.h"
+#import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
@@ -94,6 +95,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    SET_LOOKS_TABLE();
 
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
@@ -159,6 +162,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
         cell.textLabel.text = @"(( xxx TEST xxx ))";
 #endif
     }
+    
+    SET_LOOKS_TABLE_CELL();
     
     return cell;
 }

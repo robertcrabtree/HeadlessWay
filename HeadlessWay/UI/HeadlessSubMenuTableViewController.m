@@ -10,6 +10,7 @@
 #import "HeadlessBrowserViewController.h"
 #import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNode.h"
+#import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
 
 @interface HeadlessSubMenuTableViewController ()
@@ -46,6 +47,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    SET_LOOKS_TABLE();
+    
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:self.node.name];
 }
 
@@ -80,6 +83,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     HeadlessDataNode *groupNode = [node.children objectAtIndex:indexPath.section];
     HeadlessDataNode *n = [groupNode.children objectAtIndex:indexPath.row];
     cell.textLabel.text = n.name;
+    
+    SET_LOOKS_TABLE_CELL();
 
     return cell;
 }
