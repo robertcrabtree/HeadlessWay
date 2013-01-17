@@ -7,6 +7,7 @@
 //
 
 #import "HeadlessAlarmRepeatTableViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 #import "HeadlessCommon.h"
 
 @interface HeadlessAlarmRepeatTableViewController ()
@@ -43,6 +44,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
 - (void)didReceiveMemoryWarning
