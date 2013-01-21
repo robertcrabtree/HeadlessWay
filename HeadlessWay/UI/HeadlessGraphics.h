@@ -5,11 +5,11 @@
     blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define SET_LOOKS_NAVIGATION_BAR() { \
-    [[UINavigationBar appearance] setTintColor:UIColorFromHex(0x354B65)]; \
+    [[UINavigationBar appearance] setTintColor:UIColorFromHex(0x4C5B74)]; \
 }
 
 #define SET_LOOKS_TOOLBAR() { \
-    [[UIToolbar appearance] setTintColor:UIColorFromHex(0x354B65)]; \
+    [[UIToolbar appearance] setTintColor:UIColorFromHex(0x4C5B74)]; \
 }
 
 #define SET_LOOKS_TABLE() { \
