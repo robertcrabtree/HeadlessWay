@@ -13,9 +13,11 @@
 }
 
 #define SET_LOOKS_TABLE() { \
-    UIImageView* bgView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]] autorelease]; \
-    [self.tableView.backgroundView addSubview:bgView]; \
-    self.tableView.backgroundColor = UIColorFromHex(0xD2D3D5); \
+    UIImage *backgroundImage = [UIImage imageNamed:@"background.png"]; \
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:backgroundImage]; \
+    self.tableView.backgroundView = backgroundImageView; \
+    self.tableView.backgroundColor = [UIColor clearColor]; \
+    [backgroundImageView release]; \
 }
 
 #define SET_LOOKS_TABLE_CELL() { \
