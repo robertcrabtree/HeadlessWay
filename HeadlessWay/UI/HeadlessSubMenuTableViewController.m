@@ -71,6 +71,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
     return group.children.count;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SET_LOOKS_TABLE_CELL();
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -83,8 +88,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     HeadlessDataNode *groupNode = [node.children objectAtIndex:indexPath.section];
     HeadlessDataNode *n = [groupNode.children objectAtIndex:indexPath.row];
     cell.textLabel.text = n.name;
-    
-    SET_LOOKS_TABLE_CELL();
 
     return cell;
 }

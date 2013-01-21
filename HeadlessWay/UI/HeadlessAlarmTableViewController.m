@@ -361,6 +361,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
     return _alarms.count;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SET_LOOKS_TABLE_CELL();
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -385,8 +390,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     cell.editingAccessoryView = nil;
     
     cell.detailTextLabel.text = [node repeatString];
-    
-    SET_LOOKS_TABLE_CELL();
 
     return cell;
 }

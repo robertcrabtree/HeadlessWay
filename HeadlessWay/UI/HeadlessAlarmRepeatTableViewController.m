@@ -68,6 +68,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
     return 7;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SET_LOOKS_TABLE_CELL();
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -105,8 +110,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     }
     
     cell.accessoryType = ((node.repeat >> indexPath.row) & 0x01) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-    
-    SET_LOOKS_TABLE_CELL();
 
     return cell;
 }

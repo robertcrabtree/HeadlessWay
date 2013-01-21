@@ -141,6 +141,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
     return 1;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SET_LOOKS_TABLE_CELL();
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -162,8 +167,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
         cell.textLabel.text = @"(( xxx TEST xxx ))";
 #endif
     }
-    
-    SET_LOOKS_TABLE_CELL();
     
     return cell;
 }
