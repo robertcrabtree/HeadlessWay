@@ -17,6 +17,8 @@
 		E014FDA31673E87700621B86 /* Headless.xml in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA01673E87700621B86 /* Headless.xml */; };
 		E014FDA51673E87700621B86 /* Pointers.txt in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA21673E87700621B86 /* Pointers.txt */; };
 		E014FDA81673F82F00621B86 /* HeadlessPointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */; };
+		E02E369A16ADE3A400646831 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E02E369916ADE3A400646831 /* icon@2x.png */; };
+		E02E369C16ADE49500646831 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E02E369B16ADE49500646831 /* icon.png */; };
 		E031BB1116632399006C6902 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1016632399006C6902 /* UIKit.framework */; };
 		E031BB1316632399006C6902 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1216632399006C6902 /* Foundation.framework */; };
 		E031BB1516632399006C6902 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1416632399006C6902 /* CoreGraphics.framework */; };
@@ -44,8 +46,6 @@
 		E0C852A51677EA070044C6BC /* HeadlessAlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A21677EA070044C6BC /* HeadlessAlarmTableViewController.m */; };
 		E0C852A81677EA100044C6BC /* AlarmNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852A71677EA100044C6BC /* AlarmNode.m */; };
 		E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */; };
-		E0D9E318169A3A4A0003F857 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D9E317169A3A4A0003F857 /* icon.png */; };
-		E0D9E31A169A3A5E0003F857 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0D9E319169A3A5E0003F857 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +67,8 @@
 		E014FDA21673E87700621B86 /* Pointers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pointers.txt; sourceTree = "<group>"; };
 		E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessPointerViewController.h; sourceTree = "<group>"; };
 		E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessPointerViewController.m; sourceTree = "<group>"; };
+		E02E369916ADE3A400646831 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		E02E369B16ADE49500646831 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E031BB0C16632399006C6902 /* HeadlessWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadlessWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E031BB1016632399006C6902 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E031BB1216632399006C6902 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,8 +112,6 @@
 		E0C852A71677EA100044C6BC /* AlarmNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmNode.m; sourceTree = "<group>"; };
 		E0C852A91677EBA90044C6BC /* HeadlessAlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessAlarmManager.h; sourceTree = "<group>"; };
 		E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmManager.m; sourceTree = "<group>"; };
-		E0D9E317169A3A4A0003F857 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		E0D9E319169A3A5E0003F857 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +187,8 @@
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
-				E0D9E319169A3A5E0003F857 /* icon@2x.png */,
-				E0D9E317169A3A4A0003F857 /* icon.png */,
+				E02E369B16ADE49500646831 /* icon.png */,
+				E02E369916ADE3A400646831 /* icon@2x.png */,
 				E031BB1616632399006C6902 /* HeadlessWay */,
 				E031BB0F16632399006C6902 /* Frameworks */,
 				E031BB0D16632399006C6902 /* Products */,
@@ -329,14 +329,14 @@
 				E031BB2A16632399006C6902 /* MainStoryboard.storyboard in Resources */,
 				E014FDA31673E87700621B86 /* Headless.xml in Resources */,
 				E014FDA51673E87700621B86 /* Pointers.txt in Resources */,
-				E0D9E318169A3A4A0003F857 /* icon.png in Resources */,
-				E0D9E31A169A3A5E0003F857 /* icon@2x.png in Resources */,
 				E0A53CD816A886A5004646D7 /* background.png in Resources */,
 				E0A53CD916A886A5004646D7 /* background@2x.png in Resources */,
 				E0A53CDE16A88A17004646D7 /* back.png in Resources */,
 				E0A53CDF16A88A17004646D7 /* back@2x.png in Resources */,
 				E0A53CE016A88A17004646D7 /* forward.png in Resources */,
 				E0A53CE116A88A17004646D7 /* forward@2x.png in Resources */,
+				E02E369A16ADE3A400646831 /* icon@2x.png in Resources */,
+				E02E369C16ADE49500646831 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
