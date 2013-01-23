@@ -87,7 +87,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.buttonExperiment.action = @selector(actionExperiment:);
     self.buttonExperiment.target = self;
     
-    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@"Pointers"];
+    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
 - (void)viewWillAppear:(BOOL)animated
