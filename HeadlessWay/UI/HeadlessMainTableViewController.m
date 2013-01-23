@@ -161,7 +161,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
         HeadlessDataNode *node = [groupNode.children objectAtIndex:indexPath.row];
         cell.textLabel.text = node.name;
     } else if (indexPath.section == _rootNode.children.count) {
-        cell.textLabel.text = @"Alarm settings";
+        cell.textLabel.text = @"Alarm Settings";
     } else {
 #ifdef _TEST_NOTIFICATION
         cell.textLabel.text = @"(( xxx TEST xxx ))";
