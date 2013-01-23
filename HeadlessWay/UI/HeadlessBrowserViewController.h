@@ -10,8 +10,6 @@
 
 @class HeadlessDataNode;
 
-#warning need to resize youtube and images in mobile versioned webpages
-
 @interface HeadlessBrowserViewController : UIViewController<UIWebViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;

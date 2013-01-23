@@ -14,8 +14,6 @@
 
 @implementation HeadlessAppDelegate
 
-#warning test alarms thouroughly when device is turned off especially
-
 - (void)dealloc
 {
     [_window release];
