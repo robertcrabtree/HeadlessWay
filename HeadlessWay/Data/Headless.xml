@@ -5,7 +5,7 @@
         <!--    HOMEPAGE       -->
         <!----------------------->
         <node type="webdata">
-            <name>Home</name>
+            <name>Welcome</name>
             <url>http://www.headless.org/headless-app/english-welcome.htm</url>
         </node>
         <!----------------------->
