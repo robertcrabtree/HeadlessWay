@@ -107,7 +107,7 @@ HEADLESS_ROTATION_SUPPORT
     }
 
     if (self.experimentSubmenu != nil) {
-        UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Experiment" style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
+        UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Random Experiment" style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
         self.navigationItem.rightBarButtonItem = nextButton;
         [nextButton release];
     }
