@@ -49,7 +49,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     
     SET_LOOKS_TABLE();
     
-    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:self.node.name];
+    [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
 - (void)didReceiveMemoryWarning
