@@ -4,7 +4,7 @@
 #define HEADLESS_ROTATION_SUPPORT \
 - (NSUInteger)supportedInterfaceOrientations \
 { \
-    return UIInterfaceOrientationMaskLandscape; \
+    return UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait; \
 } \
 - (BOOL)shouldAutorotate \
 { \
@@ -28,7 +28,7 @@
 } \
 - (BOOL)shouldAutorotate \
 { \
-    return NO; \
+    return YES; \
 } \
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation \
 { \
