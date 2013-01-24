@@ -21,6 +21,8 @@
 
 @synthesize experimentSubmenu, pointers, buttonRefresh, buttonExperiment, textView, alarmFired;
 
+static BOOL _inUse = NO;
+
 HEADLESS_ROTATION_SUPPORT_NONE
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -105,6 +107,18 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.textView.text = text;
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    _inUse = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    _inUse = YES;
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
@@ -136,6 +150,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
     HeadlessBrowserViewController *controller = [segue destinationViewController];
     controller.node = randomExperiment;
     controller.experimentSubmenu = experimentSubmenu;
+}
+
++(BOOL)inUse
+{
+    return _inUse;
 }
 
 @end

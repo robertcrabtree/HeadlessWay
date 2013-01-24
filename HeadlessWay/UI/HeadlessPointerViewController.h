@@ -19,4 +19,6 @@
 @property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
 @property (nonatomic, retain) Pointers *pointers;
 @property (nonatomic, assign) BOOL alarmFired; // a seeing alarm has fired
+
++(BOOL)inUse;
 @end

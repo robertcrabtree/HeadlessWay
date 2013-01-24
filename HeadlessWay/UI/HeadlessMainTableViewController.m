@@ -21,7 +21,6 @@
 
 @interface HeadlessMainTableViewController () {
     HeadlessDataNode *_rootNode;
-    BOOL _isPointerViewActive;
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
 @property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
@@ -43,7 +42,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
         _rootNode = [[parse parseFile:@"Headless.xml"] retain];
         [parse release];
-        _isPointerViewActive = NO;
     }
     return self;
 }
@@ -52,8 +50,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 {
     // if the user is already looking at a pointer then we don't want
     // to show another pointer
-    if (!_isPointerViewActive) {
-        _isPointerViewActive = YES;
+    if (![HeadlessPointerViewController inUse]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
         pointerView.experimentSubmenu = [HeadlessDataNode experimentMenu];
@@ -61,7 +58,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
         pointerView.alarmFired = alarmFired;
         
         HeadlessNavigationController *navController = [[HeadlessNavigationController alloc] initWithRootViewController:pointerView];
-        [self presentViewController:navController animated:YES completion:nil];
+        
+        // main view controller may not be on the top of the stack
+        // not sure if this is necessary but do it anyways
+        UIViewController *top = self.navigationController.topViewController;
+        [top presentViewController:navController animated:YES completion:nil];
         [navController release];
     }
 }
@@ -104,7 +105,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    _isPointerViewActive = NO;
 }
 
 - (void)dealloc
