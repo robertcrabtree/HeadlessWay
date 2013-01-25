@@ -10,6 +10,10 @@
 		E005ECB616B23CCE002FB0CB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E005ECB516B23CCD002FB0CB /* Reachability.m */; };
 		E005ECB916B24001002FB0CB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E005ECB816B24001002FB0CB /* SystemConfiguration.framework */; };
 		E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */; };
+		E00CF03416B34644009EB1EF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03016B34644009EB1EF /* Icon.png */; };
+		E00CF03516B34644009EB1EF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03116B34644009EB1EF /* Icon@2x.png */; };
+		E00CF03616B34644009EB1EF /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03216B34644009EB1EF /* iTunesArtwork.png */; };
+		E00CF03716B34644009EB1EF /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03316B34644009EB1EF /* iTunesArtwork@2x.png */; };
 		E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* HeadlessDataNode.m */; };
 		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
 		E014FD851673E7E500621B86 /* HeadlessDataNodeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* HeadlessDataNodeParser.m */; };
@@ -35,8 +39,6 @@
 		E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB491663287C006C6902 /* libz.dylib */; };
 		E0343A1B16742B3B0090FCAA /* HeadlessAlarmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */; };
 		E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */; };
-		E06D114016AE46AC00369089 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E02E369B16ADE49500646831 /* icon.png */; };
-		E06D114116AE46B000369089 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E02E369916ADE3A400646831 /* icon@2x.png */; };
 		E0A53CD816A886A5004646D7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CD616A886A5004646D7 /* background.png */; };
 		E0A53CD916A886A5004646D7 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CD716A886A5004646D7 /* background@2x.png */; };
 		E0A53CDE16A88A17004646D7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CDA16A88A17004646D7 /* back.png */; };
@@ -56,6 +58,10 @@
 		E005ECB816B24001002FB0CB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E006F5D71697578D0065FE9D /* HeadlessNavigationBarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessNavigationBarHelper.h; sourceTree = "<group>"; };
 		E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessNavigationBarHelper.m; sourceTree = "<group>"; };
+		E00CF03016B34644009EB1EF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		E00CF03116B34644009EB1EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		E00CF03216B34644009EB1EF /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		E00CF03316B34644009EB1EF /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		E014FD761673E7E500621B86 /* HeadlessDataNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessDataNode.h; sourceTree = "<group>"; };
 		E014FD771673E7E500621B86 /* HeadlessDataNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessDataNode.m; sourceTree = "<group>"; };
 		E014FD7B1673E7E500621B86 /* Pointers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointers.h; sourceTree = "<group>"; };
@@ -72,8 +78,6 @@
 		E014FDA21673E87700621B86 /* Pointers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pointers.txt; sourceTree = "<group>"; };
 		E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessPointerViewController.h; sourceTree = "<group>"; };
 		E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessPointerViewController.m; sourceTree = "<group>"; };
-		E02E369916ADE3A400646831 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		E02E369B16ADE49500646831 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E031BB0C16632399006C6902 /* HeadlessWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadlessWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E031BB1016632399006C6902 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E031BB1216632399006C6902 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -202,8 +206,10 @@
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
-				E02E369B16ADE49500646831 /* icon.png */,
-				E02E369916ADE3A400646831 /* icon@2x.png */,
+				E00CF03016B34644009EB1EF /* Icon.png */,
+				E00CF03116B34644009EB1EF /* Icon@2x.png */,
+				E00CF03216B34644009EB1EF /* iTunesArtwork.png */,
+				E00CF03316B34644009EB1EF /* iTunesArtwork@2x.png */,
 				E031BB1616632399006C6902 /* HeadlessWay */,
 				E031BB0F16632399006C6902 /* Frameworks */,
 				E031BB0D16632399006C6902 /* Products */,
@@ -352,8 +358,10 @@
 				E0A53CDF16A88A17004646D7 /* back@2x.png in Resources */,
 				E0A53CE016A88A17004646D7 /* forward.png in Resources */,
 				E0A53CE116A88A17004646D7 /* forward@2x.png in Resources */,
-				E06D114016AE46AC00369089 /* icon.png in Resources */,
-				E06D114116AE46B000369089 /* icon@2x.png in Resources */,
+				E00CF03416B34644009EB1EF /* Icon.png in Resources */,
+				E00CF03516B34644009EB1EF /* Icon@2x.png in Resources */,
+				E00CF03616B34644009EB1EF /* iTunesArtwork.png in Resources */,
+				E00CF03716B34644009EB1EF /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
