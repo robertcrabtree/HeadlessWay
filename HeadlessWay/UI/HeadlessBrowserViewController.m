@@ -79,6 +79,7 @@ HEADLESS_ROTATION_SUPPORT
         [self.navigationController setToolbarHidden:NO animated:YES];
         
         [back release];
+        [fixed release];
         [forward release];
         [flex release];
         [refresh release];
