@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E005ECB616B23CCE002FB0CB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E005ECB516B23CCD002FB0CB /* Reachability.m */; };
+		E005ECB916B24001002FB0CB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E005ECB816B24001002FB0CB /* SystemConfiguration.framework */; };
 		E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */; };
 		E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* HeadlessDataNode.m */; };
 		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
@@ -49,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E005ECB416B23CCD002FB0CB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = "<group>"; };
+		E005ECB516B23CCD002FB0CB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
+		E005ECB816B24001002FB0CB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E006F5D71697578D0065FE9D /* HeadlessNavigationBarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessNavigationBarHelper.h; sourceTree = "<group>"; };
 		E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessNavigationBarHelper.m; sourceTree = "<group>"; };
 		E014FD761673E7E500621B86 /* HeadlessDataNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessDataNode.h; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E005ECB916B24001002FB0CB /* SystemConfiguration.framework in Frameworks */,
 				E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */,
 				E031BB1116632399006C6902 /* UIKit.framework in Frameworks */,
 				E031BB1316632399006C6902 /* Foundation.framework in Frameworks */,
@@ -129,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E005ECB716B23CDB002FB0CB /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E005ECB416B23CCD002FB0CB /* Reachability.h */,
+				E005ECB516B23CCD002FB0CB /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		E014FD751673E7E500621B86 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +202,7 @@
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
+				E005ECB816B24001002FB0CB /* SystemConfiguration.framework */,
 				E02E369B16ADE49500646831 /* icon.png */,
 				E02E369916ADE3A400646831 /* icon@2x.png */,
 				E031BB1616632399006C6902 /* HeadlessWay */,
@@ -217,6 +233,7 @@
 		E031BB1616632399006C6902 /* HeadlessWay */ = {
 			isa = PBXGroup;
 			children = (
+				E005ECB716B23CDB002FB0CB /* Reachability */,
 				E031BB1F16632399006C6902 /* HeadlessAppDelegate.h */,
 				E031BB2016632399006C6902 /* HeadlessAppDelegate.m */,
 				E031BB2816632399006C6902 /* MainStoryboard.storyboard */,
@@ -367,6 +384,7 @@
 				E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */,
 				E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */,
 				E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */,
+				E005ECB616B23CCE002FB0CB /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
