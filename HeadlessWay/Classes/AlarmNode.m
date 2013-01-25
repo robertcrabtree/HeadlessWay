@@ -102,7 +102,6 @@ static const char *DAY_SAT = "Sat";
 
 - (NSString*)dateString
 {
-#warning verify that 11am/pm, 12am/pm, and 1am/pm works
     return [NSString stringWithFormat:@"%d:%02d %@", self.hour %12 == 0 ? 12 : self.hour %12 , self.minute, self.hour >= 12 ? @"PM" : @"AM"];
 }
 
