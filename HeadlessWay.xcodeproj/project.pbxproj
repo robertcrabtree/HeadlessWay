@@ -202,7 +202,6 @@
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
-				E005ECB816B24001002FB0CB /* SystemConfiguration.framework */,
 				E02E369B16ADE49500646831 /* icon.png */,
 				E02E369916ADE3A400646831 /* icon@2x.png */,
 				E031BB1616632399006C6902 /* HeadlessWay */,
@@ -223,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E031BB491663287C006C6902 /* libz.dylib */,
+				E005ECB816B24001002FB0CB /* SystemConfiguration.framework */,
 				E031BB1016632399006C6902 /* UIKit.framework */,
 				E031BB1216632399006C6902 /* Foundation.framework */,
 				E031BB1416632399006C6902 /* CoreGraphics.framework */,
