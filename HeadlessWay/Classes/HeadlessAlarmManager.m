@@ -81,7 +81,7 @@
                 //                                                      dateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterShortStyle];
                 //NSLog(@"%02d) creating local notification: %@", cnt+1, dateString);
                 
-                [self saveNotification:timeDate text:@"See who you really are" isWarning:NO];
+                [self saveNotification:timeDate text:@"See who you really are." isWarning:NO];
                 if (++cnt == MAX_NOTIFY)
                     break;
             }
