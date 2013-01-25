@@ -18,6 +18,7 @@
 #import "Pointers.h"
 #import "HeadlessDataNode.h"
 #import "HeadlessAlarmRouter.h"
+#import "Reachability.h"
 
 @interface HeadlessMainTableViewController () {
     HeadlessDataNode *_rootNode;
@@ -79,11 +80,29 @@ HEADLESS_ROTATION_SUPPORT_NONE
     [self popupPointer:YES];
 }
 
+- (void)showAlert:(NSString*)text
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:text
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.buttonPointer.target = self;
     self.buttonPointer.action = @selector(actionPointer:);
+    
+    // see if we have an internet connection
+    Reachability *r = [Reachability reachabilityWithHostName:@"headless.org"];
+    NetworkStatus internetStatus = [r currentReachabilityStatus];
+    if(internetStatus == NotReachable) {
+        [self showAlert:@"This application requires an internet connection. Please connect to a network and try again"];
+    }
 
     Pointers *p = [[Pointers alloc] init];
     self.pointers = p;
