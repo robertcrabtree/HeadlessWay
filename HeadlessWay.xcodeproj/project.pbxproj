@@ -12,8 +12,8 @@
 		E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */; };
 		E00CF03416B34644009EB1EF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03016B34644009EB1EF /* Icon.png */; };
 		E00CF03516B34644009EB1EF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03116B34644009EB1EF /* Icon@2x.png */; };
-		E00CF03616B34644009EB1EF /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03216B34644009EB1EF /* iTunesArtwork.png */; };
-		E00CF03716B34644009EB1EF /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03316B34644009EB1EF /* iTunesArtwork@2x.png */; };
+		E00CF03616B34644009EB1EF /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03216B34644009EB1EF /* iTunesArtwork */; };
+		E00CF03716B34644009EB1EF /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = E00CF03316B34644009EB1EF /* iTunesArtwork@2x */; };
 		E014FD801673E7E500621B86 /* HeadlessDataNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD771673E7E500621B86 /* HeadlessDataNode.m */; };
 		E014FD831673E7E500621B86 /* Pointers.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7C1673E7E500621B86 /* Pointers.m */; };
 		E014FD851673E7E500621B86 /* HeadlessDataNodeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD7F1673E7E500621B86 /* HeadlessDataNodeParser.m */; };
@@ -60,8 +60,8 @@
 		E006F5D81697578D0065FE9D /* HeadlessNavigationBarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessNavigationBarHelper.m; sourceTree = "<group>"; };
 		E00CF03016B34644009EB1EF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		E00CF03116B34644009EB1EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		E00CF03216B34644009EB1EF /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		E00CF03316B34644009EB1EF /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		E00CF03216B34644009EB1EF /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		E00CF03316B34644009EB1EF /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		E014FD761673E7E500621B86 /* HeadlessDataNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessDataNode.h; sourceTree = "<group>"; };
 		E014FD771673E7E500621B86 /* HeadlessDataNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessDataNode.m; sourceTree = "<group>"; };
 		E014FD7B1673E7E500621B86 /* Pointers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointers.h; sourceTree = "<group>"; };
@@ -208,8 +208,8 @@
 			children = (
 				E00CF03016B34644009EB1EF /* Icon.png */,
 				E00CF03116B34644009EB1EF /* Icon@2x.png */,
-				E00CF03216B34644009EB1EF /* iTunesArtwork.png */,
-				E00CF03316B34644009EB1EF /* iTunesArtwork@2x.png */,
+				E00CF03216B34644009EB1EF /* iTunesArtwork */,
+				E00CF03316B34644009EB1EF /* iTunesArtwork@2x */,
 				E031BB1616632399006C6902 /* HeadlessWay */,
 				E031BB0F16632399006C6902 /* Frameworks */,
 				E031BB0D16632399006C6902 /* Products */,
@@ -360,8 +360,8 @@
 				E0A53CE116A88A17004646D7 /* forward@2x.png in Resources */,
 				E00CF03416B34644009EB1EF /* Icon.png in Resources */,
 				E00CF03516B34644009EB1EF /* Icon@2x.png in Resources */,
-				E00CF03616B34644009EB1EF /* iTunesArtwork.png in Resources */,
-				E00CF03716B34644009EB1EF /* iTunesArtwork@2x.png in Resources */,
+				E00CF03616B34644009EB1EF /* iTunesArtwork in Resources */,
+				E00CF03716B34644009EB1EF /* iTunesArtwork@2x in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
