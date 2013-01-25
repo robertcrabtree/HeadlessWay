@@ -13,7 +13,7 @@
 }
 
 #define SET_LOOKS_TABLE() { \
-    UIImage *backgroundImage = [UIImage imageNamed:@"background.png"]; \
+    UIImage *backgroundImage = [UIImage imageNamed:@"background"]; \
     UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:backgroundImage]; \
     self.tableView.backgroundView = backgroundImageView; \
     self.tableView.backgroundColor = [UIColor clearColor]; \
