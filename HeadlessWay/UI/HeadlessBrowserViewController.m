@@ -7,6 +7,7 @@
 //
 
 #import "HeadlessBrowserViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 #import "HeadlessDataNode.h"
 #import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
@@ -112,6 +113,12 @@ HEADLESS_ROTATION_SUPPORT
         self.navigationItem.rightBarButtonItem = nextButton;
         [nextButton release];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [HeadlessNavigationBarHelper setNavBarImage:self.navigationController.navigationBar forHomePage:NO];
+    [super viewWillAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -10,4 +10,5 @@
 
 @interface HeadlessNavigationBarHelper : NSObject
 +(void)setTitleAndBackButton:(UINavigationItem*)navItem title:(NSString*)title;
++(void)setNavBarImage:(UINavigationBar*)navItem forHomePage:(BOOL)homePage;
 @end

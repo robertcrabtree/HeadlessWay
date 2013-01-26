@@ -52,6 +52,12 @@ HEADLESS_ROTATION_SUPPORT_NONE
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [HeadlessNavigationBarHelper setNavBarImage:self.navigationController.navigationBar forHomePage:NO];
+    [super viewWillAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -94,6 +94,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [HeadlessNavigationBarHelper setNavBarImage:self.navigationController.navigationBar forHomePage:NO];
     [super viewWillAppear:animated];
     
     // add observer to format the text vertically centered

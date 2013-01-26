@@ -10,6 +10,7 @@
 #import "HeadlessCommon.h"
 #import "HeadlessGraphics.h"
 #import "HeadlessAlarmRepeatTableViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 
 @interface HeadlessAlarmItemViewController ()
 @property (nonatomic, retain) UIDatePicker *picker;
@@ -111,6 +112,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    [HeadlessNavigationBarHelper setNavBarImage:self.navigationController.navigationBar forHomePage:NO];
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     if (path) {
         [self.tableView deselectRowAtIndexPath:path animated:animated];

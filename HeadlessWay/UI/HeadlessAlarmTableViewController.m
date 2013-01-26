@@ -10,6 +10,7 @@
 #import "HeadlessAlarmItemViewController.h"
 #import "HeadlessNavigationController.h"
 #import "HeadlessAlarmRepeatTableViewController.h"
+#import "HeadlessNavigationBarHelper.h"
 #import "HeadlessAlarmManager.h"
 #import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
@@ -253,6 +254,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [HeadlessNavigationBarHelper setNavBarImage:self.navigationController.navigationBar forHomePage:NO];
     
     // if we are adding a node (modal view controller for adding a node is done)
     if (self.addingNode) {

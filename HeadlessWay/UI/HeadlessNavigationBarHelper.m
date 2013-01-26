@@ -20,4 +20,15 @@
         navItem.title = title;
 }
 
++(void)setNavBarImage:(UINavigationBar*)navItem forHomePage:(BOOL)homePage
+{
+    if (homePage) {
+        [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home"] forBarMetrics:UIBarMetricsDefault];
+        [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
+    } else {
+        [navItem setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+        [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
+    }
+}
+
 @end

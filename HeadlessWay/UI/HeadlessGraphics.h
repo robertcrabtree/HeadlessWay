@@ -10,6 +10,10 @@
 
 #define SET_LOOKS_TOOLBAR() { \
     [[UIToolbar appearance] setTintColor:UIColorFromHex(0x4C5B74)]; \
+    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"toolbar"] \
+                        forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault]; \
+    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"toolbar-landscape"] \
+                        forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsLandscapePhone]; \
 }
 
 #define SET_LOOKS_TABLE() { \
