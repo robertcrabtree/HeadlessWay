@@ -233,6 +233,10 @@
                     <name>Twitter</name>
                     <url navigation="yes">https://twitter.com/headexchange</url>
                 </node>
+                <node type="webdata">
+                    <name>Workshops</name>
+                    <url>http://headless.org/headless-app/workshops-richard-lang_app.htm</url>
+                </node>
             </node>
         </node>
     </node>
