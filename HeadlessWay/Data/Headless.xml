@@ -227,11 +227,11 @@
             <node type="group">
                 <node type="webpage">
                     <name>No-Facebook</name>
-                    <url navigation="yes">https://www.facebook.com/groups/richardlang/</url>
+                    <url>https://www.facebook.com/groups/richardlang/</url>
                 </node>
                 <node type="webpage">
                     <name>Twitter</name>
-                    <url navigation="yes">https://twitter.com/headexchange</url>
+                    <url>https://twitter.com/headexchange</url>
                 </node>
                 <node type="webpage">
                     <name>Workshops</name>
