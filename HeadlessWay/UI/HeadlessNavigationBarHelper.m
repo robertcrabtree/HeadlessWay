@@ -7,6 +7,7 @@
 //
 
 #import "HeadlessNavigationBarHelper.h"
+#import "HeadlessCommon.h"
 
 @implementation HeadlessNavigationBarHelper
 
@@ -24,10 +25,18 @@
 {
     if (homePage) {
         [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home"] forBarMetrics:UIBarMetricsDefault];
-        [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
+        if (IS_IPHONE_5) {
+            [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home-landscape-iphone5"] forBarMetrics:UIBarMetricsLandscapePhone];
+        } else {
+            [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
+        }
     } else {
         [navItem setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-        [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
+        if (IS_IPHONE_5) {
+            [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-landscape-iphone5"] forBarMetrics:UIBarMetricsLandscapePhone];
+        } else {
+            [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
+        }
     }
 }
 

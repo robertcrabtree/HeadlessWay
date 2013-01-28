@@ -1,3 +1,5 @@
+#import "HeadlessCommon.h"
+
 // convert from html hex code
 #define UIColorFromHex(rgbValue) [UIColor \
     colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -12,8 +14,13 @@
     [[UIToolbar appearance] setTintColor:UIColorFromHex(0x4C5B74)]; \
     [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"toolbar"] \
                         forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault]; \
-    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"toolbar-landscape"] \
-                        forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsLandscapePhone]; \
+    if (IS_IPHONE_5) { \
+        [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"toolbar-landscape-iphone5"] \
+                                forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsLandscapePhone]; \
+    } else { \
+        [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"toolbar-landscape"] \
+                                forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsLandscapePhone]; \
+    } \
 }
 
 #define SET_LOOKS_TABLE() { \

@@ -23,6 +23,9 @@
 		E014FDA31673E87700621B86 /* Headless.xml in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA01673E87700621B86 /* Headless.xml */; };
 		E014FDA51673E87700621B86 /* Pointers.txt in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA21673E87700621B86 /* Pointers.txt */; };
 		E014FDA81673F82F00621B86 /* HeadlessPointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */; };
+		E0177EB216B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EAF16B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png */; };
+		E0177EB316B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */; };
+		E0177EB416B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EB116B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png */; };
 		E031BB1116632399006C6902 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1016632399006C6902 /* UIKit.framework */; };
 		E031BB1316632399006C6902 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1216632399006C6902 /* Foundation.framework */; };
 		E031BB1516632399006C6902 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1416632399006C6902 /* CoreGraphics.framework */; };
@@ -90,6 +93,9 @@
 		E014FDA21673E87700621B86 /* Pointers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pointers.txt; sourceTree = "<group>"; };
 		E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessPointerViewController.h; sourceTree = "<group>"; };
 		E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessPointerViewController.m; sourceTree = "<group>"; };
+		E0177EAF16B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-home-landscape-iphone5@2x.png"; path = "Images/navbar-home-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
+		E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-landscape-iphone5@2x.png"; path = "Images/navbar-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
+		E0177EB116B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "toolbar-landscape-iphone5@2x.png"; path = "Images/toolbar-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
 		E031BB0C16632399006C6902 /* HeadlessWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadlessWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E031BB1016632399006C6902 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E031BB1216632399006C6902 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -307,24 +313,27 @@
 		E0A53CD416A88697004646D7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E0CF339C16B3B70700C3886F /* toolbar-landscape.png */,
-				E0CF339D16B3B70700C3886F /* toolbar-landscape@2x.png */,
-				E0CF339E16B3B70700C3886F /* toolbar.png */,
-				E0CF339F16B3B70700C3886F /* toolbar@2x.png */,
+				E0A53CDA16A88A17004646D7 /* back.png */,
+				E0A53CDB16A88A17004646D7 /* back@2x.png */,
+				E0A53CD616A886A5004646D7 /* background.png */,
+				E0A53CD716A886A5004646D7 /* background@2x.png */,
+				E0A53CDC16A88A17004646D7 /* forward.png */,
+				E0A53CDD16A88A17004646D7 /* forward@2x.png */,
+				E0177EAF16B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png */,
 				E0CF339016B3B3FB00C3886F /* navbar-home-landscape.png */,
 				E0CF339116B3B3FB00C3886F /* navbar-home-landscape@2x.png */,
 				E0CF339216B3B3FB00C3886F /* navbar-home.png */,
 				E0CF339316B3B3FB00C3886F /* navbar-home@2x.png */,
+				E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */,
 				E0CF339416B3B3FB00C3886F /* navbar-landscape.png */,
 				E0CF339516B3B3FB00C3886F /* navbar-landscape@2x.png */,
 				E0CF338B16B3A58F00C3886F /* navbar.png */,
 				E0CF338C16B3A58F00C3886F /* navbar@2x.png */,
-				E0A53CDA16A88A17004646D7 /* back.png */,
-				E0A53CDB16A88A17004646D7 /* back@2x.png */,
-				E0A53CDC16A88A17004646D7 /* forward.png */,
-				E0A53CDD16A88A17004646D7 /* forward@2x.png */,
-				E0A53CD616A886A5004646D7 /* background.png */,
-				E0A53CD716A886A5004646D7 /* background@2x.png */,
+				E0177EB116B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png */,
+				E0CF339C16B3B70700C3886F /* toolbar-landscape.png */,
+				E0CF339D16B3B70700C3886F /* toolbar-landscape@2x.png */,
+				E0CF339E16B3B70700C3886F /* toolbar.png */,
+				E0CF339F16B3B70700C3886F /* toolbar@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -410,6 +419,9 @@
 				E0CF33A116B3B70700C3886F /* toolbar-landscape@2x.png in Resources */,
 				E0CF33A216B3B70700C3886F /* toolbar.png in Resources */,
 				E0CF33A316B3B70700C3886F /* toolbar@2x.png in Resources */,
+				E0177EB216B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png in Resources */,
+				E0177EB316B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png in Resources */,
+				E0177EB416B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,8 +552,8 @@
 				INFOPLIST_FILE = "HeadlessWay/HeadlessWay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AC620076-A49B-4039-AA87-B462EB7F7BDA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC620076-A49B-4039-AA87-B462EB7F7BDA";
+				PROVISIONING_PROFILE = "CD3F558B-169B-4546-A05B-ECD699F9A925";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CD3F558B-169B-4546-A05B-ECD699F9A925";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
