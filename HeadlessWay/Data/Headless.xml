@@ -15,40 +15,24 @@
             <name>Experiments</name>
             <node type="group" special="experiment">
                 <node type="webdata">
-                    <name>Touch</name>
-                    <url>http://www.headless.org/headless-app/experiments/touch.htm</url>
+                    <name>Pointing</name>
+                    <url>http://www.headless.org/headless-app/experiments/pointing.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Two-Way Pointing</name>
                     <url>http://www.headless.org/headless-app/experiments/2-way-pointing.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Being All Things</name>
-                    <url>http://www.headless.org/headless-app/experiments/being-all-things.htm</url>
+                    <name>The Bottom Line</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-bottom-line.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Closed Eyes</name>
-                    <url>http://www.headless.org/headless-app/experiments/closed-eyes.htm</url>
+                    <name>The Single Eye</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-single-eye.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Handling Problems</name>
-                    <url>http://www.headless.org/headless-app/experiments/handling-problems.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>For the Blind</name>
-                    <url>http://www.headless.org/headless-app/experiments/inseeing-experiments-for-the-blind.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>No Head Circle</name>
-                    <url>http://www.headless.org/headless-app/experiments/no-head-circle.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Pointing</name>
-                    <url>http://www.headless.org/headless-app/experiments/pointing.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Seeing Who You Are</name>
-                    <url>http://www.headless.org/headless-app/experiments/seeing-who-you-are.htm</url>
+                    <name>The Mirror</name>
+                    <url>http://www.headless.org/headless-app/experiments/the-mirror.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Seeing Your Nose</name>
@@ -59,20 +43,36 @@
                     <url>http://www.headless.org/headless-app/experiments/spinning-the-world.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>The Bottom Line</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-bottom-line.htm</url>
+                    <name>Touch</name>
+                    <url>http://www.headless.org/headless-app/experiments/touch.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>The Mirror</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-mirror.htm</url>
+                    <name>No Head Circle</name>
+                    <url>http://www.headless.org/headless-app/experiments/no-head-circle.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>The Single Eye</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-single-eye.htm</url>
+                    <name>Closed Eyes</name>
+                    <url>http://www.headless.org/headless-app/experiments/closed-eyes.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Being All Things</name>
+                    <url>http://www.headless.org/headless-app/experiments/being-all-things.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>For the Blind</name>
+                    <url>http://www.headless.org/headless-app/experiments/inseeing-experiments-for-the-blind.htm</url>
                 </node>
                 <node type="webdata">
                     <name>The Tube</name>
                     <url>http://www.headless.org/headless-app/experiments/the-tube.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Seeing Who You Are</name>
+                    <url>http://www.headless.org/headless-app/experiments/seeing-who-you-are.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Handling Problems</name>
+                    <url>http://www.headless.org/headless-app/experiments/handling-problems.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Time</name>
