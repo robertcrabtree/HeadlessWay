@@ -34,7 +34,7 @@
 
 HEADLESS_ROTATION_SUPPORT_NONE
 
-//#define _TEST_NOTIFICATION 1
+//#define _TEST_HEADLESS 1
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -146,7 +146,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-#ifdef _TEST_NOTIFICATION
+#ifdef _TEST_HEADLESS
     return 4;
 #else
     return 3;
@@ -183,7 +183,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     } else if (indexPath.section == _rootNode.children.count) {
         cell.textLabel.text = @"Alarm Settings";
     } else {
-#ifdef _TEST_NOTIFICATION
+#ifdef _TEST_HEADLESS
         cell.textLabel.text = @"(( xxx TEST xxx ))";
 #endif
     }
@@ -256,43 +256,15 @@ HEADLESS_ROTATION_SUPPORT_NONE
     } else if (indexPath.section == _rootNode.children.count) {
         [self performSegueWithIdentifier:@"segueIdMainMenuToNotification" sender:self];
     } else {
-#ifdef _TEST_NOTIFICATION
-        [self testNotification];
-        [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+#ifdef _TEST_HEADLESS
+        [self testHeadless];
 #endif
     }
 }
 
-#ifdef _TEST_NOTIFICATION
-- (void)testNotification
+#ifdef _TEST_HEADLESS
+- (void)testHeadless
 {
-    NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
-    NSLog(@"have %d notifications scheduled", notifications.count);
-    
-    NSDate *now = [NSDate date];
-    
-    now = [now dateByAddingTimeInterval:10];
-    
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil)
-        NSLog(@"Error: notification is null");
-    
-    localNotif.fireDate = now;
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
-    localNotif.alertBody = @"This is a test notification";
-    localNotif.alertAction = nil;
-    localNotif.soundName = UILocalNotificationDefaultSoundName;
-    localNotif.applicationIconBadgeNumber = 0;
-    localNotif.repeatInterval = 0;
-
-    // real notification
-    localNotif.userInfo = [NSDictionary dictionaryWithObject:@"Object" forKey:@"Key"];
-    
-    // warning notification
-//    localNotif.userInfo = nil;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-    [localNotif release];
 }
 #endif
 
