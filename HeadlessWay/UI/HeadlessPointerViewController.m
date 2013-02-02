@@ -90,7 +90,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.buttonExperiment.target = self;
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame: textView.frame];
-    imageView.image = [UIImage imageNamed:@"paper-background3"];
+    imageView.image = [UIImage imageNamed:@"paper-background"];
     imageView.frame = self.textView.frame;
     [self.view addSubview: imageView];
     [self.view sendSubviewToBack: imageView];
