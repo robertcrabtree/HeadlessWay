@@ -89,6 +89,14 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.buttonExperiment.action = @selector(actionExperiment:);
     self.buttonExperiment.target = self;
     
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame: textView.frame];
+    imageView.image = [UIImage imageNamed:@"paper-background3"];
+    imageView.frame = self.textView.frame;
+    [self.view addSubview: imageView];
+    [self.view sendSubviewToBack: imageView];
+    [self.textView setBackgroundColor:[UIColor clearColor]];
+    [imageView release];
+    
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
