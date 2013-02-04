@@ -23,7 +23,6 @@
 		E014FDA31673E87700621B86 /* Headless.xml in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA01673E87700621B86 /* Headless.xml */; };
 		E014FDA51673E87700621B86 /* Pointers.txt in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA21673E87700621B86 /* Pointers.txt */; };
 		E014FDA81673F82F00621B86 /* HeadlessPointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */; };
-		E0177EB216B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EAF16B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png */; };
 		E0177EB316B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */; };
 		E0177EB416B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EB116B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png */; };
 		E031BB1116632399006C6902 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB1016632399006C6902 /* UIKit.framework */; };
@@ -42,6 +41,12 @@
 		E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E031BB491663287C006C6902 /* libz.dylib */; };
 		E0343A1B16742B3B0090FCAA /* HeadlessAlarmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0343A1A16742B3B0090FCAA /* HeadlessAlarmRouter.m */; };
 		E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */; };
+		E055953116BCD8920085A67F /* paper-background.png in Resources */ = {isa = PBXBuildFile; fileRef = E055952F16BCD8920085A67F /* paper-background.png */; };
+		E055953216BCD8920085A67F /* paper-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E055953016BCD8920085A67F /* paper-background@2x.png */; };
+		E06C7A4E16B67A0C003BD964 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06C7A4D16B67A0C003BD964 /* MediaPlayer.framework */; };
+		E06E86AE16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E06E86AB16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png */; };
+		E06E86AF16BF51E100B7DDBA /* navbar-movie-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = E06E86AC16BF51E100B7DDBA /* navbar-movie-landscape.png */; };
+		E06E86B016BF51E100B7DDBA /* navbar-movie-landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E06E86AD16BF51E100B7DDBA /* navbar-movie-landscape@2x.png */; };
 		E0A53CD816A886A5004646D7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CD616A886A5004646D7 /* background.png */; };
 		E0A53CD916A886A5004646D7 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CD716A886A5004646D7 /* background@2x.png */; };
 		E0A53CDE16A88A17004646D7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A53CDA16A88A17004646D7 /* back.png */; };
@@ -55,8 +60,6 @@
 		E0C852AB1677EBA90044C6BC /* HeadlessAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */; };
 		E0CF338D16B3A58F00C3886F /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF338B16B3A58F00C3886F /* navbar.png */; };
 		E0CF338E16B3A58F00C3886F /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF338C16B3A58F00C3886F /* navbar@2x.png */; };
-		E0CF339616B3B3FB00C3886F /* navbar-home-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF339016B3B3FB00C3886F /* navbar-home-landscape.png */; };
-		E0CF339716B3B3FB00C3886F /* navbar-home-landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF339116B3B3FB00C3886F /* navbar-home-landscape@2x.png */; };
 		E0CF339816B3B3FB00C3886F /* navbar-home.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF339216B3B3FB00C3886F /* navbar-home.png */; };
 		E0CF339916B3B3FB00C3886F /* navbar-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF339316B3B3FB00C3886F /* navbar-home@2x.png */; };
 		E0CF339A16B3B3FB00C3886F /* navbar-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF339416B3B3FB00C3886F /* navbar-landscape.png */; };
@@ -93,7 +96,6 @@
 		E014FDA21673E87700621B86 /* Pointers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pointers.txt; sourceTree = "<group>"; };
 		E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessPointerViewController.h; sourceTree = "<group>"; };
 		E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessPointerViewController.m; sourceTree = "<group>"; };
-		E0177EAF16B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-home-landscape-iphone5@2x.png"; path = "Images/navbar-home-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
 		E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-landscape-iphone5@2x.png"; path = "Images/navbar-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
 		E0177EB116B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "toolbar-landscape-iphone5@2x.png"; path = "Images/toolbar-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
 		E031BB0C16632399006C6902 /* HeadlessWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadlessWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,12 @@
 		E043809616A0D21000E3AD41 /* HeadlessNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessNavigationController.h; sourceTree = "<group>"; };
 		E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessNavigationController.m; sourceTree = "<group>"; };
 		E043809C16A0E1AD00E3AD41 /* HeadlessCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessCommon.h; sourceTree = "<group>"; };
+		E055952F16BCD8920085A67F /* paper-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-background.png"; path = "Images/paper-background.png"; sourceTree = "<group>"; };
+		E055953016BCD8920085A67F /* paper-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-background@2x.png"; path = "Images/paper-background@2x.png"; sourceTree = "<group>"; };
+		E06C7A4D16B67A0C003BD964 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E06E86AB16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-movie-landscape-iphone5@2x.png"; path = "Images/navbar-movie-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
+		E06E86AC16BF51E100B7DDBA /* navbar-movie-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-movie-landscape.png"; path = "Images/navbar-movie-landscape.png"; sourceTree = "<group>"; };
+		E06E86AD16BF51E100B7DDBA /* navbar-movie-landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-movie-landscape@2x.png"; path = "Images/navbar-movie-landscape@2x.png"; sourceTree = "<group>"; };
 		E0A53CD616A886A5004646D7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Images/background.png; sourceTree = "<group>"; };
 		E0A53CD716A886A5004646D7 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Images/background@2x.png"; sourceTree = "<group>"; };
 		E0A53CDA16A88A17004646D7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Images/back.png; sourceTree = "<group>"; };
@@ -141,8 +149,6 @@
 		E0C852AA1677EBA90044C6BC /* HeadlessAlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessAlarmManager.m; sourceTree = "<group>"; };
 		E0CF338B16B3A58F00C3886F /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = Images/navbar.png; sourceTree = "<group>"; };
 		E0CF338C16B3A58F00C3886F /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar@2x.png"; path = "Images/navbar@2x.png"; sourceTree = "<group>"; };
-		E0CF339016B3B3FB00C3886F /* navbar-home-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-home-landscape.png"; path = "Images/navbar-home-landscape.png"; sourceTree = "<group>"; };
-		E0CF339116B3B3FB00C3886F /* navbar-home-landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-home-landscape@2x.png"; path = "Images/navbar-home-landscape@2x.png"; sourceTree = "<group>"; };
 		E0CF339216B3B3FB00C3886F /* navbar-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-home.png"; path = "Images/navbar-home.png"; sourceTree = "<group>"; };
 		E0CF339316B3B3FB00C3886F /* navbar-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-home@2x.png"; path = "Images/navbar-home@2x.png"; sourceTree = "<group>"; };
 		E0CF339416B3B3FB00C3886F /* navbar-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-landscape.png"; path = "Images/navbar-landscape.png"; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06C7A4E16B67A0C003BD964 /* MediaPlayer.framework in Frameworks */,
 				E005ECB916B24001002FB0CB /* SystemConfiguration.framework in Frameworks */,
 				E031BB4A1663287C006C6902 /* libz.dylib in Frameworks */,
 				E031BB1116632399006C6902 /* UIKit.framework in Frameworks */,
@@ -236,6 +243,7 @@
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
+				E06C7A4D16B67A0C003BD964 /* MediaPlayer.framework */,
 				E00CF03016B34644009EB1EF /* Icon.png */,
 				E00CF03116B34644009EB1EF /* Icon@2x.png */,
 				E00CF03216B34644009EB1EF /* iTunesArtwork */,
@@ -313,15 +321,17 @@
 		E0A53CD416A88697004646D7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E06E86AB16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png */,
+				E06E86AC16BF51E100B7DDBA /* navbar-movie-landscape.png */,
+				E06E86AD16BF51E100B7DDBA /* navbar-movie-landscape@2x.png */,
+				E055952F16BCD8920085A67F /* paper-background.png */,
+				E055953016BCD8920085A67F /* paper-background@2x.png */,
 				E0A53CDA16A88A17004646D7 /* back.png */,
 				E0A53CDB16A88A17004646D7 /* back@2x.png */,
 				E0A53CD616A886A5004646D7 /* background.png */,
 				E0A53CD716A886A5004646D7 /* background@2x.png */,
 				E0A53CDC16A88A17004646D7 /* forward.png */,
 				E0A53CDD16A88A17004646D7 /* forward@2x.png */,
-				E0177EAF16B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png */,
-				E0CF339016B3B3FB00C3886F /* navbar-home-landscape.png */,
-				E0CF339116B3B3FB00C3886F /* navbar-home-landscape@2x.png */,
 				E0CF339216B3B3FB00C3886F /* navbar-home.png */,
 				E0CF339316B3B3FB00C3886F /* navbar-home@2x.png */,
 				E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */,
@@ -409,8 +419,6 @@
 				E00CF03716B34644009EB1EF /* iTunesArtwork@2x in Resources */,
 				E0CF338D16B3A58F00C3886F /* navbar.png in Resources */,
 				E0CF338E16B3A58F00C3886F /* navbar@2x.png in Resources */,
-				E0CF339616B3B3FB00C3886F /* navbar-home-landscape.png in Resources */,
-				E0CF339716B3B3FB00C3886F /* navbar-home-landscape@2x.png in Resources */,
 				E0CF339816B3B3FB00C3886F /* navbar-home.png in Resources */,
 				E0CF339916B3B3FB00C3886F /* navbar-home@2x.png in Resources */,
 				E0CF339A16B3B3FB00C3886F /* navbar-landscape.png in Resources */,
@@ -419,9 +427,13 @@
 				E0CF33A116B3B70700C3886F /* toolbar-landscape@2x.png in Resources */,
 				E0CF33A216B3B70700C3886F /* toolbar.png in Resources */,
 				E0CF33A316B3B70700C3886F /* toolbar@2x.png in Resources */,
-				E0177EB216B62BAB00A9B57B /* navbar-home-landscape-iphone5@2x.png in Resources */,
 				E0177EB316B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png in Resources */,
 				E0177EB416B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png in Resources */,
+				E055953116BCD8920085A67F /* paper-background.png in Resources */,
+				E055953216BCD8920085A67F /* paper-background@2x.png in Resources */,
+				E06E86AE16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png in Resources */,
+				E06E86AF16BF51E100B7DDBA /* navbar-movie-landscape.png in Resources */,
+				E06E86B016BF51E100B7DDBA /* navbar-movie-landscape@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
