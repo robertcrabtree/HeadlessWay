@@ -117,7 +117,9 @@
 		[aXMLString getBytes:bytes maxLength:bytesLength usedLength:0 encoding:NSUTF8StringEncoding options:NSStringEncodingConversionAllowLossy range:NSMakeRange(0, bytesLength) remainingRange:nil];
 		
 		// set null terminator at end of byte array
-		bytes[bytesLength] = 0;
+        if (bytes) {
+            bytes[bytesLength] = 0;
+        }
 		
 		// decode xml data
 		[self decodeBytes];
@@ -226,7 +228,9 @@
         [data getBytes:bytes length:bytesLength];
         
         // set null terminator at end of byte array
-        bytes[bytesLength] = 0;
+        if (bytes) {
+            bytes[bytesLength] = 0;
+        }
         
         // decode xml data
         [self decodeBytes];
@@ -480,11 +484,12 @@
             // different behavior depending on if this is the end of the query or midstream
             if (i < (components.count - 1)) {
                 // midstream
-                do {
-                    NSString *restOfQuery = [[components subarrayWithRange:NSMakeRange(i + 1, components.count - i - 1)] componentsJoinedByString:@"."];
-                    [TBXML iterateElementsForQuery:restOfQuery fromElement:currTBXMLElement withBlock:iterateBlock];
-                } while ((currTBXMLElement = currTBXMLElement->nextSibling));
-                
+                if (currTBXMLElement) {
+                    do {
+                        NSString *restOfQuery = [[components subarrayWithRange:NSMakeRange(i + 1, components.count - i - 1)] componentsJoinedByString:@"."];
+                        [TBXML iterateElementsForQuery:restOfQuery fromElement:currTBXMLElement withBlock:iterateBlock];
+                    } while ((currTBXMLElement = currTBXMLElement->nextSibling));
+                }
             }
         } else {
             currTBXMLElement = [TBXML childElementNamed:iTagName parentElement:currTBXMLElement];            
