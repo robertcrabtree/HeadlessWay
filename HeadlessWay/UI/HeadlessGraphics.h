@@ -1,3 +1,4 @@
+#import <MediaPlayer/MediaPlayer.h>
 #import "HeadlessCommon.h"
 
 // convert from html hex code
@@ -8,6 +9,12 @@
 
 #define SET_LOOKS_NAVIGATION_BAR() { \
     [[UINavigationBar appearance] setTintColor:UIColorFromHex(0x4C5B74)]; \
+    [[UINavigationBar appearanceWhenContainedIn:[MPMoviePlayerViewController class], nil] setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault]; \
+    if (IS_IPHONE_5) { \
+        [[UINavigationBar appearanceWhenContainedIn:[MPMoviePlayerViewController class], nil] setBackgroundImage:[UIImage imageNamed:@"navbar-movie-landscape-iphone5"] forBarMetrics:UIBarMetricsLandscapePhone]; \
+    } else { \
+        [[UINavigationBar appearanceWhenContainedIn:[MPMoviePlayerViewController class], nil] setBackgroundImage:[UIImage imageNamed:@"navbar-movie-landscape"] forBarMetrics:UIBarMetricsLandscapePhone]; \
+    } \
 }
 
 #define SET_LOOKS_TOOLBAR() { \
