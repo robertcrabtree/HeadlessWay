@@ -104,6 +104,24 @@ HEADLESS_ROTATION_SUPPORT_NONE
     return group.name;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    HeadlessDataNode *group = [node.children objectAtIndex:section];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 7, self.tableView.bounds.size.width, 30)];
+    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 30)] autorelease];
+    
+    label.text = group.name;
+    label.font = [UIFont boldSystemFontOfSize:label.font.pointSize];
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.shadowColor = [UIColor colorWithWhite:0.8 alpha:0.8];
+    [label sizeToFit];
+    
+    [headerView addSubview:label];
+    [label release];
+    return headerView;
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
