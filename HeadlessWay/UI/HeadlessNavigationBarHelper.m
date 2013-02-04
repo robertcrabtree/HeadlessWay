@@ -25,11 +25,6 @@
 {
     if (homePage) {
         [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home"] forBarMetrics:UIBarMetricsDefault];
-        if (IS_IPHONE_5) {
-            [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home-landscape-iphone5"] forBarMetrics:UIBarMetricsLandscapePhone];
-        } else {
-            [navItem setBackgroundImage:[UIImage imageNamed:@"navbar-home-landscape"] forBarMetrics:UIBarMetricsLandscapePhone];
-        }
     } else {
         [navItem setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
         if (IS_IPHONE_5) {
