@@ -202,6 +202,27 @@ HEADLESS_ROTATION_SUPPORT_NONE
     return title;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = nil;
+    if (section < _rootNode.children.count) {
+        headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 30)] autorelease];
+        HeadlessDataNode *group = [_rootNode.children objectAtIndex:section];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 7, self.tableView.bounds.size.width, 30)];
+        
+        label.text = group.name;
+        label.font = [UIFont boldSystemFontOfSize:label.font.pointSize];
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [UIColor whiteColor];
+        label.shadowColor = [UIColor colorWithWhite:0.8 alpha:0.8];
+        [label sizeToFit];
+        
+        [headerView addSubview:label];
+        [label release];
+    }
+    return headerView;
+}
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return NO;
