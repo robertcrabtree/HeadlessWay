@@ -23,8 +23,8 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 {
     self = [super init];
     if (self) {
-        name = nil;
-        url = nil;
+        name = [[[NSString alloc] initWithString:@""] retain];
+        url = [[[NSString alloc] initWithString:@""] retain];
         type = kDataNodeTypeSubMenu;
         isExperimentMenu = NO;
         children = [[NSMutableArray alloc] init];
