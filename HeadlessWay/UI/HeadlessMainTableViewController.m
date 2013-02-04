@@ -19,6 +19,7 @@
 #import "HeadlessDataNode.h"
 #import "HeadlessAlarmRouter.h"
 #import "Reachability.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface HeadlessMainTableViewController () {
     HeadlessDataNode *_rootNode;
@@ -286,6 +287,14 @@ HEADLESS_ROTATION_SUPPORT_NONE
 #ifdef _TEST_HEADLESS
 - (void)testHeadless
 {
+    //    NSString *vid = @"http://static.clipcanvas.com/sample/clipcanvas_14348_offline.mp4";
+    //    NSString *vid = @"http://192.168.0.12/~bobbycrabtree/prog_index.m3u8";
+    NSString *vid = @"http://192.168.0.12/~bobbycrabtree/3B/playlist.m3u8";
+    //    NSString *vid = @"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
+    MPMoviePlayerViewController* theMoviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:vid]];
+    [HeadlessNavigationBarHelper setNavBarImage:theMoviePlayer.navigationController.navigationBar forHomePage:NO];
+    [self presentMoviePlayerViewControllerAnimated:theMoviePlayer];
+    [theMoviePlayer release];
 }
 #endif
 
