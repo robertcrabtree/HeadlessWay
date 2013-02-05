@@ -15,7 +15,6 @@
 #import "HeadlessDataNodeParser.h"
 #import "HeadlessGraphics.h"
 #import "HeadlessCommon.h"
-#import "Pointers.h"
 #import "HeadlessDataNode.h"
 #import "HeadlessAlarmRouter.h"
 #import "Reachability.h"
@@ -26,12 +25,11 @@
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
 @property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
-@property (nonatomic, retain) Pointers *pointers;
 @end
 
 @implementation HeadlessMainTableViewController
 
-@synthesize buttonPointer, experimentSubmenu, pointers;
+@synthesize buttonPointer, experimentSubmenu;
 
 HEADLESS_ROTATION_SUPPORT_NONE
 
@@ -56,7 +54,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
         pointerView.experimentSubmenu = [HeadlessDataNode experimentMenu];
-        pointerView.pointers = self.pointers;
         pointerView.alarmFired = alarmFired;
         
         HeadlessNavigationController *navController = [[HeadlessNavigationController alloc] initWithRootViewController:pointerView];
@@ -104,10 +101,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     if(internetStatus == NotReachable) {
         [self showAlert:@"This application requires an internet connection. Please connect to a network and try again"];
     }
-
-    Pointers *p = [[Pointers alloc] init];
-    self.pointers = p;
-    [p release];
 
     [[HeadlessAlarmRouter sharedInstance] registerHandler:self handler:@selector(headlessAlarmHandler)];
     

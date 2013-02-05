@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class HeadlessDataNode;
+
 @interface Pointers : NSObject
 - (NSString*)nextPointer;
+- (void)addPointer:(HeadlessDataNode*)pointer;
++ (id)sharedInstance;
 @end

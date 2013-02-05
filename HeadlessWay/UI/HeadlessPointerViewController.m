@@ -19,7 +19,7 @@
 
 @implementation HeadlessPointerViewController
 
-@synthesize experimentSubmenu, pointers, buttonRefresh, buttonExperiment, textView, alarmFired;
+@synthesize experimentSubmenu, buttonRefresh, buttonExperiment, textView, alarmFired;
 
 static BOOL _inUse = NO;
 
@@ -37,7 +37,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
 - (void)dealloc
 {
     [experimentSubmenu release];
-    [pointers release];
     [buttonRefresh release];
     [buttonExperiment release];
     [textView release];
@@ -46,10 +45,9 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void)nextPointer
 {
-    if (self.pointers) {
-        NSString *pointer = [self.pointers nextPointer];
-        self.textView.text = pointer;
-    }
+    Pointers *pointerObj = [Pointers sharedInstance];
+    NSString *pointer = [pointerObj nextPointer];
+    self.textView.text = pointer;
 }
 
 - (void) actionDone:(id)sender

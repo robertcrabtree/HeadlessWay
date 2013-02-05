@@ -7,12 +7,13 @@
 //
 
 #import "HeadlessDataNode.h"
+#import "Pointers.h"
 
 @implementation HeadlessDataNode
 
 static HeadlessDataNode* _gExperimentMenu = nil;
 
-@synthesize type, isExperimentMenu, name, url, children, randomExperiment;
+@synthesize type, isExperimentMenu, name, url, text, children, randomExperiment;
 
 + (HeadlessDataNode*) experimentMenu
 {
@@ -39,6 +40,7 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 {
     NSString *typeStr = [TBXML valueOfAttributeNamed:@"type" forElement:elmt];
     NSString *specialStr = [TBXML valueOfAttributeNamed:@"special" forElement:elmt];
+    
 
     if ([typeStr isEqualToString:@"root"]) {
         type = kDataNodeTypeRoot;
@@ -52,6 +54,8 @@ static HeadlessDataNode* _gExperimentMenu = nil;
         type = kDataNodeTypeWebPageFull;
     } else if ([typeStr isEqualToString:@"youtube"]) {
         type = kDataNodeTypeYoutube;
+    } else if ([typeStr isEqualToString:@"pointer"]) {
+        type = kDataNodeTypePointer;
     }
 
     if ([specialStr isEqualToString:@"experiment"]) {
@@ -67,6 +71,10 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 {
     TBXMLElement *elmtName = [TBXML childElementNamed:@"name" parentElement:elmt];
     TBXMLElement *elmtUrl = [TBXML childElementNamed:@"url" parentElement:elmt];
+    NSString *data = [TBXML textForElement:elmt];
+    
+    if (data && data.length > 0)
+        text = [data retain];
     
     if (elmtName)
         name = [[TBXML textForElement:elmtName] retain];
@@ -81,7 +89,13 @@ static HeadlessDataNode* _gExperimentMenu = nil;
     if (child) {
         do {
             HeadlessDataNode *childNode = [[HeadlessDataNode alloc] initWithElement:child];
-            [children addObject:childNode];
+            
+            // pointers don't get added to the UI heirarchy
+            if (childNode.type == kDataNodeTypePointer) {
+                [[Pointers sharedInstance] addPointer:childNode];
+            } else {
+                [children addObject:childNode];
+            }
             [childNode release];
         } while ((child = child->nextSibling));
     }
@@ -117,6 +131,7 @@ static HeadlessDataNode* _gExperimentMenu = nil;
     [_gExperimentMenu release];
     [name release];
     [url release];
+    [text release];
     [children release];
     [super dealloc];
 }

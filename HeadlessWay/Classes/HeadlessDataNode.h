@@ -16,6 +16,7 @@ typedef enum {
     kDataNodeTypeWebData,       // will not show navigation buttons in UIWebView
     kDataNodeTypeWebPageFull,   // will show navigation buttons in UIWebView
     kDataNodeTypeYoutube,
+    kDataNodeTypePointer,
 } HeadlessDataNodeType;
 
 @interface HeadlessDataNode : NSObject
@@ -29,6 +30,7 @@ typedef enum {
 @property (nonatomic, assign) BOOL isExperimentMenu;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;
+@property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) NSMutableArray *children;
 
 @property (nonatomic, readonly) HeadlessDataNode *randomExperiment;

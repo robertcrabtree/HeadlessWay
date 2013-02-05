@@ -7,76 +7,20 @@
 //
 
 #import "Pointers.h"
+#import "HeadlessDataNode.h"
+
 @interface Pointers() {
     NSMutableArray *_pointers;
 }
 @end
 
-static NSString* POINTER_BUNDLE_FILE = @"Pointers";
-static NSString* POINTER_BUNDLE_EXT = @"txt";
-static NSString* POINTER_FILE = @"Pointers.txt";
+static Pointers* sharedInstance = nil;
 
 @implementation Pointers
 
-- (NSString*)pointerFilePath
+- (void)addPointer:(HeadlessDataNode*)pointer
 {
-    NSArray *dir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    return [[dir objectAtIndex:0] stringByAppendingPathComponent:POINTER_FILE];
-}
-
-- (void) initPointers
-{
-    
-    NSString *pointerPath = [self pointerFilePath];
-	BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:pointerPath];
-    
-    // see if pointers file exists
-    // if so, load them into array
-    // if not, parse bundle file and save them to pointers file
-    if (fileExists) {
-        NSArray *values = [[NSArray alloc] initWithContentsOfFile:pointerPath];
-        for (int i = 0; i < values.count; i++) {
-            NSString *pointer = [values objectAtIndex:i];
-            pointer = [pointer stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-            if ([pointer length] > 0) {
-                //NSLog(@"%02d :%@", i, pointer);
-                [_pointers addObject:pointer];
-            }
-        }
-        [values release];
-    } else {
-        NSString *file = [[NSBundle mainBundle] pathForResource:POINTER_BUNDLE_FILE ofType:POINTER_BUNDLE_EXT];
-        NSString *fileContents = [NSString stringWithContentsOfFile:file
-                                                           encoding:NSUTF8StringEncoding error:NULL];
-        NSArray* pointers = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        
-        for (int i = 0; i < pointers.count; i++) {
-            NSString *pointer = [pointers objectAtIndex:i];
-            pointer = [pointer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            
-            if ([pointer length] > 0) {
-                //NSLog(@"%02d :%@", i, pointer);
-                [_pointers addObject:pointer];
-            }
-        }
-        [_pointers writeToFile:pointerPath atomically:YES];
-    }
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        _pointers = [[NSMutableArray alloc] init];
-        [self initPointers];
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-    [_pointers release];
-    [super dealloc];
+    [_pointers addObject:pointer];
 }
 
 - (NSString*)nextPointer
@@ -87,8 +31,59 @@ static NSString* POINTER_FILE = @"Pointers.txt";
     }
 
     int random = arc4random() % _pointers.count;
-    NSString *pointer = [_pointers objectAtIndex:random];
-//    NSLog(@"random %d=%@", random, pointer);
-    return pointer;
+    HeadlessDataNode *pointer = [_pointers objectAtIndex:random];
+//    NSLog(@"random %d=%@", random, pointer.text);
+    return pointer.text;
 }
+
+/////////////////////////////////////// SINGLETON IMPL ///////////////////////////////
+
++ (Pointers *)sharedInstance {
+    if (sharedInstance == nil) {
+        sharedInstance = [[super allocWithZone:NULL] init];
+    }
+    
+    return sharedInstance;
+}
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        _pointers = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
+-(void)dealloc
+{
+    [super dealloc];
+}
+
++ (id)allocWithZone:(NSZone*)zone {
+    return [[self sharedInstance] retain];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
+
+- (id)retain {
+    return self;
+}
+
+- (NSUInteger)retainCount {
+    return NSUIntegerMax;
+}
+
+- (oneway void)release {
+    
+}
+
+- (id)autorelease {
+    return self;
+}
+
 @end

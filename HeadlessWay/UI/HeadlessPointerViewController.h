@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class HeadlessDataNode;
-@class Pointers;
 
 @interface HeadlessPointerViewController : UIViewController
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonRefresh;
@@ -17,7 +16,6 @@
 @property (nonatomic, retain) IBOutlet UITextView *textView;
 
 @property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
-@property (nonatomic, retain) Pointers *pointers;
 @property (nonatomic, assign) BOOL alarmFired; // a seeing alarm has fired
 
 +(BOOL)inUse;
