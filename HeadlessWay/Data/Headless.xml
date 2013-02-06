@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <node type="root">
     <node type="group">
-        <!----------------------->
+        <!-- ***************** -->
         <!--    HOMEPAGE       -->
-        <!----------------------->
+        <!-- ***************** -->
         <node type="webdata">
             <name>Welcome</name>
             <url>http://www.headless.org/headless-app/english-welcome.htm</url>
         </node>
-        <!----------------------->
+        <!-- ***************** -->
         <!--    EXPERIMENTS    -->
-        <!----------------------->
+        <!-- ***************** -->
         <node type="submenu">
             <name>Experiments</name>
             <node type="group" special="experiment">
@@ -81,14 +81,14 @@
                 </node>
             </node>
         </node>
-        <!----------------------->
+        <!-- ***************** -->
         <!--    ARTICLES       -->
-        <!----------------------->
+        <!-- ***************** -->
         <node type="submenu">
             <name>Articles</name>
-            <!----------------------->
+            <!-- ***************** -->
             <!-- DOUGLAS ARTICLES  -->
-            <!----------------------->
+            <!-- ***************** -->
             <node type="group">
                 <name>By Douglas Harding</name>
                 <node type="webdata">
@@ -136,9 +136,9 @@
                     <url>http://www.headless.org/headless-app/articles/douglas-articles/the-face-game.htm</url>
                 </node>
             </node>
-            <!----------------------->
+            <!-- ***************** -->
             <!--  OTHER ARTICLES  -->
-            <!----------------------->
+            <!-- ***************** -->
             <node type="group">
                 <name>By Others</name>
                 <node type="webdata">
@@ -211,17 +211,17 @@
                 </node>
             </node>
         </node>
-        <!----------------------->
+        <!-- ***************** -->
         <!--    VIDEO          -->
-        <!----------------------->
+        <!-- ***************** -->
         <node type="webdata">
             <name>Video</name>
             <url>http://www.headless.org/headless-app/experiments-video.htm</url>
         </node>
     </node>
-    <!----------------------->
+    <!-- ***************** -->
     <!--    RESOURCES      -->
-    <!----------------------->
+    <!-- ***************** -->
     <node type="group">
         <node type="submenu">
             <name>Resources</name>
@@ -242,9 +242,9 @@
             </node>
         </node>
     </node>
-    <!----------------------->
+    <!-- ***************** -->
     <!--    POINTERS       -->
-    <!----------------------->
+    <!-- ***************** -->
     <node type="pointer">
         The ups and downs of life where you find life going on, above that bottom line of yours… go on regardless of whether they are resented, or just tolerated, or in the end (whether by God’s good grace, or simple looking-to-see, or both) welcomed with open arms. The art of handling these inexorable goings-on is the art of resting on what underlies them, the art and science of consciously being the ground which supports all that commotion without itself becoming disturbed in the slightest. Here, you are the bedrock of the world, where it all begins and where it all ends. Eternally one and the same, you are the Unmoved Mover. Douglas Harding, Head Off Stress.
     </node>
