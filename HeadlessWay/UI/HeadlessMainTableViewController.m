@@ -265,8 +265,9 @@ HEADLESS_ROTATION_SUPPORT_NONE
         } else if (node.type == kDataNodeTypeWebData || node.type == kDataNodeTypeWebPageFull) {
             [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
         } else if (node.type == kDataNodeTypeVideo) {
-            NSURL *url = [NSURL URLWithString:node.url];
-#warning process video
+            MPMoviePlayerViewController* theMoviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:node.url]];
+            [self presentMoviePlayerViewControllerAnimated:theMoviePlayer];
+            [theMoviePlayer release];
         }
     } else if (indexPath.section == _rootNode.children.count) {
         [self performSegueWithIdentifier:@"segueIdMainMenuToNotification" sender:self];

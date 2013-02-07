@@ -37,6 +37,20 @@ HEADLESS_ROTATION_SUPPORT_NONE
     [super dealloc];
 }
 
+- (IBAction)handleRandom:(id)sender
+{
+    HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
+    HeadlessDataNode *randomNode = randomNodes.randomNode;
+    
+    if (randomNode.type == kDataNodeTypeVideo) {
+        MPMoviePlayerViewController* moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:randomNode.url]];
+        [self presentMoviePlayerViewControllerAnimated:moviePlayer];
+        [moviePlayer release];
+    } else {
+        [self performSegueWithIdentifier:@"segueIdSubMenuToBrowser" sender:self];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -189,9 +203,9 @@ HEADLESS_ROTATION_SUPPORT_NONE
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
     } else if (n.type == kDataNodeTypeVideo) {
-        [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
-        NSURL *url = [NSURL URLWithString:n.url];
-#warning process video
+        MPMoviePlayerViewController* moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:n.url]];
+        [self presentMoviePlayerViewControllerAnimated:moviePlayer];
+        [moviePlayer release];
     } else {
         [self performSegueWithIdentifier:@"segueIdSubMenuToBrowser" sender:self];
     }
@@ -214,7 +228,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
                 controller.randomNodes = group;
             }
         }
-    } else { // segueIdSubMenuToBrowserBrowser
+    } else { // segueIdSubMenuToBrowserRandom
         HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
         controller.randomNodes = randomNodes;
         controller.node = randomNodes.randomNode;

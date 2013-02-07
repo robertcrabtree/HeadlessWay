@@ -223,9 +223,135 @@
         <!-- ***************** -->
         <!--    VIDEO          -->
         <!-- ***************** -->
-        <node type="webdata">
+        <node type="submenu">
             <name>Video</name>
-            <url>http://www.headless.org/headless-app/experiments-video.htm</url>
+            <node type="group">
+                <name>Video</name>
+                <node type="submenu">
+                    <name>Experiments</name>
+                    <node type="group" random="Experiment">
+                        <name>Who Are You Really?</name>
+                        <node type="video">
+                            <name>Part 1A</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/1A/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 1B</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/1B/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 2A</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/2A/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 2B</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/2B/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 3A</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/3A/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 3B</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/3B/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 4A</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/4A/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Part 4B</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/4B/playlist.m3u8</url>
+                        </node>
+                    </node>
+                </node>
+                <node type="submenu">
+                    <name>Reflections</name>
+                    <node type="group" random="Reflection">
+                        <name>Reflections</name>
+                        <node type="video">
+                            <name>Reflection 1</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections1/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 2</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections2/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 3</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections3/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 4</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections4/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 5</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections5/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 6</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections6/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 7</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections7/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 8</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections8/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 9</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections9/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 10</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections10/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 11</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections11/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 12</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections12/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 13</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections13/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 14</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections14/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 15</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections15/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 16</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections16/playlist.m3u8</url>
+                        </node>
+                        <node type="video">
+                            <name>Reflection 17</name>
+                            <url>http://192.168.0.12/~bobbycrabtree/Reflections17/playlist.m3u8</url>
+                        </node>
+                    </node>
+                </node>
+                <node type="video">
+                    <name>Not What You Look Like</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/NotWhatYouLookLike/playlist.m3u8</url>
+                </node>
+                <node type="video">
+                    <name>The Four Stages of Life</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/FourStagesOfLife/playlist.m3u8</url>
+                </node>
+                <node type="video">
+                    <name>The Man With No Head</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/ManWithNoHead/playlist.m3u8</url>
+                </node>
+            </node>
         </node>
     </node>
     <!-- ***************** -->
