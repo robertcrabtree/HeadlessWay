@@ -264,9 +264,9 @@ HEADLESS_ROTATION_SUPPORT_NONE
             [self performSegueWithIdentifier:@"segueIdMainMenuToSubmenu" sender:self];
         } else if (node.type == kDataNodeTypeWebData || node.type == kDataNodeTypeWebPageFull) {
             [self performSegueWithIdentifier:@"segueIdMainMenuToBrowser" sender:self];
-        } else if (node.type == kDataNodeTypeYoutube) {
+        } else if (node.type == kDataNodeTypeVideo) {
             NSURL *url = [NSURL URLWithString:node.url];
-            [[UIApplication sharedApplication] openURL:url];
+#warning process video
         }
     } else if (indexPath.section == _rootNode.children.count) {
         [self performSegueWithIdentifier:@"segueIdMainMenuToNotification" sender:self];
@@ -285,7 +285,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     NSString *vid = @"http://192.168.0.12/~bobbycrabtree/3B/playlist.m3u8";
     //    NSString *vid = @"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
     MPMoviePlayerViewController* theMoviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:vid]];
-    [HeadlessNavigationBarHelper setNavBarImage:theMoviePlayer.navigationController.navigationBar forHomePage:NO];
     [self presentMoviePlayerViewControllerAnimated:theMoviePlayer];
     [theMoviePlayer release];
 }

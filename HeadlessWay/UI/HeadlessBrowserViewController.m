@@ -95,16 +95,6 @@ HEADLESS_ROTATION_SUPPORT
         NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.node.url]];
         [self.webView loadRequest:requestURL];
         NSLog(@"url=%@", self.node.url);
-    } else if (self.node.type == kDataNodeTypeYoutube) {
-        NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head>\
-                                <body style=\"background:#33ff66;margin-top:0px;margin-left:0px\"><div>\
-                                <object width=\"320\" height=\"480\">\
-                                <param name=\"movie\" value=\"%@\"></param>\
-                                <param name=\"wmode\" value=\"transparent\"></param>\
-                                <embed src=\"%@\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"320\" height=\"480\"></embed>\
-                                </object></div></body></html>",node.url,node.url];
-        
-        [self.webView loadHTMLString:htmlString baseURL:nil];
     } else {
         NSLog(@"Error: invalid node type in browser");
     }

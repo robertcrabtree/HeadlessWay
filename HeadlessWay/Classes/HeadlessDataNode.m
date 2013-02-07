@@ -55,8 +55,8 @@ static HeadlessDataNode* _gExperimentMenu = nil;
         type = kDataNodeTypeWebData;
     } else if ([typeStr isEqualToString:@"webpage"]) {
         type = kDataNodeTypeWebPageFull;
-    } else if ([typeStr isEqualToString:@"youtube"]) {
-        type = kDataNodeTypeYoutube;
+    } else if ([typeStr isEqualToString:@"video"]) {
+        type = kDataNodeTypeVideo;
     } else if ([typeStr isEqualToString:@"pointer"]) {
         type = kDataNodeTypePointer;
     }

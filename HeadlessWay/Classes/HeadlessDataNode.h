@@ -15,7 +15,7 @@ typedef enum {
     kDataNodeTypeSubMenu,
     kDataNodeTypeWebData,       // will not show navigation buttons in UIWebView
     kDataNodeTypeWebPageFull,   // will show navigation buttons in UIWebView
-    kDataNodeTypeYoutube,
+    kDataNodeTypeVideo,
     kDataNodeTypePointer,
 } HeadlessDataNodeType;
 

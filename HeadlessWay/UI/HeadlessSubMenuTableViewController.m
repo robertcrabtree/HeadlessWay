@@ -188,10 +188,10 @@ HEADLESS_ROTATION_SUPPORT_NONE
         HeadlessSubMenuTableViewController *subMenu = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"StoryboardIdSubMenu"];
         subMenu.node = n;
         [self.navigationController pushViewController:subMenu animated:YES];
-    } else if (n.type == kDataNodeTypeYoutube) {
+    } else if (n.type == kDataNodeTypeVideo) {
         [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
         NSURL *url = [NSURL URLWithString:n.url];
-        [[UIApplication sharedApplication] openURL:url];
+#warning process video
     } else {
         [self performSegueWithIdentifier:@"segueIdSubMenuToBrowser" sender:self];
     }
