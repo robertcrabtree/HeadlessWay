@@ -18,7 +18,7 @@
 
 @implementation HeadlessBrowserViewController
 
-@synthesize webView, buttonBack, buttonForward, node, experimentSubmenu;
+@synthesize webView, buttonBack, buttonForward, node, randomNodes;
 
 HEADLESS_ROTATION_SUPPORT
 
@@ -37,13 +37,13 @@ HEADLESS_ROTATION_SUPPORT
     [buttonBack release];
     [buttonForward release];
     [node release];
-    [experimentSubmenu release];
+    [randomNodes release];
     [super dealloc];
 }
 
 - (void)actionNext:(id)sender
 {
-    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.experimentSubmenu.randomExperiment.url]];
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.randomNodes.randomNode.url]];
     [self.webView loadRequest:requestURL];
 }
 
@@ -94,6 +94,7 @@ HEADLESS_ROTATION_SUPPORT
     if (self.node.type == kDataNodeTypeWebData || self.node.type == kDataNodeTypeWebPageFull) {
         NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:self.node.url]];
         [self.webView loadRequest:requestURL];
+        NSLog(@"url=%@", self.node.url);
     } else if (self.node.type == kDataNodeTypeYoutube) {
         NSString *htmlString = [NSString stringWithFormat:@"<html><head><meta name = \"viewport\" content = \"initial-scale = 1.0, user-scalable = no, width = 212\"/></head>\
                                 <body style=\"background:#33ff66;margin-top:0px;margin-left:0px\"><div>\
@@ -108,8 +109,9 @@ HEADLESS_ROTATION_SUPPORT
         NSLog(@"Error: invalid node type in browser");
     }
 
-    if (self.experimentSubmenu != nil) {
-        UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Random Experiment" style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
+    if (self.randomNodes != nil) {
+        NSString *buttonText = [NSString stringWithFormat:@"Random %@", randomNodes.randomName];
+        UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:buttonText style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
         self.navigationItem.rightBarButtonItem = nextButton;
         [nextButton release];
     }

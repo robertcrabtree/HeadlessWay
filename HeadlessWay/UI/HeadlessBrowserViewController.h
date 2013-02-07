@@ -17,5 +17,5 @@
 @property (nonatomic, retain) UIBarButtonItem *buttonForward;
 
 @property (nonatomic, retain) HeadlessDataNode *node;
-@property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
+@property (nonatomic, retain) HeadlessDataNode *randomNodes;
 @end

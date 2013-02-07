@@ -13,4 +13,5 @@
 
 @interface HeadlessDataNodeParser : NSObject
 - (HeadlessDataNode*) parseFile:(NSString *)fileName;
+- (HeadlessDataNode*) parseURL:(NSString *)url;
 @end

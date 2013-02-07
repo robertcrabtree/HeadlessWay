@@ -15,7 +15,7 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonExperiment;
 @property (nonatomic, retain) IBOutlet UITextView *textView;
 
-@property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
+@property (nonatomic, retain) HeadlessDataNode *randomExperiments;
 @property (nonatomic, assign) BOOL alarmFired; // a seeing alarm has fired
 
 +(BOOL)inUse;

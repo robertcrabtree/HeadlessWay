@@ -49,6 +49,21 @@ HEADLESS_ROTATION_SUPPORT_NONE
     
     SET_LOOKS_TABLE();
     
+    BOOL removeRandomButton = YES;
+    // Only show a "Random" button if we have a single group (too confusing if we have more than one group).
+    if (node.children.count == 1) {
+        HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
+        // And, obvoiusly, don't show random button if we aren't supposed to (IOW, the random name is empty string).
+        if (![randomNodes.randomName isEqualToString:@""]) {
+            removeRandomButton = NO;
+            self.navigationItem.rightBarButtonItem.title = [NSString stringWithFormat:@"Random %@", randomNodes.randomName];
+        }
+    }
+
+    if (removeRandomButton) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
 
@@ -184,18 +199,25 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    HeadlessDataNode *group = [self.node.children objectAtIndex:indexPath.section];
-    HeadlessDataNode *n = [group.children objectAtIndex:indexPath.row];
     
-    if (n.type == kDataNodeTypeSubMenu) {
-        NSLog(@"Error: we don't support recursive segue yet");
-    } else {
-        HeadlessBrowserViewController *controller = [segue destinationViewController];
-        controller.node = n;
-        if (group.isExperimentMenu) {
-            controller.experimentSubmenu = group;
+    HeadlessBrowserViewController *controller = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"segueIdSubMenuToBrowser"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        HeadlessDataNode *group = [self.node.children objectAtIndex:indexPath.section];
+        HeadlessDataNode *n = [group.children objectAtIndex:indexPath.row];
+        
+        if (n.type == kDataNodeTypeSubMenu) {
+            NSLog(@"Error: we don't support recursive segue yet");
+        } else {
+            controller.node = n;
+            if (![group.randomName isEqualToString:@""]) {
+                controller.randomNodes = group;
+            }
         }
+    } else { // segueIdSubMenuToBrowserBrowser
+        HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
+        controller.randomNodes = randomNodes;
+        controller.node = randomNodes.randomNode;
     }
 }
 

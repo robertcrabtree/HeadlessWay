@@ -19,7 +19,7 @@
 
 @implementation HeadlessPointerViewController
 
-@synthesize experimentSubmenu, buttonRefresh, buttonExperiment, textView, alarmFired;
+@synthesize randomExperiments, buttonRefresh, buttonExperiment, textView, alarmFired;
 
 static BOOL _inUse = NO;
 
@@ -36,7 +36,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void)dealloc
 {
-    [experimentSubmenu release];
+    [randomExperiments release];
     [buttonRefresh release];
     [buttonExperiment release];
     [textView release];
@@ -153,10 +153,10 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    HeadlessDataNode *randomExperiment = experimentSubmenu.randomExperiment;
+    HeadlessDataNode *randomExperiment = randomExperiments.randomNode;
     HeadlessBrowserViewController *controller = [segue destinationViewController];
     controller.node = randomExperiment;
-    controller.experimentSubmenu = experimentSubmenu;
+    controller.randomNodes = randomExperiments;
 }
 
 +(BOOL)inUse

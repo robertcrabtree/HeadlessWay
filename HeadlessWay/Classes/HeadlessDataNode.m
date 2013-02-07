@@ -13,7 +13,7 @@
 
 static HeadlessDataNode* _gExperimentMenu = nil;
 
-@synthesize type, isExperimentMenu, name, url, text, children, randomExperiment;
+@synthesize type, isExperimentMenu, name, url, text, randomName, children, randomNode;
 
 + (HeadlessDataNode*) experimentMenu
 {
@@ -26,6 +26,8 @@ static HeadlessDataNode* _gExperimentMenu = nil;
     if (self) {
         name = [[[NSString alloc] initWithString:@""] retain];
         url = [[[NSString alloc] initWithString:@""] retain];
+        text = [[[NSString alloc] initWithString:@""] retain];
+        randomName = [[[NSString alloc] initWithString:@""] retain];
         type = kDataNodeTypeSubMenu;
         isExperimentMenu = NO;
         children = [[NSMutableArray alloc] init];
@@ -39,7 +41,8 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 - (void)initAttributes:(TBXMLElement *)elmt
 {
     NSString *typeStr = [TBXML valueOfAttributeNamed:@"type" forElement:elmt];
-    NSString *specialStr = [TBXML valueOfAttributeNamed:@"special" forElement:elmt];
+    NSString *isExperiment = [TBXML valueOfAttributeNamed:@"isExperiment" forElement:elmt];
+    NSString *randomStr = [TBXML valueOfAttributeNamed:@"random" forElement:elmt];
     
 
     if ([typeStr isEqualToString:@"root"]) {
@@ -58,12 +61,16 @@ static HeadlessDataNode* _gExperimentMenu = nil;
         type = kDataNodeTypePointer;
     }
 
-    if ([specialStr isEqualToString:@"experiment"]) {
+    if (isExperiment &&[isExperiment isEqualToString:@"YES"]) {
         isExperimentMenu = YES;
         if (_gExperimentMenu && self != _gExperimentMenu) {
             [_gExperimentMenu release];
         }
         _gExperimentMenu = [self retain];
+    }
+    
+    if (randomStr && ![isExperiment isEqualToString:@""]) {
+        self.randomName = randomStr;
     }
 }
 
@@ -119,7 +126,7 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 
 ////////////////////////////////////////////////////////////////////////
 
-- (HeadlessDataNode*)randomExperiment
+- (HeadlessDataNode*)randomNode
 {
     int random = arc4random() % children.count;
     HeadlessDataNode *node = [children objectAtIndex:random];
@@ -132,6 +139,7 @@ static HeadlessDataNode* _gExperimentMenu = nil;
     [name release];
     [url release];
     [text release];
+    [randomName release];
     [children release];
     [super dealloc];
 }

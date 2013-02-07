@@ -31,7 +31,8 @@ typedef enum {
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSString *text;
+@property (nonatomic, retain) NSString *randomName;
 @property (nonatomic, retain) NSMutableArray *children;
 
-@property (nonatomic, readonly) HeadlessDataNode *randomExperiment;
+@property (nonatomic, readonly) HeadlessDataNode *randomNode;
 @end

@@ -24,12 +24,12 @@
     HeadlessDataNode *_rootNode;
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
-@property (nonatomic, retain) HeadlessDataNode *experimentSubmenu;
+@property (nonatomic, retain) HeadlessDataNode *randomExperiments;
 @end
 
 @implementation HeadlessMainTableViewController
 
-@synthesize buttonPointer, experimentSubmenu;
+@synthesize buttonPointer, randomExperiments;
 
 HEADLESS_ROTATION_SUPPORT_NONE
 
@@ -53,7 +53,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     if (![HeadlessPointerViewController inUse]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
-        pointerView.experimentSubmenu = [HeadlessDataNode experimentMenu];
+        pointerView.randomExperiments = [HeadlessDataNode experimentMenu];
         pointerView.alarmFired = alarmFired;
         
         HeadlessNavigationController *navController = [[HeadlessNavigationController alloc] initWithRootViewController:pointerView];
@@ -125,7 +125,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 {
     [_rootNode release];
     [buttonPointer release];
-    [experimentSubmenu release];
+    [randomExperiments release];
     [super dealloc];
 }
 
