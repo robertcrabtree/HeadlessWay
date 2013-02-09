@@ -11,13 +11,13 @@
 
 @implementation HeadlessDataNode
 
-static HeadlessDataNode* _gExperimentMenu = nil;
+static HeadlessDataNode* _gExperimentGroup = nil;
 
-@synthesize type, isExperimentMenu, name, url, text, randomName, children, randomNode;
+@synthesize type, isExperimentGroup, isReflectionGroup, name, url, text, randomName, children, randomNode;
 
-+ (HeadlessDataNode*) experimentMenu
++ (HeadlessDataNode*) experimentGroup
 {
-    return _gExperimentMenu;
+    return _gExperimentGroup;
 }
 
 - (id) init
@@ -29,7 +29,8 @@ static HeadlessDataNode* _gExperimentMenu = nil;
         text = [[[NSString alloc] initWithString:@""] retain];
         randomName = [[[NSString alloc] initWithString:@""] retain];
         type = kDataNodeTypeSubMenu;
-        isExperimentMenu = NO;
+        isExperimentGroup = NO;
+        isReflectionGroup = NO;
         children = [[NSMutableArray alloc] init];
     }
     return self;
@@ -42,6 +43,7 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 {
     NSString *typeStr = [TBXML valueOfAttributeNamed:@"type" forElement:elmt];
     NSString *isExperiment = [TBXML valueOfAttributeNamed:@"isExperiment" forElement:elmt];
+    NSString *isReflection = [TBXML valueOfAttributeNamed:@"isReflection" forElement:elmt];
     NSString *randomStr = [TBXML valueOfAttributeNamed:@"random" forElement:elmt];
     
 
@@ -60,13 +62,17 @@ static HeadlessDataNode* _gExperimentMenu = nil;
     } else if ([typeStr isEqualToString:@"pointer"]) {
         type = kDataNodeTypePointer;
     }
+    
+    if (isReflection && [isReflection isEqualToString:@"YES"]) {
+        self.isReflectionGroup = YES;
+    }
 
     if (isExperiment &&[isExperiment isEqualToString:@"YES"]) {
-        isExperimentMenu = YES;
-        if (_gExperimentMenu && self != _gExperimentMenu) {
-            [_gExperimentMenu release];
+        isExperimentGroup = YES;
+        if (_gExperimentGroup && self != _gExperimentGroup) {
+            [_gExperimentGroup release];
         }
-        _gExperimentMenu = [self retain];
+        _gExperimentGroup = [self retain];
     }
     
     if (randomStr && ![isExperiment isEqualToString:@""]) {
@@ -135,7 +141,7 @@ static HeadlessDataNode* _gExperimentMenu = nil;
 
 - (void)dealloc
 {
-    [_gExperimentMenu release];
+    [_gExperimentGroup release];
     [name release];
     [url release];
     [text release];

@@ -24,10 +24,11 @@ typedef enum {
 - (id) initWithElement:(TBXMLElement *)elmt;
 - (void) setElement:(TBXMLElement *)elmt;
 
-+ (HeadlessDataNode*) experimentMenu;
++ (HeadlessDataNode*) experimentGroup;
 
 @property (nonatomic, assign) HeadlessDataNodeType type;
-@property (nonatomic, assign) BOOL isExperimentMenu;
+@property (nonatomic, assign) BOOL isExperimentGroup;
+@property (nonatomic, assign) BOOL isReflectionGroup;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSString *text;

@@ -53,7 +53,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     if (![HeadlessPointerViewController inUse]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
-        pointerView.randomExperiments = [HeadlessDataNode experimentMenu];
+        pointerView.randomExperiments = [HeadlessDataNode experimentGroup];
         pointerView.alarmFired = alarmFired;
         
         HeadlessNavigationController *navController = [[HeadlessNavigationController alloc] initWithRootViewController:pointerView];

@@ -28,13 +28,7 @@
                             <outlet property="delegate" destination="32V-jc-XEm" id="F1w-gP-USY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="h32-EA-UVK">
-                        <barButtonItem key="rightBarButtonItem" title="Random" id="Xn0-7X-D0q">
-                            <connections>
-                                <action selector="handleRandom:" destination="32V-jc-XEm" id="UDF-W0-iSj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="h32-EA-UVK"/>
                     <connections>
                         <segue destination="AZr-dD-jvu" kind="push" identifier="segueIdSubMenuToBrowser" id="ZfC-oL-DOQ"/>
                     </connections>
@@ -295,6 +289,48 @@
             <point key="canvasLocation" x="1412" y="1235"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="HeadlessAlarmItemViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessAlarmItemViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="buttonCancel" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="buttonSave" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="HeadlessAlarmRepeatTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessAlarmRepeatTableViewController.h"/>
+        </class>
+        <class className="HeadlessAlarmTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessAlarmTableViewController.h"/>
+        </class>
+        <class className="HeadlessBrowserViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessBrowserViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="HeadlessMainTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessMainTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="buttonPointer" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="HeadlessNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessNavigationController.h"/>
+        </class>
+        <class className="HeadlessPointerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessPointerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="buttonExperiment" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="buttonRefresh" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="HeadlessSubMenuTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeadlessSubMenuTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -183,7 +183,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
             self.tableView.frame.origin.y -
             self.tableView.sectionHeaderHeight;
         
-        NSString *text = @"Add alarms to remind you to see who you really are.";
+        NSString *text = @"Add alarms to remind you to see who you really are. When the alarm fires, you will be presented with a pointer for contemplation and are encouraged to do an experiment.";
         _labelNoAlarms.font = [UIFont boldSystemFontOfSize:_labelNoAlarms.font.pointSize];
         CGRect frame = _labelNoAlarms.frame;
         frame.size.width = [text sizeWithFont:_labelNoAlarms.font].width;

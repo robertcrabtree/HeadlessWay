@@ -1,4 +1,4 @@
-//
+////
 //  HeadlessSubMenuTableViewController.m
 //  HeadlessWay
 //
@@ -37,20 +37,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     [super dealloc];
 }
 
-- (IBAction)handleRandom:(id)sender
-{
-    HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
-    HeadlessDataNode *randomNode = randomNodes.randomNode;
-    
-    if (randomNode.type == kDataNodeTypeVideo) {
-        MPMoviePlayerViewController* moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:randomNode.url]];
-        [self presentMoviePlayerViewControllerAnimated:moviePlayer];
-        [moviePlayer release];
-    } else {
-        [self performSegueWithIdentifier:@"segueIdSubMenuToBrowser" sender:self];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -62,21 +48,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     SET_LOOKS_TABLE();
-    
-    BOOL removeRandomButton = YES;
-    // Only show a "Random" button if we have a single group (too confusing if we have more than one group).
-    if (node.children.count == 1) {
-        HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
-        // And, obvoiusly, don't show random button if we aren't supposed to (IOW, the random name is empty string).
-        if (![randomNodes.randomName isEqualToString:@""]) {
-            removeRandomButton = NO;
-            self.navigationItem.rightBarButtonItem.title = [NSString stringWithFormat:@"Random %@", randomNodes.randomName];
-        }
-    }
-
-    if (removeRandomButton) {
-        self.navigationItem.rightBarButtonItem = nil;
-    }
     
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 }
@@ -103,6 +74,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     HeadlessDataNode *group = [node.children objectAtIndex:section];
+
+    // reflections are all going to be random. don't list them all
+    if (group.isReflectionGroup)
+        return 1;
+    
     return group.children.count;
 }
 
@@ -115,14 +91,19 @@ HEADLESS_ROTATION_SUPPORT_NONE
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    HeadlessDataNode *group = [node.children objectAtIndex:indexPath.section];
     
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    HeadlessDataNode *groupNode = [node.children objectAtIndex:indexPath.section];
-    HeadlessDataNode *n = [groupNode.children objectAtIndex:indexPath.row];
-    cell.textLabel.text = n.name;
+    if (group.isReflectionGroup) {
+        cell.textLabel.text = @"Video Reflection";
+    } else {
+        HeadlessDataNode *groupNode = [node.children objectAtIndex:indexPath.section];
+        HeadlessDataNode *n = [groupNode.children objectAtIndex:indexPath.row];
+        cell.textLabel.text = n.name;
+    }
 
     return cell;
 }
@@ -144,6 +125,51 @@ HEADLESS_ROTATION_SUPPORT_NONE
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.shadowColor = [UIColor colorWithWhite:0.8 alpha:0.8];
+    [label sizeToFit];
+    
+    [headerView addSubview:label];
+    [label release];
+    return headerView;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    HeadlessDataNode *group = [node.children objectAtIndex:section];
+
+    if (!group.isReflectionGroup)
+        return nil;
+
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 0)];
+    CGFloat constrainedSize = self.tableView.frame.size.width - 40;
+    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 100, constrainedSize, 0)] autorelease];
+
+    label.text = @"Reflections are short, randomized video clips intended for periodic contemplation.";
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:15.0];
+    
+    CGRect frame = label.frame;
+    frame.size.width = [label.text sizeWithFont:label.font].width;
+    frame.size = [label.text sizeWithFont: label.font
+                  constrainedToSize:CGSizeMake(constrainedSize, CGFLOAT_MAX)
+                      lineBreakMode:UILineBreakModeWordWrap];
+
+    label.frame = frame;
+    headerView.frame = label.frame;
+//    headerView.backgroundColor = [UIColor greenColor];
+//    label.backgroundColor = [UIColor redColor];
+
+    float xCenter = self.tableView.frame.size.width / 2;
+    float yCenter = frame.size.height / 2;
+    
+    label.textAlignment = UITextAlignmentCenter;
+    label.lineBreakMode = NSLineBreakByWordWrapping;
+    label.numberOfLines = 0;
+    
+    [label setCenter:CGPointMake(xCenter, yCenter)];
+
+//    label.shadowColor = [UIColor colorWithWhite:0.8 alpha:0.8];
     [label sizeToFit];
     
     [headerView addSubview:label];
@@ -196,8 +222,14 @@ HEADLESS_ROTATION_SUPPORT_NONE
 {
     // Navigation logic may go here. Create and push another view controller.
     HeadlessDataNode *group = [self.node.children objectAtIndex:indexPath.section];
-    HeadlessDataNode *n = [group.children objectAtIndex:indexPath.row];
-    
+    HeadlessDataNode *n = nil;
+
+    if (group.isReflectionGroup) {
+        n = group.randomNode;
+    } else {
+        n = [group.children objectAtIndex:indexPath.row];
+    }
+
     if (n.type == kDataNodeTypeSubMenu) {
         HeadlessSubMenuTableViewController *subMenu = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"StoryboardIdSubMenu"];
         subMenu.node = n;
@@ -228,10 +260,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
                 controller.randomNodes = group;
             }
         }
-    } else { // segueIdSubMenuToBrowserRandom
-        HeadlessDataNode *randomNodes = [node.children objectAtIndex:0];
-        controller.randomNodes = randomNodes;
-        controller.node = randomNodes.randomNode;
     }
 }
 

@@ -100,7 +100,7 @@ HEADLESS_ROTATION_SUPPORT
     }
 
     if (self.randomNodes != nil) {
-        NSString *buttonText = [NSString stringWithFormat:@"Random %@", randomNodes.randomName];
+        NSString *buttonText = [NSString stringWithFormat:@"Another %@", randomNodes.randomName];
         UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:buttonText style:UIBarButtonItemStyleBordered target:self action:@selector(actionNext:)];
         self.navigationItem.rightBarButtonItem = nextButton;
         [nextButton release];
