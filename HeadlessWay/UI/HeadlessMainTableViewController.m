@@ -40,7 +40,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self = [super initWithCoder:aDecoder];
     if (self) {
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
-        _rootNode = [[parse parseFile:@"Headless.xml"] retain];
+        _rootNode = [[parse parseFile:@"headlessApp.xml"] retain];
         [parse release];
     }
     return self;
