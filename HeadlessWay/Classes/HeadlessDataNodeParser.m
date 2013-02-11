@@ -23,7 +23,11 @@
 - (HeadlessDataNode*) parseFile:(NSString *)fileName
 {
     NSError *error;
-    TBXML *xml = [[TBXML alloc] initWithXMLFile:fileName error:&error];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    NSURL *url = [NSURL URLWithString:fileName];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    TBXML *xml = [[TBXML alloc] initWithXMLData:data error:&error];
     
     HeadlessDataNode *root = nil;
     if (xml.rootXMLElement) {
@@ -33,22 +37,7 @@
     }
     
     [xml release];
-    return root;
-}
-
-#warning This is asynchronous, need to work with this
-- (HeadlessDataNode*) parseURL:(NSString *)url
-{
-    TBXML *xml = [[TBXML alloc] initWithURL:[NSURL URLWithString:url] success:nil failure:nil];
-    
-    HeadlessDataNode *root = nil;
-    if (xml.rootXMLElement) {
-        root = [[[HeadlessDataNode alloc] initWithElement:xml.rootXMLElement] autorelease];
-    } else {
-        NSLog(@"Error: missing root element");
-    }
-    
-    [xml release];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     return root;
 }
 

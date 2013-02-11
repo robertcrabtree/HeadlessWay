@@ -40,7 +40,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self = [super initWithCoder:aDecoder];
     if (self) {
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
-        _rootNode = [[parse parseFile:@"headlessApp.xml"] retain];
+#warning download from headless website
+        _rootNode = [[parse parseFile:@"http://192.168.0.12/~bobbycrabtree/headlessApp.xml"] retain];
         [parse release];
     }
     return self;
@@ -49,8 +50,9 @@ HEADLESS_ROTATION_SUPPORT_NONE
 - (void)popupPointer:(BOOL)alarmFired
 {
     // if the user is already looking at a pointer then we don't want
-    // to show another pointer
-    if (![HeadlessPointerViewController inUse]) {
+    // to show another pointer. also check to make sure all xml data
+    // was downloaded
+    if (![HeadlessPointerViewController inUse] && _rootNode) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
         HeadlessPointerViewController *pointerView = [storyboard instantiateViewControllerWithIdentifier:@"HeadlessPointerViewController"];
         pointerView.randomExperiments = [HeadlessDataNode experimentGroup];
@@ -98,21 +100,23 @@ HEADLESS_ROTATION_SUPPORT_NONE
     // see if we have an internet connection
     Reachability *r = [Reachability reachabilityWithHostName:@"headless.org"];
     NetworkStatus internetStatus = [r currentReachabilityStatus];
-    if(internetStatus == NotReachable) {
-        [self showAlert:@"This application requires an internet connection. Please connect to a network and try again"];
-    }
-
+    
     [[HeadlessAlarmRouter sharedInstance] registerHandler:self handler:@selector(headlessAlarmHandler)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    SET_LOOKS_TABLE();
-
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
+
+    if (!_rootNode || internetStatus == NotReachable) {
+        self.buttonPointer.enabled = NO;
+        [self showAlert:@"This application requires an internet connection. Please connect to a network and try again."];
+    }
+    
+    SET_LOOKS_TABLE();
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -139,12 +143,18 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
+    
+    // see if xml file was downloaded successfully
+    if (_rootNode) {
+        // Return the number of sections.
 #ifdef _TEST_HEADLESS
-    return 4;
+        return 4;
 #else
-    return 3;
+        return 3;
 #endif
+    }
+    
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
