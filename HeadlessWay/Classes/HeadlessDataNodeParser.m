@@ -20,22 +20,34 @@
     [super dealloc];
 }
 
-- (HeadlessDataNode*) parseFile:(NSString *)fileName
+- (HeadlessDataNode*) parse:(TBXML *)xml
 {
-    NSError *error;
-    
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSURL *url = [NSURL URLWithString:fileName];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    TBXML *xml = [[TBXML alloc] initWithXMLData:data error:&error];
-    
     HeadlessDataNode *root = nil;
     if (xml.rootXMLElement) {
         root = [[[HeadlessDataNode alloc] initWithElement:xml.rootXMLElement] autorelease];
     } else {
         NSLog(@"Error: missing root element");
     }
-    
+    return root;
+}
+
+- (HeadlessDataNode*) parseFile:(NSString *)fileName
+{
+    NSError *error;
+    TBXML *xml = [[TBXML alloc] initWithXMLFile:fileName error:&error];
+    HeadlessDataNode *root = [self parse:xml];
+    [xml release];
+    return root;
+}
+
+- (HeadlessDataNode*) parseUrl:(NSString *)fileName
+{
+    NSError *error;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    NSURL *url = [NSURL URLWithString:fileName];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    TBXML *xml = [[TBXML alloc] initWithXMLData:data error:&error];
+    HeadlessDataNode *root = [self parse:xml];
     [xml release];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     return root;
