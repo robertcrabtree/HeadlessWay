@@ -207,9 +207,8 @@
         <!--    REFLECTIONS    -->
         <!-- ***************** -->
         <node type="submenu">
-            <name>Reflections</name>
+            <name>Video Reflections</name>
             <node type="group" isReflection="YES" random="Reflection">
-                <name>Reflections</name>
                 <node type="video">
                     <name>Reflection 1</name>
                     <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections1/playlist.m3u8</url>
@@ -436,9 +435,9 @@
         <!--    VIDEO          -->
         <!-- ***************** -->
         <node type="submenu">
-            <name>Video</name>
+            <name>Videos</name>
             <node type="group">
-                <name>Video</name>
+                <name>Videos</name>
                 <node type="submenu">
                     <name>Experiments</name>
                     <node type="group" random="Experiment">
