@@ -142,10 +142,6 @@
             <node type="group">
                 <name>By Others</name>
                 <node type="webdata">
-                    <name>A Useful Tool</name>
-                    <url>http://www.headless.org/headless-app/articles/useful-tool.htm</url>
-                </node>
-                <node type="webdata">
                     <name>A True Beginning</name>
                     <url>http://www.headless.org/headless-app/articles/a-true-beginning.htm</url>
                 </node>
@@ -160,10 +156,6 @@
                 <node type="webdata">
                     <name>Face to No-Face</name>
                     <url>http://www.headless.org/headless-app/articles/face-to-no-face.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Gordian Knot</name>
-                    <url>http://www.headless.org/headless-app/articles/gordian-knot.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Handling Problems</name>
@@ -194,10 +186,6 @@
                     <url>http://www.headless.org/headless-app/articles/not-in-prison.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Remarks on Enlightenment</name>
-                    <url>http://www.headless.org/headless-app/articles/remarks-on-enlightenment.htm</url>
-                </node>
-                <node type="webdata">
                     <name>Sharing It With Children</name>
                     <url>http://www.headless.org/headless-app/articles/sharing-with-children.htm</url>
                 </node>
@@ -208,6 +196,10 @@
                 <node type="webdata">
                     <name>Two Days</name>
                     <url>http://www.headless.org/headless-app/articles/two-days.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>A Useful Tool</name>
+                    <url>http://www.headless.org/headless-app/articles/useful-tool.htm</url>
                 </node>
             </node>
         </node>
