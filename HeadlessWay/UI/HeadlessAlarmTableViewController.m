@@ -177,7 +177,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
         
         _labelNoAlarms = [[UILabel alloc] initWithFrame:CGRectZero];
         
-        CGFloat constrainedSize = self.tableView.frame.size.width;
+        CGFloat constrainedSize = self.tableView.frame.size.width - 40;
         float xCenter = self.tableView.frame.size.width / 2 - self.tableView.frame.origin.x;
         float yCenter = self.tableView.frame.size.height / 2 -
             self.tableView.frame.origin.y -
