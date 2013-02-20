@@ -144,7 +144,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     CGFloat constrainedSize = self.tableView.frame.size.width - 40;
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 100, constrainedSize, 0)] autorelease];
 
-    label.text = @"Reflections are short, randomized video clips to point you Home.";
+    label.text = @"Short, randomized video clips to inspire you.";
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont systemFontOfSize:15.0];
