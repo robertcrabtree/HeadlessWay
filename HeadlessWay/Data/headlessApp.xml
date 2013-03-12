@@ -74,116 +74,90 @@
             <!-- DOUGLAS ARTICLES  -->
             <!-- ***************** -->
             <node type="group">
-                <name>By Douglas Harding</name>
+                <name>Articles</name>
                 <node type="webdata">
-                    <name>The Headless Way</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/the-headless-way.htm</url>
+                    <name>Who Are you?</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/who-are-you.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Confrontation</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/confrontation.htm</url>
+                    <name>Self-image</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/self-image.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Discovering Who You Are</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/discovering-who-you-are.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Experience and Meaning</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/experience-and-meaning.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Harding's Tips</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/hardings-tip.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Making A Good Impression</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/impression.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>My Special Friend</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/my-special-friend.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>On Being Aware</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/on-being-aware.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Results of Seeing</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/results.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Solving Problems</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/solving-problems.htm</url>
+                    <name>Four Stages Of Life</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/the-stages-of-life.htm</url>
                 </node>
                 <node type="webdata">
                     <name>The Face Game</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-articles/the-face-game.htm</url>
-                </node>
-            </node>
-            <!-- ***************** -->
-            <!--  OTHER ARTICLES  -->
-            <!-- ***************** -->
-            <node type="group">
-                <name>By Others</name>
-                <node type="webdata">
-                    <name>A True Beginning</name>
-                    <url>http://www.headless.org/headless-app/articles/a-true-beginning.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/the-face-game.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>A View of Bankei</name>
-                    <url>http://www.headless.org/headless-app/articles/a-view-of-bankei.htm</url>
+                    <name>Relationships</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/relationships.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Douglas Dying</name>
-                    <url>http://www.headless.org/headless-app/articles/douglas-dying.htm</url>
+                    <name>The One And The Many</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/the-one-that-is-many.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Solving Problems</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/solving-problems.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Results</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/results.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Making A Good Impression</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/making-a-good-impression.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Face to No-Face</name>
-                    <url>http://www.headless.org/headless-app/articles/face-to-no-face.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/face-to-no-face.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>For The Blind</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/for-the-blind.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Handling Problems</name>
-                    <url>http://www.headless.org/headless-app/articles/handling-problems.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/handling-problems.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>The Mind Game</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/the-mind-game.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Sex And Seeing</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/sex-and-seeing.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Not in Prison</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/not-in-prison.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Harding's Way</name>
-                    <url>http://www.headless.org/headless-app/articles/hardings-way.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Stage Fright</name>
-                    <url>http://www.headless.org/headless-app/articles/headless-performance.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>In Memoriam</name>
-                    <url>http://www.headless.org/headless-app/articles/in-memoriam.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Letters From Home</name>
-                    <url>http://www.headless.org/headless-app/articles/letters-from-home.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Letter to Martin</name>
-                    <url>http://www.headless.org/headless-app/articles/letter-to-martin.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Not In Prison</name>
-                    <url>http://www.headless.org/headless-app/articles/not-in-prison.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Sharing It With Children</name>
-                    <url>http://www.headless.org/headless-app/articles/sharing-with-children.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>The Bomb</name>
-                    <url>http://www.headless.org/headless-app/articles/the-bomb.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/hardings-way.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Two Days</name>
-                    <url>http://www.headless.org/headless-app/articles/two-days.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/two-days.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>A Useful Tool</name>
-                    <url>http://www.headless.org/headless-app/articles/useful-tool.htm</url>
+                    <name>In Memoriam</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/in-memoriam.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Stage Fright</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/stage-fright.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>Letters From Home</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/letters-from-home.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>The Bomb</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/articles/the-bomb.htm</url>
                 </node>
             </node>
         </node>
