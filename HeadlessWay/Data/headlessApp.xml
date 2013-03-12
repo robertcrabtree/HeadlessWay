@@ -17,67 +17,51 @@
                 <name>Experiments</name>
                 <node type="webdata">
                     <name>Pointing</name>
-                    <url>http://www.headless.org/headless-app/experiments/pointing.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/pointing.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Two-Way Pointing</name>
-                    <url>http://www.headless.org/headless-app/experiments/2-way-pointing.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>The Bottom Line</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-bottom-line.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/2-way-pointing.htm</url>
                 </node>
                 <node type="webdata">
                     <name>The Single Eye</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-single-eye.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/the-single-eye.htm</url>
                 </node>
                 <node type="webdata">
                     <name>The Mirror</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-mirror.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/the-mirror.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Seeing Your Nose</name>
-                    <url>http://www.headless.org/headless-app/experiments/seeing-your-nose.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Spinning The World</name>
-                    <url>http://www.headless.org/headless-app/experiments/spinning-the-world.htm</url>
+                    <name>Movement</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/movement.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Touch</name>
-                    <url>http://www.headless.org/headless-app/experiments/touch.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>No Head Circle</name>
-                    <url>http://www.headless.org/headless-app/experiments/no-head-circle.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/touch.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Closed Eyes</name>
-                    <url>http://www.headless.org/headless-app/experiments/closed-eyes.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/closed-eyes.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>Being All Things</name>
-                    <url>http://www.headless.org/headless-app/experiments/being-all-things.htm</url>
+                    <name>Stress</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/stress.htm</url>
                 </node>
                 <node type="webdata">
-                    <name>For the Blind</name>
-                    <url>http://www.headless.org/headless-app/experiments/inseeing-experiments-for-the-blind.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>The Tube</name>
-                    <url>http://www.headless.org/headless-app/experiments/the-tube.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Seeing Who You Are</name>
-                    <url>http://www.headless.org/headless-app/experiments/seeing-who-you-are.htm</url>
-                </node>
-                <node type="webdata">
-                    <name>Handling Problems</name>
-                    <url>http://www.headless.org/headless-app/experiments/handling-problems.htm</url>
+                    <name>Face to No-Face</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/face-to-no-face.htm</url>
                 </node>
                 <node type="webdata">
                     <name>Time</name>
-                    <url>http://www.headless.org/headless-app/experiments/time.htm</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/time.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>My Nose</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/my-nose.htm</url>
+                </node>
+                <node type="webdata">
+                    <name>No-Head Circle</name>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/experiments/no-head-circle.htm</url>
                 </node>
             </node>
         </node>
