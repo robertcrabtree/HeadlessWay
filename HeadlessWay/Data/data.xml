@@ -6,7 +6,7 @@
         <!-- ***************** -->
         <node type="webdata">
             <name>Welcome</name>
-            <url>http://www.headless.org/headless-app/english-welcome.htm</url>
+            <url>http://192.168.0.12/~bobbycrabtree/headless-app/welcome.htm</url>
         </node>
         <!-- ***************** -->
         <!--    EXPERIMENTS    -->
