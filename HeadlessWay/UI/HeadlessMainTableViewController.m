@@ -40,8 +40,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self = [super initWithCoder:aDecoder];
     if (self) {
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
-#warning download from headless website
-        _rootNode = [[parse parseFile:@"http://192.168.0.12/~bobbycrabtree/headlessApp.xml"] retain];
+        _rootNode = [[parse parseUrl:@"http://www.headless.org/headless-app/data.xml"] retain];
         [parse release];
     }
     return self;
