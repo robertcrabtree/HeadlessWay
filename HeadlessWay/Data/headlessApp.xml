@@ -211,223 +211,223 @@
             <node type="group" isReflection="YES" random="Reflection">
                 <node type="video">
                     <name>Reflection 1</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections1/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections1/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 2</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections2/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections2/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 3</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections3/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections3/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 4</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections4/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections4/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 5</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections5/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections5/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 6</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections6/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections6/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 7</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections7/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections7/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 8</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections8/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections8/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 9</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections9/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections9/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 10</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections10/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections10/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 11</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections11/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections11/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 12</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections12/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections12/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 13</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections13/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections13/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 14</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections14/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections14/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 15</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections15/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections15/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 16</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections16/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections16/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 17</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections17/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections17/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 18</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections18/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections18/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 19</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections19/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections19/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 20</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections20/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections20/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 21</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections21/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections21/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 22</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections22/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections22/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 23</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections23/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections23/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 24</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections24/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections24/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 25</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections25/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections25/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 26</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections26/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections26/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 27</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections27/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections27/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 28</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections28/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections28/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 29</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections29/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections29/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 30</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections30/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections30/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 31</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections31/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections31/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 32</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections32/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections32/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 33</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections33/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections33/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 34</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections34/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections34/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 35</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections35/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections35/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 36</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections36/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections36/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 37</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections37/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections37/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 38</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections38/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections38/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 39</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections39/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections39/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 40</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections40/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections40/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 41</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections41/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections41/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 42</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections42/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections42/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 43</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections43/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections43/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 44</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections44/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections44/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 45</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections45/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections45/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 46</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections46/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections46/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 47</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections47/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections47/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 48</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections48/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections48/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 49</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections49/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections49/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 50</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections50/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections50/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 51</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections51/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections51/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 52</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections52/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections52/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 53</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections53/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections53/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 54</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections54/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections54/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>Reflection 55</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/Reflections55/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Reflections55/playlist.m3u8</url>
                 </node>
             </node>
         </node>
@@ -444,49 +444,49 @@
                         <name>Who Are You Really?</name>
                         <node type="video">
                             <name>Part 1A</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_1A/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_1A/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 1B</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_1B/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_1B/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 2A</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_2A/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_2A/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 2B</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_2B/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_2B/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 3A</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_3A/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_3A/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 3B</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_3B/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_3B/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 4A</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_4A/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_4A/playlist.m3u8</url>
                         </node>
                         <node type="video">
                             <name>Part 4B</name>
-                            <url>http://192.168.0.12/~bobbycrabtree/Headless/Experiments_4B/playlist.m3u8</url>
+                            <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/Experiments_4B/playlist.m3u8</url>
                         </node>
                     </node>
                 </node>
                 <node type="video">
                     <name>Not What You Look Like</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/NotWhatYouLookLike/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/NotWhatYouLookLike/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>The Four Stages of Life</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/FourStagesOfLife/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/FourStagesOfLife/playlist.m3u8</url>
                 </node>
                 <node type="video">
                     <name>The Man With No Head</name>
-                    <url>http://192.168.0.12/~bobbycrabtree/Headless/ManWithNoHead/playlist.m3u8</url>
+                    <url>http://192.168.0.12/~bobbycrabtree/headless-app/video/ManWithNoHead/playlist.m3u8</url>
                 </node>
             </node>
         </node>
