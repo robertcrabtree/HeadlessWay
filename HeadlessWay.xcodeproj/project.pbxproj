@@ -20,7 +20,6 @@
 		E014FD981673E7F500621B86 /* HeadlessBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8A1673E7F500621B86 /* HeadlessBrowserViewController.m */; };
 		E014FD991673E7F500621B86 /* HeadlessMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD8C1673E7F500621B86 /* HeadlessMainTableViewController.m */; };
 		E014FD9E1673E7F500621B86 /* HeadlessSubMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */; };
-		E014FDA31673E87700621B86 /* headlessApp.xml in Resources */ = {isa = PBXBuildFile; fileRef = E014FDA01673E87700621B86 /* headlessApp.xml */; };
 		E014FDA81673F82F00621B86 /* HeadlessPointerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */; };
 		E0177EB316B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */; };
 		E0177EB416B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0177EB116B62BAB00A9B57B /* toolbar-landscape-iphone5@2x.png */; };
@@ -91,7 +90,6 @@
 		E014FD8C1673E7F500621B86 /* HeadlessMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessMainTableViewController.m; sourceTree = "<group>"; };
 		E014FD951673E7F500621B86 /* HeadlessSubMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessSubMenuTableViewController.h; sourceTree = "<group>"; };
 		E014FD961673E7F500621B86 /* HeadlessSubMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessSubMenuTableViewController.m; sourceTree = "<group>"; };
-		E014FDA01673E87700621B86 /* headlessApp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = headlessApp.xml; sourceTree = "<group>"; };
 		E014FDA61673F82F00621B86 /* HeadlessPointerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessPointerViewController.h; sourceTree = "<group>"; };
 		E014FDA71673F82F00621B86 /* HeadlessPointerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlessPointerViewController.m; sourceTree = "<group>"; };
 		E0177EB016B62BAB00A9B57B /* navbar-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-landscape-iphone5@2x.png"; path = "Images/navbar-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
@@ -229,14 +227,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E014FD9F1673E87700621B86 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				E014FDA01673E87700621B86 /* headlessApp.xml */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		E031BB0116632399006C6902 = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +271,6 @@
 				E014FD751673E7E500621B86 /* Classes */,
 				E031BB3F166327D1006C6902 /* TBXML */,
 				E005ECB716B23CDB002FB0CB /* Reachability */,
-				E014FD9F1673E87700621B86 /* Data */,
 				E031BB1716632399006C6902 /* Supporting Files */,
 				E0A53CD416A88697004646D7 /* Images */,
 			);
@@ -402,7 +391,6 @@
 				E031BB2516632399006C6902 /* Default@2x.png in Resources */,
 				E031BB2716632399006C6902 /* Default-568h@2x.png in Resources */,
 				E031BB2A16632399006C6902 /* MainStoryboard.storyboard in Resources */,
-				E014FDA31673E87700621B86 /* headlessApp.xml in Resources */,
 				E0A53CD816A886A5004646D7 /* background.png in Resources */,
 				E0A53CD916A886A5004646D7 /* background@2x.png in Resources */,
 				E0A53CDE16A88A17004646D7 /* back.png in Resources */,
