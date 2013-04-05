@@ -35,13 +35,32 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 //#define _TEST_HEADLESS 1
 
+- (void)populateRootNode
+{
+    
+    // see if we have an internet connection
+    Reachability *r = [Reachability reachabilityWithHostName:@"headless.org"];
+    NetworkStatus internetStatus = [r currentReachabilityStatus];
+
+    // load the xml data
+    if (internetStatus != NotReachable) {
+        HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
+        _rootNode = [[parse parseUrl:@"http://www.headless.org/headless-app/data.xml"] retain];
+        [parse release];
+    }
+    
+    if (_rootNode) {
+        self.buttonPointer.enabled = YES;
+    } else {
+        self.buttonPointer.enabled = NO;
+    }
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
-        _rootNode = [[parse parseUrl:@"http://www.headless.org/headless-app/data.xml"] retain];
-        [parse release];
+        [self populateRootNode];
     }
     return self;
 }
@@ -72,6 +91,18 @@ HEADLESS_ROTATION_SUPPORT_NONE
     [self popupPointer:NO];
 }
 
+- (void) actionRefresh:(id)sender
+{
+    [self populateRootNode];
+    
+    if (_rootNode) {
+        self.navigationItem.leftBarButtonItem = nil;
+        [self.tableView reloadData];
+    } else {
+        [self showAlert:@"Unable to load data. Please connect to a network and try again."];
+    }
+}
+
 - (void) headlessAlarmHandler
 {
     NSLog(@"handling headlessAlarmHandler");
@@ -96,10 +127,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
     self.buttonPointer.target = self;
     self.buttonPointer.action = @selector(actionPointer:);
     
-    // see if we have an internet connection
-    Reachability *r = [Reachability reachabilityWithHostName:@"headless.org"];
-    NetworkStatus internetStatus = [r currentReachabilityStatus];
-    
     [[HeadlessAlarmRouter sharedInstance] registerHandler:self handler:@selector(headlessAlarmHandler)];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -110,9 +137,11 @@ HEADLESS_ROTATION_SUPPORT_NONE
     
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
 
-    if (!_rootNode || internetStatus == NotReachable) {
-        self.buttonPointer.enabled = NO;
-        [self showAlert:@"This application requires an internet connection. Please connect to a network and try again."];
+    if (!_rootNode) {
+        UIBarButtonItem *refresh = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(actionRefresh:)];
+        self.navigationItem.leftBarButtonItem = refresh;
+        [refresh release];
+        [self showAlert:@"This application requires an internet connection. Please connect to a network and hit the refresh button."];
     }
     
     SET_LOOKS_TABLE();
