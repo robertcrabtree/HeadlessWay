@@ -22,6 +22,9 @@
 
 @interface HeadlessMainTableViewController () {
     HeadlessDataNode *_rootNode;
+    UIActivityIndicatorView *_activityIndicator;
+    UIAlertView *_activityIndicatorOverlay;
+    UIBarButtonItem *_refreshButton;
 }
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPointer;
 @property (nonatomic, retain) HeadlessDataNode *randomExperiments;
@@ -35,24 +38,45 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 //#define _TEST_HEADLESS 1
 
-- (void)populateRootNode
+- (void)startDownloadOnMainThread
 {
-    
-    // see if we have an internet connection
+    [_activityIndicatorOverlay show];
+    self.tableView.userInteractionEnabled = NO;
+    _refreshButton.enabled = NO;
+    self.buttonPointer.enabled = NO;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [_activityIndicator startAnimating];
+    [self performSelectorInBackground:@selector(downloadOnBackgroundThread) withObject:nil];
+}
+
+- (void)downloadOnBackgroundThread
+{
     Reachability *r = [Reachability reachabilityWithHostName:@"headless.org"];
     NetworkStatus internetStatus = [r currentReachabilityStatus];
-
-    // load the xml data
+    
     if (internetStatus != NotReachable) {
         HeadlessDataNodeParser *parse = [[HeadlessDataNodeParser alloc] init];
         _rootNode = [[parse parseUrl:@"http://www.headless.org/headless-app/data.xml"] retain];
         [parse release];
     }
+    [self performSelectorOnMainThread:@selector(finishDownloadOnMainThread) withObject:nil waitUntilDone:NO];
+}
+
+- (void)finishDownloadOnMainThread
+{
+    [_activityIndicator stopAnimating];
+    [_activityIndicatorOverlay dismissWithClickedButtonIndex:-1 animated:YES];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
     if (_rootNode) {
+        self.navigationItem.leftBarButtonItem = nil;
         self.buttonPointer.enabled = YES;
+        self.tableView.userInteractionEnabled = YES;
+        [self.tableView reloadData];
     } else {
-        self.buttonPointer.enabled = NO;
+        self.navigationItem.leftBarButtonItem = _refreshButton;
+        _refreshButton.enabled = YES;
+        [self showAlert:@"This application requires an internet connection. Please connect to a network and hit the refresh button."];
     }
 }
 
@@ -60,7 +84,6 @@ HEADLESS_ROTATION_SUPPORT_NONE
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self populateRootNode];
     }
     return self;
 }
@@ -93,14 +116,7 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void) actionRefresh:(id)sender
 {
-    [self populateRootNode];
-    
-    if (_rootNode) {
-        self.navigationItem.leftBarButtonItem = nil;
-        [self.tableView reloadData];
-    } else {
-        [self showAlert:@"Unable to load data. Please connect to a network and try again."];
-    }
+    [self startDownloadOnMainThread];
 }
 
 - (void) headlessAlarmHandler
@@ -136,13 +152,21 @@ HEADLESS_ROTATION_SUPPORT_NONE
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [HeadlessNavigationBarHelper setTitleAndBackButton:self.navigationItem title:@""];
+    
+    _refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(actionRefresh:)];
 
-    if (!_rootNode) {
-        UIBarButtonItem *refresh = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(actionRefresh:)];
-        self.navigationItem.leftBarButtonItem = refresh;
-        [refresh release];
-        [self showAlert:@"This application requires an internet connection. Please connect to a network and hit the refresh button."];
-    }
+    _activityIndicatorOverlay = [[UIAlertView alloc] initWithTitle:@""
+                                                           message:@"Please Wait..."
+                                                          delegate:nil
+                                                 cancelButtonTitle:nil
+                                                 otherButtonTitles:nil];
+    
+    _activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(125, 50, 30, 30)];
+    _activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    
+    [_activityIndicatorOverlay addSubview:_activityIndicator];
+    
+    [self startDownloadOnMainThread];
     
     SET_LOOKS_TABLE();
 }
@@ -155,6 +179,8 @@ HEADLESS_ROTATION_SUPPORT_NONE
 
 - (void)dealloc
 {
+    [_refreshButton release];
+    [_activityIndicator release];
     [_rootNode release];
     [buttonPointer release];
     [randomExperiments release];

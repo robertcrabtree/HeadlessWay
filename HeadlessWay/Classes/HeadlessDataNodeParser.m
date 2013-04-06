@@ -43,13 +43,11 @@
 - (HeadlessDataNode*) parseUrl:(NSString *)fileName
 {
     NSError *error;
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURL *url = [NSURL URLWithString:fileName];
     NSData *data = [NSData dataWithContentsOfURL:url];
     TBXML *xml = [[TBXML alloc] initWithXMLData:data error:&error];
     HeadlessDataNode *root = [self parse:xml];
     [xml release];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     return root;
 }
 
