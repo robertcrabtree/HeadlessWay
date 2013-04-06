@@ -41,6 +41,7 @@
 		E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E043809716A0D21000E3AD41 /* HeadlessNavigationController.m */; };
 		E055953116BCD8920085A67F /* paper-background.png in Resources */ = {isa = PBXBuildFile; fileRef = E055952F16BCD8920085A67F /* paper-background.png */; };
 		E055953216BCD8920085A67F /* paper-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E055953016BCD8920085A67F /* paper-background@2x.png */; };
+		E062AFF21710DEBB00A8D2F0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E062AFF11710DEBB00A8D2F0 /* MBProgressHUD.m */; };
 		E06C7A4E16B67A0C003BD964 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06C7A4D16B67A0C003BD964 /* MediaPlayer.framework */; };
 		E06E86AE16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E06E86AB16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png */; };
 		E06E86AF16BF51E100B7DDBA /* navbar-movie-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = E06E86AC16BF51E100B7DDBA /* navbar-movie-landscape.png */; };
@@ -122,6 +123,8 @@
 		E043809C16A0E1AD00E3AD41 /* HeadlessCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessCommon.h; sourceTree = "<group>"; };
 		E055952F16BCD8920085A67F /* paper-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-background.png"; path = "Images/paper-background.png"; sourceTree = "<group>"; };
 		E055953016BCD8920085A67F /* paper-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-background@2x.png"; path = "Images/paper-background@2x.png"; sourceTree = "<group>"; };
+		E062AFF01710DEBB00A8D2F0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		E062AFF11710DEBB00A8D2F0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		E06C7A4D16B67A0C003BD964 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E06E86AB16BF51E100B7DDBA /* navbar-movie-landscape-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-movie-landscape-iphone5@2x.png"; path = "Images/navbar-movie-landscape-iphone5@2x.png"; sourceTree = "<group>"; };
 		E06E86AC16BF51E100B7DDBA /* navbar-movie-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar-movie-landscape.png"; path = "Images/navbar-movie-landscape.png"; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 				E031BB2816632399006C6902 /* MainStoryboard.storyboard */,
 				E014FD861673E7F500621B86 /* UI */,
 				E014FD751673E7E500621B86 /* Classes */,
+				E062AFEF1710DE9F00A8D2F0 /* MBProgressHUD */,
 				E031BB3F166327D1006C6902 /* TBXML */,
 				E005ECB716B23CDB002FB0CB /* Reachability */,
 				E031BB1716632399006C6902 /* Supporting Files */,
@@ -302,6 +306,15 @@
 				E031BB451663283E006C6902 /* TBXML+HTTP.m */,
 			);
 			name = TBXML;
+			sourceTree = "<group>";
+		};
+		E062AFEF1710DE9F00A8D2F0 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E062AFF01710DEBB00A8D2F0 /* MBProgressHUD.h */,
+				E062AFF11710DEBB00A8D2F0 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		E0A53CD416A88697004646D7 /* Images */ = {
@@ -449,6 +462,7 @@
 				E006F5D91697578D0065FE9D /* HeadlessNavigationBarHelper.m in Sources */,
 				E043809816A0D21000E3AD41 /* HeadlessNavigationController.m in Sources */,
 				E005ECB616B23CCE002FB0CB /* Reachability.m in Sources */,
+				E062AFF21710DEBB00A8D2F0 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
